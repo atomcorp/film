@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+  ],
+  "settings": {
+    "typescript.validate.enable": false,
+    "files.exclude": {
+      "**/node_modules": true,
+      ".vscode": true
+    }
+  }
+}

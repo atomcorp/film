@@ -1,0 +1,19 @@
+Task:
+  ☐ Throttle search within Redux, so we can show loading icon when user is typing or just do it through state maybe
+  ☐ Click on film name should add it into your collection @high
+  ☐ Actions you can perform on collections include: watched (toggle), prioritise
+  ☐ Lists: Watched list, to watch list
+  ☐ Filter by director etc (need another API req). Maybe get it when you add film to your collection @idea
+  ☐ Add user (name), maybe stats
+  ☐ Drag and drop the movie names for order (omg use: https://github.com/atlassian/react-beautiful-dnd)
+  
+
+Ideas: 
+  ☐ Name: The Black List?
+
+FYI:
+  ~ Use [CSSNext](http://cssnext.io/features/) for CSS Modules
+  ~ Help for using CSS Modules with  (https://medium.com/@sapegin/css-modules-with-typescript-and-webpack-6b221ebe5f10)
+  ~ [TSLint rules](https://palantir.github.io/tslint/rules/)
+  ~ API = http://www.omdbapi.com/?&s=The Thing&apikey=
+  
