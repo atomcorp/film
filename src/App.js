@@ -1,12 +1,12 @@
 import React from 'react';
 import {hot} from 'react-hot-loader';
-import {SearchContainer} from './containers';
 import store from './redux/store/store';
 import {Provider} from 'react-redux';
+import {FilmApp} from './components';
 
 const App = () => (
   <Provider store={store}>
-    <SearchContainer />
+    <FilmApp />
   </Provider>
 );
 

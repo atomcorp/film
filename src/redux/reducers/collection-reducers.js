@@ -15,7 +15,9 @@ const collection = (
 ) => {
   switch (action.type) {
     case ADD_TO_COLLECTION.SUCCESS:
-      return [...state.films, action.filmResult];
+      return Object.assign({}, state, {
+        films: [...state.films, action.filmResult],
+      });
     case ADD_TO_COLLECTION.FAIL:
     case ADD_TO_COLLECTION.ATTEMPT:
     default:

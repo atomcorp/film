@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import {SearchResult} from '../../components';
+import {SearchResult} from '../../components/SearchResult/SearchResult';
 import {
   addFilmImdbDataToCollection,
 } from '../../redux/actions/collection-actions';

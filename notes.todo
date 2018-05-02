@@ -6,6 +6,7 @@ Task:
   ☐ Filter by director etc (need another API req). Maybe get it when you add film to your collection @idea
   ☐ Add user (name), maybe stats
   ☐ Drag and drop the movie names for order (omg use: https://github.com/atlassian/react-beautiful-dnd)
+  ☐ Use thumbs up/down when clicking Watched
   
 
 Ideas: 
