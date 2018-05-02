@@ -1,5 +1,4 @@
 # Event listener
-
 ```js
 /**
  * Outputs the event that happened

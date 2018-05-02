@@ -1,6 +1,7 @@
 /** @module component/Search */
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import {SearchResults} from '../index';
 import {throttle as _throttle} from '../../helpers';
 /**
   @typedef SearchState
@@ -62,11 +63,9 @@ export class Search extends Component {
           Film name: {this.props.search ? this.props.search.filmName : null}
           <br />
           Film results:{' '}
-          {this.props.search && this.props.search.searchResults
-            ? this.props.search.searchResults
-                .map((film) => film.Title)
-                .join(', ')
-            : null}
+          {this.props.search && this.props.search.searchResults ? (
+            <SearchResults searchResults={this.props.search.searchResults} />
+          ) : null}
           Film messages: {this.props.search ? this.props.search.message : null}
         </form>
       </div>
@@ -86,5 +85,3 @@ Search.propTypes = {
     message: PropTypes.string,
   }),
 };
-
-
