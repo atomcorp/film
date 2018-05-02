@@ -1,5 +1,4 @@
 {
-  "printWidth": 80,
   "arrowParens": "always",
   "semi": true,
   "useTabs": false,
@@ -7,5 +6,6 @@
   "bracketSpacing": false,
   "singleQuote": true,
   "jsxBracketSameLine": false,
-  "trailingComma": "es5"
+  "trailingComma": "es5",
+  "printWidth": 80
 }
