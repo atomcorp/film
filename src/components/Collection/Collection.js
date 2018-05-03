@@ -21,10 +21,11 @@ import PropTypes from 'prop-types';
  * @property {string} Production
  * @property {string} Website
  */
+
 /**
  * List the films in the collection
  * @param {object} collection
- * @param {film} collection.film
+ * @param {Array<film>} collection.film
  * @return {HTML}
  */
 const Collection = ({collection}) => (
@@ -44,7 +45,7 @@ const Collection = ({collection}) => (
 );
 
 Collection.propTypes = {
-  collection: {
+  collection: PropTypes.shape({
     films: PropTypes.arrayOf(
       PropTypes.shape({
         Title: PropTypes.string,
@@ -69,7 +70,7 @@ Collection.propTypes = {
         Website: PropTypes.string,
       })
     ),
-  },
+  }),
 };
 
 export {Collection};
