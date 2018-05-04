@@ -1,5 +1,6 @@
-import SearchContainer from './Search/SearchContainer';
-import SearchResultContainer from './SearchResult/SearchResultContainer';
-import CollectionContainer from './Collection/CollectionContainer';
+import Search from './Search/Search';
+import SearchResult from './SearchResult/SearchResult';
+import Collection from './Collection/Collection';
+import SearchResults from './SearchResults/SearchResults';
 
-export {SearchContainer, SearchResultContainer, CollectionContainer};
+export {Search, SearchResult, Collection, SearchResults};
