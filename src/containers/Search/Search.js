@@ -31,7 +31,7 @@ class Search extends Component {
     this.state = {
       filmName: '',
     };
-    this.staggerFilmSearchRequests = _staggerRequests(750);
+    this.staggerFilmSearchRequests = _staggerRequests(100);
   }
   /**
    * @param {InputChange} event Text changed in input
