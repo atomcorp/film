@@ -17,8 +17,12 @@ const collection = (
     case ADD_TO_COLLECTION.SUCCESS:
       return Object.assign({}, state, {
         films: [...state.films, action.filmResult],
+        message: [],
       });
     case ADD_TO_COLLECTION.FAIL:
+      return Object.assign({}, state, {
+        message: [...state.message, action.message],
+      });
     case ADD_TO_COLLECTION.ATTEMPT:
     default:
       return state;

@@ -20,9 +20,26 @@ const addToCollectionFail = ({message}) => ({
   message,
 });
 
+const isFilmAlreadyInCollection = ({imdbID, films}) => {
+  if (films.length < 1) {
+    return false;
+  }
+  return films.some((film) => film.imdbID === imdbID);
+};
+
 const addFilmImdbDataToCollection = ({imdbID}) => {
-  return (dispatch) => {
+  return (dispatch, getState) => {
     dispatch(addToCollectionAttempt({imdbID}));
+    const state = getState();
+    if (isFilmAlreadyInCollection({
+      films: state.collection.films,
+      imdbID,
+    })) {
+      dispatch(addToCollectionFail({
+        message: 'Film has already been added',
+      }));
+      return;
+    }
     fetch(
       `http://omdbapi.com/?apikey=${API_KEY}&i=${encodeURIComponent(imdbID)}`
     )
@@ -37,7 +54,9 @@ const addFilmImdbDataToCollection = ({imdbID}) => {
           })
         );
       })
-      .catch((err) => dispatch(addToCollectionFail(err)));
+      .catch((err) => dispatch(addToCollectionFail({
+        message: err,
+      })));
   };
 };
 
