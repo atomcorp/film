@@ -1,4 +1,4 @@
-{
+const data = {
   "Search": [
     {
       "Title": "Hard Boiled",
@@ -81,3 +81,5 @@
   "totalResults": "25",
   "Response": "True"
 }
+
+export default data;
