@@ -2,7 +2,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {SearchResults} from '../';
-import {throttle as _throttle} from '../../helpers';
+import {staggerRequests as _staggerRequests} from '../../helpers';
 import {connect} from 'react-redux';
 import {searchForAFilm} from '../../redux/actions/search-actions';
 
@@ -31,17 +31,18 @@ class Search extends Component {
     this.state = {
       filmName: '',
     };
-    this.throttleSearchForFilm = _throttle(this.props.searchForAFilm, 1000);
+    this.staggerFilmSearchRequests = _staggerRequests(750);
   }
   /**
    * @param {InputChange} event Text changed in input
    * @listens InputChange
    */
   handleChange = (event) => {
+    const filmName = event.currentTarget.value;
     this.setState({
-      filmName: event.currentTarget.value,
+      filmName,
     });
-    this.throttleSearchForFilm(event.currentTarget.value);
+    this.staggerFilmSearchRequests(() => this.props.searchForAFilm(filmName));
   };
   /**
    * @param {FormSubmit} event Search form submitted

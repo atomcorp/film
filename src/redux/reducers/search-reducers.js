@@ -38,6 +38,7 @@ const search = (state = {
     case SEARCH_FAIL:
       return Object.assign({}, state, {
         message: action.message,
+        searchResults: [],
       });
     default:
       return state;
