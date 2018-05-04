@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {SearchResult} from '../';
 
-const SearchResults = ({searchResults, search}) => (
+const SearchResults = ({search}) => (
   <div className="search-results">
     {search.searchResults.map((result) => (
       <SearchResult key={result.imdbID} {...result} />
@@ -12,11 +12,13 @@ const SearchResults = ({searchResults, search}) => (
 );
 
 SearchResults.propTypes = {
-  searchResults: PropTypes.arrayOf(
-    PropTypes.shape({
-      Title: PropTypes.string,
-    })
-  ),
+  search: PropTypes.shape({
+    searchResults: PropTypes.arrayOf(
+      PropTypes.shape({
+        Title: PropTypes.string,
+      })
+    ),
+  })
 };
 
 const mapStateToProps = (state) => ({
