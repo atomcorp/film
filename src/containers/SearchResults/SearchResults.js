@@ -2,13 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {SearchResult} from '../';
-import {
-  addFilmImdbDataToCollection,
-} from '../../redux/actions/collection-actions';
 
-const SearchResults = ({searchResults}) => (
+const SearchResults = ({searchResults, search}) => (
   <div className="search-results">
-    {searchResults.map((result) => (
+    {search.searchResults.map((result) => (
       <SearchResult key={result.imdbID} {...result} />
     ))}
   </div>
@@ -23,14 +20,10 @@ SearchResults.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  search: state.state,
+  search: state.search,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  addFilmImdbDataToCollection: ({imdbID}) => {
-    dispatch(addFilmImdbDataToCollection({imdbID}));
-  },
-});
+const mapDispatchToProps = (dispatch) => ({});
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchResults);
 

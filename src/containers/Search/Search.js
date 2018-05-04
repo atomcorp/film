@@ -62,14 +62,6 @@ class Search extends Component {
             onChange={this.handleChange}
           />
           <input type="submit" value="Search" />
-          <br />
-          Film name: {this.props.search ? this.props.search.filmName : null}
-          <br />
-          Film results:{' '}
-          {this.props.search && this.props.search.searchResults ? (
-            <SearchResults searchResults={this.props.search.searchResults} />
-          ) : null}
-          Film messages: {this.props.search ? this.props.search.message : null}
         </form>
       </div>
     );
@@ -78,20 +70,9 @@ class Search extends Component {
 
 Search.propTypes = {
   searchForAFilm: PropTypes.func,
-  search: PropTypes.shape({
-    filmName: PropTypes.string,
-    searchResults: PropTypes.arrayOf(
-      PropTypes.shape({
-        Title: PropTypes.string,
-      })
-    ),
-    message: PropTypes.string,
-  }),
 };
 
-const mapStateToProps = (state) => ({
-  search: state.search,
-});
+const mapStateToProps = (state) => ({});
 
 /**
  * @param {Dispatch} dispatch - redux function
