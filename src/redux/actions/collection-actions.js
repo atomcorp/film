@@ -4,6 +4,13 @@ const ADD_TO_COLLECTION = {
   SUCCESS: 'ADD_TO_COLLECTION_SUCCESS',
   FAIL: 'ADD_TO_COLLECTION_FAIL',
 };
+const ADD_TO_WATCHED_LIST = {
+  ATTEMPT: 'ADD_TO_WATCHED_LIST_ATTEMPT',
+  SUCCESS: 'ADD_TO_WATCHED_LIST_SUCCESS',
+  FAIL: 'ADD_TO_WATCHED_LIST_FAIL',
+}
+
+// ADD TO COLLECTION
 
 const addToCollectionAttempt = ({imdbID}) => ({
   type: ADD_TO_COLLECTION.ATTEMPT,
@@ -60,4 +67,46 @@ const addFilmImdbDataToCollection = ({imdbID}) => {
   };
 };
 
-export {addFilmImdbDataToCollection, ADD_TO_COLLECTION};
+// ADD TO WATCHED LIST
+
+const addToWatchedListAttempt = () => ({
+  type: ADD_TO_WATCHED_LIST.ATTEMPT,
+});
+
+const addToWatchedListSuccess = ({imdbID}) => ({
+  type: ADD_TO_WATCHED_LIST.SUCCESS,
+  imdbID,
+});
+
+const addToWatchedListFail = ({message}) => ({
+  type: ADD_TO_WATCHED_LIST.FAIL,
+  message,
+});
+
+const isFilmAlreadyInWatchList = ({imdbID, watched}) => {
+  return watched.includes(imdbID);
+}
+
+const addFilmToWatchedList = ({imdbID}) => {
+  return (dispatch, getState) => {
+    const state = getState();
+    dispatch(addToWatchedListAttempt());
+    if (isFilmAlreadyInWatchList({
+      imdbID,
+      watched: state.collection.watched,
+    })) {
+    dispatch(addToWatchedListFail({
+      message: 'Already in list',
+    }));
+    return;
+    }
+    dispatch(addToWatchedListSuccess({imdbID}));
+  }
+}
+
+export {
+  ADD_TO_COLLECTION,
+  addFilmImdbDataToCollection,
+  ADD_TO_WATCHED_LIST,
+  addFilmToWatchedList,
+};

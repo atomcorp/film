@@ -1,0 +1,518 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"get",
+				"getState"
+			],
+			[
+				"searchResul",
+				"searchResults"
+			],
+			[
+				"Searc",
+				"SearchResults"
+			],
+			[
+				"Sea",
+				"SearchResult"
+			],
+			[
+				"Sear",
+				"SearchResultContainer"
+			],
+			[
+				"d",
+				"document"
+			],
+			[
+				"quer",
+				"querySelector"
+			],
+			[
+				"purchase",
+				"purchase__buy"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"padding",
+				"padding-right"
+			],
+			[
+				"a",
+				"anim-\tanimation: ${1:name} ${2:duration} ${3:timing-function} ${4:delay} ${5:iteration-count} ${6:direction} ${7:fill-mode};"
+			],
+			[
+				"for",
+				"for\tfor (…) {…}"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "Package Control Messages\n========================\n\nMaterial Theme\n--------------\n\n  #### Material Theme for Sublime Text 3\n  \n  ## Version 4.1.5\n  \n  📣 **BUG FIXES**:\n  * Fix theme not activating after installation ([#1230](https://github.com/equinusocio/material-theme/issues/1230)) ([1e8ffa5](https://github.com/equinusocio/material-theme/commit/1e8ffa5))\n  \n  ** Check the official changelog (https://github.com/equinusocio/material-theme/blob/master/CHANGELOG.md) **\n",
+			"settings":
+			{
+				"buffer_size": 471,
+				"line_ending": "Windows",
+				"name": "Package Control Messages",
+				"read_only": true,
+				"scratch": true
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"babe",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"them",
+				"UI: Select Theme"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"mater",
+				"Material Theme: Activate theme"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"twig",
+				"Set Syntax: HTML (Twig)"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"scss",
+				"Set Syntax: SCSS"
+			],
+			[
+				"forma",
+				"CodeFormatter: Format Code"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 428.0
+	},
+	"console":
+	{
+		"height": 162.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/tom/sites/film",
+		"/C/Users/tom/sites/film/src",
+		"/C/Users/tom/sites/film/src/components",
+		"/C/Users/tom/sites/film/src/components/FilmApp",
+		"/C/Users/tom/sites/film/src/containers",
+		"/C/Users/tom/sites/film/src/containers/Collection",
+		"/C/Users/tom/sites/film/src/containers/Search",
+		"/C/Users/tom/sites/film/src/containers/SearchResult",
+		"/C/Users/tom/sites/film/src/containers/SearchResults",
+		"/C/Users/tom/sites/film/src/helpers",
+		"/C/Users/tom/sites/film/src/redux",
+		"/C/Users/tom/sites/film/src/redux/actions",
+		"/C/Users/tom/sites/film/src/redux/reducers"
+	],
+	"file_history":
+	[
+		"/C/Users/tom/sites/film/src/containers/Search/Search.js",
+		"/C/Users/tom/sites/film/src/redux/reducers/search-reducers.js",
+		"/C/Users/tom/sites/film/src/helpers/stagger-requests.js",
+		"/C/Users/tom/sites/film/src/helpers/index.js",
+		"/C/Users/tom/sites/film/src/redux/reducers/collection-reducers.js",
+		"/C/Users/tom/sites/film/src/redux/actions/collection-actions.js",
+		"/C/Users/tom/sites/film/src/containers/SearchResult/SearchResult.js",
+		"/C/Users/tom/sites/film/src/containers/SearchResults/SearchResults.js",
+		"/C/Users/tom/sites/film/src/containers/index.js",
+		"/C/Users/tom/sites/film/src/components/FilmApp/FilmApp.js",
+		"/C/Users/tom/sites/film/src/components/SearchResult/SearchResult.js",
+		"/C/Users/tom/sites/film/src/components/index.js",
+		"/C/Users/tom/sites/film/src/components/SearchResults/SearchResults.js",
+		"/C/Users/tom/sites/film/src/components/Search/Search.js",
+		"/C/Users/tom/sites/film/src/containers/Search/SearchContainer.js",
+		"/C/Users/tom/sites/film/src/components/Collection/Collection.js",
+		"/C/Users/tom/sites/film/src/containers/Collection/CollectionContainer.js",
+		"/C/Users/tom/sites/film/src/containers/SearchResult/SearchResultContainer.js",
+		"/C/Users/tom/sites/film/src/containers/SearchResults/SearchResultsContainer.js",
+		"/C/Users/tom/sites/film/src/containers/SearchResultsContainer.js",
+		"/C/Users/tom/sites/film/src/containers/SearchResultContainer.js",
+		"/C/Users/tom/sites/film/src/containers/SearchContainer.js",
+		"/C/Users/tom/sites/film/src/containers/CollectionContainer.js",
+		"/C/Users/tom/sites/film/src/App.js",
+		"/C/Users/tom/sites/spookmarks/package.json",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/edge/_animate-video.js",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/edge/edge--scroll/_edge--scroll.js",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/edge/edge--scroll/_edge--scroll.scss",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/edge/edge--scroll/edge--scroll--popup.twig",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/edge/edge--scroll/paragraph--edge-series-section.html.twig",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/edge/edge--scroll/edge--scroll.twig",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/edge/edge--scroll/click-area.svg",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/edge/edge.js",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/edge/edge.twig",
+		"/C/Users/tom/sites/ca-v4-dylan/dylan.sublime-project",
+		"/C/Users/tom/sites/ca-v4-dylan/sites/default/settings.php",
+		"/C/Users/tom/sites/ca-v4-dylan/sites/default/settings.local.php",
+		"/C/Users/tom/sites/ca-v4-dylan/README.md",
+		"/C/Users/tom/sites/ca-v4-dylan/config/active/tvi.taxonomy_vocabulary.categories.yml",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/range--add-ons/node--product--add-on.html.twig",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/related-content/related-content.scss",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/purchase/purchase.scss",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/product/product--cta/product--cta.html.twig",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/purchase/purchase.html.twig",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/product/product--cta/_product--cta.scss",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/range--add-ons/range--add-ons.scss",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/range--add-ons/range--add-ons.html.twig",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/embed-product--purchase/node--product--embed-product-purchase.html.twig",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/product/product.html.twig",
+		"/C/Users/tom/sites/ca-v4-dylan/sites/development.services.yml",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/ca_dylan_theme.libraries.yml",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/embed-product--purchase/embed-product--purchase.scss",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/global/variables/_colours.scss",
+		"/C/Users/tom/sites/ca-v4-dylan/sites/settings.local.php",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/embed-product--purchase/embed-product--purchase.js",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/utility/commerce-location/commerce-location.js",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/range/range.html.twig",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/blogs/blogs.js",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/templates/paragraphs/paragraph--range-add-ons.html.twig",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/utility/commerce-location/commerce-location.scss",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/range-add-ons/range-add-ons.html.twig",
+		"/C/Users/tom/sites/ca-v4-dylan/gulpfile.js",
+		"/C/Users/tom/sites/ca-v4-dylan/modules/custom/ca_dylan_config/ca_dylan_config.features.yml",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/embed-product--purchase/embed-product--purchase.html.twig",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/embed-product--purchase/embed-product--purchase.css",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/embed-product--purchase/double-image-style-formatter--node--product--field-image-thumb.html.twig",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/components/embed-product--browse/node--product--embed-product-browse.html.twig",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/ca_dylan_theme.theme",
+		"/C/Users/tom/sites/ca-v4-dylan/modules/custom/ca_dylan_module/ca_dylan_module.module",
+		"/C/Users/tom/sites/ca-v4-dylan/modules/custom/ca_dylan_module/src/Http/ShopHttp.php",
+		"/C/Users/tom/sites/ca-v4-dylan/themes/custom/ca_dylan_theme/templates/paragraphs/xparagraph--embed-product-purchase.html.twig",
+		"/C/Users/tom/sites/ca-v4-dylan/sites/sites.php",
+		"/C/Users/tom/sites/ca-v4-dylan/modules/custom/ca_dylan_config/config/install/core.entity_form_display.paragraph.embed_spotify.default.yml",
+		"/C/Users/tom/sites/porfolio/source/js/content/skills.js",
+		"/C/Users/tom/sites/porfolio/source/tests/grid/style.css",
+		"/C/Users/tom/sites/porfolio/source/tests/grid/script.js",
+		"/C/Users/tom/sites/porfolio/grid-test.html",
+		"/C/Users/tom/sites/porfolio/index.html",
+		"/C/Users/tom/sites/porfolio/filter-test.html",
+		"/C/Users/tom/sites/porfolio/source/sass/content/_skills.scss",
+		"/C/Users/tom/sites/porfolio/source/tests/script.js",
+		"/C/Users/tom/sites/porfolio/source/tests/style.css",
+		"/C/Users/tom/sites/b2b-us/themes/ca_b2b/source/sass/_office-products.scss",
+		"/C/Users/tom/sites/b2b-us/themes/ca_b2b/source/sass/style.scss",
+		"/C/Users/tom/sites/b2b-us/themes/ca_b2b/source/sass/_office-dealers.scss",
+		"/C/Users/tom/sites/b2b-us/themes/ca_b2b/source/sass/_office.scss",
+		"/C/Users/tom/sites/b2b-us/themes/ca_b2b/source/sass/_base.scss",
+		"/C/Users/tom/sites/b2b-us/themes/ca_b2b/source/sass/_products.scss",
+		"/C/Users/tom/sites/b2b-us/themes/ca_b2b/source/sass/_products-toolbar.scss",
+		"/C/Users/tom/sites/b2b-us/themes/ca_b2b/templates/views/products/views-exposed-form--customer-products--page.tpl.php",
+		"/C/Users/tom/sites/b2b-us/themes/ca_b2b/source/sass/_header.scss",
+		"/C/Users/tom/sites/b2b-us/themes/ca_b2b/templates/views/products/views-view--customer-products.tpl.php",
+		"/C/Users/tom/sites/b2b-us/themes/ca_b2b/templates/views/views-view-table.tpl.php",
+		"/C/Users/tom/sites/b2b-us/themes/ca_b2b/templates/page.tpl.php",
+		"/C/Users/tom/sites/b2b-us/themes/ca_b2b/source/js/main.js",
+		"/C/Users/tom/sites/b2b-us/themes/ca_b2b/templates/views/cart/views-view--commerce-cart-block.tpl.php",
+		"/C/Users/tom/sites/b2b-us/modules/ca_b2b_functions/inc/commerce.inc",
+		"/C/Users/tom/sites/b2b-us/themes/ca_b2b/source/sass/_nav.scss",
+		"/C/Users/tom/sites/b2b-us/themes/ca_b2b/template.php",
+		"/C/Users/tom/Documents/test.js",
+		"/E/SUMMARY.todo",
+		"/C/Users/tom/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/xampp/htdocs/constellations/sites/all/themes/constellations/bootstrap/stylesheets/_bootstrap.scss",
+		"/C/xampp/htdocs/constellations/sites/all/themes/constellations/sass/_nav-header.scss",
+		"/C/xampp/htdocs/constellations/sites/all/themes/constellations/templates/page--front-page.tpl.php",
+		"/C/xampp/htdocs/constellations/sites/all/themes/constellations/sass/_front-page.scss",
+		"/C/xampp/htdocs/constellations/sites/all/themes/constellations/fonts/stylesheet.css",
+		"/C/xampp/htdocs/constellations/sites/all/themes/constellations/sass/_admin-menu.scss",
+		"/C/xampp/htdocs/constellations/sites/all/themes/constellations/css/style.css",
+		"/C/xampp/htdocs/constellations/sites/all/themes/constellations/constellations.info",
+		"/C/xampp/htdocs/constellations/sites/all/themes/constellations/templates/ds-reset--node-front-page-full.tpl.php",
+		"/C/xampp/htdocs/constellations/sites/all/themes/bootstrap/template.php",
+		"/C/xampp/htdocs/constellations/sites/all/themes/constellations/templates/page.tpl.php",
+		"/C/xampp/htdocs/constellations/sites/all/themes/bootstrap/theme/system/page.tpl.php",
+		"/C/xampp/htdocs/constellations/modules/field/theme/field.tpl.php",
+		"/C/xampp/htdocs/constellations/sites/all/themes/constellations/template.php",
+		"/C/xampp/htdocs/constellations/sites/all/themes/constellations/gulpfile.js",
+		"/C/xampp/htdocs/constellations/sites/all/modules/admin_menu/admin_menu.js",
+		"/C/xampp/htdocs/constellations/sites/all/modules/admin_menu/admin_menu.css",
+		"/C/Users/tom/Desktop/colors.theme",
+		"/C/xampp/htdocs/constellations/sites/default/settings.php",
+		"/C/Users/tom/AppData/Roaming/Sublime Text 3/Packages/User/node.sublime-build",
+		"/C/Users/tom/Sites/wp_portfolio/wp-content/themes/bones-child/library/sass/style.scss",
+		"/C/xampp/htdocs/pro-drupal/sites/all/modules/custom/annotate/annotate.admin.inc",
+		"/C/xampp/htdocs/pro-drupal/modules/field/field.crud.inc",
+		"/C/xampp/htdocs/pro-drupal/sites/all/modules/custom/annotate/annotate.install",
+		"/C/xampp/htdocs/pro-drupal/sites/all/modules/custom/annotate/annotate.module",
+		"/C/xampp/htdocs/pro-drupal/sites/all/modules/custom/annotate/annotate.info"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 167.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"this.timer",
+			"this.startTimer",
+			"this.",
+			"Container",
+			"container",
+			"Container",
+			" ",
+			"SearchResultContainer",
+			"SearchResult",
+			"export"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 471,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								471,
+								471
+							]
+						],
+						"settings":
+						{
+							"auto_indent": false,
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_width": 2,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 36.0
+	},
+	"input":
+	{
+		"height": 73.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 128.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "film.sublime-project",
+	"replace":
+	{
+		"height": 68.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"readme",
+				"README.md"
+			],
+			[
+				"libra",
+				"themes\\custom\\ca_dylan_theme\\ca_dylan_theme.libraries.yml"
+			],
+			[
+				"theme",
+				"themes\\custom\\ca_dylan_theme\\ca_dylan_theme.theme"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 388.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

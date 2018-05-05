@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import {addFilmToWatchedList} from '../../redux/actions/collection-actions';
 
 /**
  * @typedef film
@@ -29,7 +30,10 @@ import {connect} from 'react-redux';
  * @param {Array<film>} collection.film
  * @return {HTML}
  */
-const Collection = ({collection}) => (
+const Collection = ({
+  collection,
+  addFilmToWatchedList,
+}) => (
   <div>
     <h2>Collection:</h2>
     <ol>
@@ -39,6 +43,11 @@ const Collection = ({collection}) => (
             <h4>{film.Title} ({film.Year})</h4>
             {film.Director}
             <br />
+            <i onClick={() => {
+              addFilmToWatchedList({
+                imdbID: film.imdbID,
+              })
+            }}>Add film to watch list</i>
           </li>
         ))}
     </ol>
@@ -78,4 +87,13 @@ const mapStateToProps = (state) => ({
   collection: state.collection,
 });
 
-export default connect(mapStateToProps)(Collection);
+const mapDispatchToProps = (dispatch) => ({
+  addFilmToWatchedList: (imdbID) => {
+    dispatch(addFilmToWatchedList(imdbID));
+  }
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Collection);
