@@ -47,7 +47,7 @@ const Collection = ({
               addFilmToWatchedList({
                 imdbID: film.imdbID,
               })
-            }}>Add film to watch list</i>
+            }}>Add film to watched list</i>
           </li>
         ))}
     </ol>

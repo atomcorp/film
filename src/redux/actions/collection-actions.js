@@ -95,14 +95,16 @@ const addFilmToWatchedList = ({imdbID}) => {
       imdbID,
       watched: state.collection.watched,
     })) {
-    dispatch(addToWatchedListFail({
-      message: 'Already in list',
-    }));
-    return;
+      dispatch(addToWatchedListFail({
+        message: 'Already in list',
+      }));
+      return;
     }
     dispatch(addToWatchedListSuccess({imdbID}));
   }
 }
+
+// 
 
 export {
   ADD_TO_COLLECTION,

@@ -2,6 +2,7 @@ Task:
   ✔ Throttle search within Redux, so we can show loading icon when user is typing or just do it through state maybe @done (18-05-05 11:12)
   ✔ Click on film name should add it into your collection @high @done (18-05-05 11:12)
   ☐ Actions you can perform on collections include: watched (toggle), prioritise
+    ✔ watched @done (18-05-05 11:46)
   ☐ Lists: Watched list, to watch list
   ☐ Filter by director etc (need another API req). Maybe get it when you add film to your collection @idea
   ☐ Add user (name), maybe stats
@@ -10,7 +11,7 @@ Task:
   
 
 Ideas: 
-  ☐ Name: The Black List?
+  ✘ Name: The Black List? @cancelled (18-05-05 11:45)
 
 FYI:
   ~ Use [CSSNext](http://cssnext.io/features/) for CSS Modules
