@@ -8,7 +8,7 @@ const ADD_TO_WATCHED_LIST = {
   ATTEMPT: 'ADD_TO_WATCHED_LIST_ATTEMPT',
   SUCCESS: 'ADD_TO_WATCHED_LIST_SUCCESS',
   FAIL: 'ADD_TO_WATCHED_LIST_FAIL',
-}
+};
 
 // ADD TO COLLECTION
 
@@ -85,7 +85,7 @@ const addToWatchedListFail = ({message}) => ({
 
 const isFilmAlreadyInWatchList = ({imdbID, watched}) => {
   return watched.includes(imdbID);
-}
+};
 
 const addFilmToWatchedList = ({imdbID}) => {
   return (dispatch, getState) => {
@@ -101,10 +101,8 @@ const addFilmToWatchedList = ({imdbID}) => {
       return;
     }
     dispatch(addToWatchedListSuccess({imdbID}));
-  }
-}
-
-// 
+  };
+};
 
 export {
   ADD_TO_COLLECTION,

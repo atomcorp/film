@@ -18,7 +18,7 @@ SearchResults.propTypes = {
         Title: PropTypes.string,
       })
     ),
-  })
+  }),
 };
 
 const mapStateToProps = (state) => ({

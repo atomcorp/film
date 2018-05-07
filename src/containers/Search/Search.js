@@ -1,7 +1,6 @@
 /** @module containers/Search */
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {SearchResults} from '../';
 import {staggerRequests as _staggerRequests} from '../../helpers';
 import {connect} from 'react-redux';
 import {searchForAFilm} from '../../redux/actions/search-actions';

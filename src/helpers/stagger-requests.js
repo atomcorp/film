@@ -4,11 +4,11 @@ export const staggerRequests = (timeToStagger) => {
     timer = window.setTimeout(() => {
       callback();
     }, timeToStagger);
-  }
+  };
   return (callback) => {
     if (timer) {
       timer = window.clearTimeout(timer);
     }
     startTimer(callback);
-  }
-}
+  };
+};

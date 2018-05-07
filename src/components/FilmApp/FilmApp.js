@@ -1,6 +1,6 @@
 import React from 'react';
 import {Search, Collection, SearchResults} from '../../containers';
-import scss from './FilmApp.module.scss';
+// import scss from './FilmApp.module.scss';
 
 const FilmApp = () => (
   <div className="film-app">

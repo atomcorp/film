@@ -46,7 +46,7 @@ const Collection = ({
             <i onClick={() => {
               addFilmToWatchedList({
                 imdbID: film.imdbID,
-              })
+              });
             }}>Add film to watched list</i>
           </li>
         ))}
@@ -55,6 +55,7 @@ const Collection = ({
 );
 
 Collection.propTypes = {
+  addFilmToWatchedList: PropTypes.func,
   collection: PropTypes.shape({
     films: PropTypes.arrayOf(
       PropTypes.shape({
@@ -90,8 +91,8 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   addFilmToWatchedList: (imdbID) => {
     dispatch(addFilmToWatchedList(imdbID));
-  }
-})
+  },
+});
 
 export default connect(
   mapStateToProps,

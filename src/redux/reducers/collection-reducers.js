@@ -19,7 +19,12 @@ import {
 
 /**
  * Collection reducer
- * 
+ * @param {CollectionState} state
+ * @param {object} action
+ * @param {object} action.filmResult
+ * @param {string} action.message
+ * @param {string} action.imdbID
+ * @return {CollectionState}
  */
 const collection = (
   state = {
@@ -42,7 +47,7 @@ const collection = (
       });
     case ADD_TO_WATCHED_LIST.SUCCESS:
       return Object.assign({}, state, {
-        watched: [...state.watched, action.imdbID], 
+        watched: [...state.watched, action.imdbID],
       });
     case ADD_TO_WATCHED_LIST.ATTEMPT:
     case ADD_TO_COLLECTION.ATTEMPT:
