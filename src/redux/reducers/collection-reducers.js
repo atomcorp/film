@@ -1,6 +1,6 @@
 import {
   ADD_TO_COLLECTION,
-  ADD_TO_WATCHED_LIST,
+  TOGGLE_WATCHED_LIST,
 } from '../actions/collection-actions';
 /**
  * This will hold all the films that have been added
@@ -40,16 +40,26 @@ const collection = (
         films: [...state.films, action.filmResult],
         message: [],
       });
-    case ADD_TO_WATCHED_LIST.FAIL:
     case ADD_TO_COLLECTION.FAIL:
       return Object.assign({}, state, {
         message: [...state.message, action.message],
       });
-    case ADD_TO_WATCHED_LIST.SUCCESS:
+    case TOGGLE_WATCHED_LIST.ADD:
       return Object.assign({}, state, {
         watched: [...state.watched, action.imdbID],
       });
-    case ADD_TO_WATCHED_LIST.ATTEMPT:
+    case TOGGLE_WATCHED_LIST.REMOVE:
+      return Object.assign({}, state, {
+        watched: state.watched.reduce(
+          (acc, filmIds) => {
+            if (filmIds !== action.imdbID) {
+              return [...acc, filmIds];
+            }
+            return acc;
+          }
+        , []),
+      });
+    case TOGGLE_WATCHED_LIST.ATTEMPT:
     case ADD_TO_COLLECTION.ATTEMPT:
     default:
       return state;

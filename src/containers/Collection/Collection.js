@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {addFilmToWatchedList} from '../../redux/actions/collection-actions';
+import {toggleWatchedList} from '../../redux/actions/collection-actions';
 
 /**
  * @typedef film
@@ -32,7 +32,7 @@ import {addFilmToWatchedList} from '../../redux/actions/collection-actions';
  */
 const Collection = ({
   collection,
-  addFilmToWatchedList,
+  toggleWatchedList,
 }) => (
   <div>
     <h2>Collection:</h2>
@@ -44,10 +44,14 @@ const Collection = ({
             {film.Director}
             <br />
             <i onClick={() => {
-              addFilmToWatchedList({
+              toggleWatchedList({
                 imdbID: film.imdbID,
               });
-            }}>Add film to watched list</i>
+            }}>{
+              collection.watched.includes(film.imdbID)
+                ? 'Remove from watched list'
+                : 'Add to watch list'
+            }</i>
           </li>
         ))}
     </ol>
@@ -55,7 +59,7 @@ const Collection = ({
 );
 
 Collection.propTypes = {
-  addFilmToWatchedList: PropTypes.func,
+  toggleWatchedList: PropTypes.func,
   collection: PropTypes.shape({
     films: PropTypes.arrayOf(
       PropTypes.shape({
@@ -89,8 +93,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  addFilmToWatchedList: (imdbID) => {
-    dispatch(addFilmToWatchedList(imdbID));
+  toggleWatchedList: (imdbID) => {
+    dispatch(toggleWatchedList(imdbID));
   },
 });
 

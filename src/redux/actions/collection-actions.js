@@ -4,10 +4,10 @@ const ADD_TO_COLLECTION = {
   SUCCESS: 'ADD_TO_COLLECTION_SUCCESS',
   FAIL: 'ADD_TO_COLLECTION_FAIL',
 };
-const ADD_TO_WATCHED_LIST = {
-  ATTEMPT: 'ADD_TO_WATCHED_LIST_ATTEMPT',
-  SUCCESS: 'ADD_TO_WATCHED_LIST_SUCCESS',
-  FAIL: 'ADD_TO_WATCHED_LIST_FAIL',
+const TOGGLE_WATCHED_LIST = {
+  ATTEMPT: 'TOGGLE_WATCHED_LIST_ATTEMPT',
+  ADD: 'TOGGLE_WATCHED_LIST_ADD',
+  REMOVE: 'TOGGLE_WATCHED_LIST_REMOVE',
 };
 
 // ADD TO COLLECTION
@@ -67,46 +67,50 @@ const addFilmImdbDataToCollection = ({imdbID}) => {
   };
 };
 
-// ADD TO WATCHED LIST
-
-const addToWatchedListAttempt = () => ({
-  type: ADD_TO_WATCHED_LIST.ATTEMPT,
-});
-
-const addToWatchedListSuccess = ({imdbID}) => ({
-  type: ADD_TO_WATCHED_LIST.SUCCESS,
-  imdbID,
-});
-
-const addToWatchedListFail = ({message}) => ({
-  type: ADD_TO_WATCHED_LIST.FAIL,
-  message,
-});
-
-const isFilmAlreadyInWatchList = ({imdbID, watched}) => {
+const isFilmInWatchList = ({imdbID, watched}) => {
   return watched.includes(imdbID);
 };
 
-const addFilmToWatchedList = ({imdbID}) => {
+const toggleWatchedListAttempt = () => ({
+  type: TOGGLE_WATCHED_LIST.ATTEMPT,
+});
+
+const toggleWatchedListAdd = ({imdbID}) => ({
+  type: TOGGLE_WATCHED_LIST.ADD,
+  imdbID,
+});
+
+const toggleWatchedListRemove = ({imdbID}) => ({
+  type: TOGGLE_WATCHED_LIST.REMOVE,
+  imdbID,
+});
+
+/**
+ * Either add or remove film from watchlist
+ * @param {object} watchlistParams
+ * @param {string} watchlistParams.imdbID
+ * @return {void} void
+ */
+const toggleWatchedList = ({imdbID}) => {
   return (dispatch, getState) => {
     const state = getState();
-    dispatch(addToWatchedListAttempt());
-    if (isFilmAlreadyInWatchList({
-      imdbID,
+    dispatch(toggleWatchedListAttempt());
+    if (!isFilmInWatchList({
       watched: state.collection.watched,
+      imdbID,
     })) {
-      dispatch(addToWatchedListFail({
-        message: 'Already in list',
-      }));
-      return;
+      // add to watched list
+      dispatch(toggleWatchedListAdd({imdbID}));
+    } else {
+      // remove from watched list
+      dispatch(toggleWatchedListRemove({imdbID}));
     }
-    dispatch(addToWatchedListSuccess({imdbID}));
   };
 };
 
 export {
   ADD_TO_COLLECTION,
   addFilmImdbDataToCollection,
-  ADD_TO_WATCHED_LIST,
-  addFilmToWatchedList,
+  TOGGLE_WATCHED_LIST,
+  toggleWatchedList,
 };

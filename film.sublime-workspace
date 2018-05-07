@@ -91,8 +91,16 @@
 			"file": "src/redux/actions/collection-actions.js",
 			"settings":
 			{
-				"buffer_size": 2581,
+				"buffer_size": 2580,
 				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/redux/reducers/collection-reducers.js",
+			"settings":
+			{
+				"buffer_size": 1438,
 				"line_ending": "Windows"
 			}
 		}
@@ -198,19 +206,10 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/tom/sites/film",
-		"/C/Users/tom/sites/film/src",
-		"/C/Users/tom/sites/film/src/components",
-		"/C/Users/tom/sites/film/src/components/FilmApp",
-		"/C/Users/tom/sites/film/src/containers",
-		"/C/Users/tom/sites/film/src/containers/Collection",
-		"/C/Users/tom/sites/film/src/containers/Search",
-		"/C/Users/tom/sites/film/src/containers/SearchResult",
-		"/C/Users/tom/sites/film/src/containers/SearchResults",
-		"/C/Users/tom/sites/film/src/helpers",
-		"/C/Users/tom/sites/film/src/redux",
-		"/C/Users/tom/sites/film/src/redux/actions",
-		"/C/Users/tom/sites/film/src/redux/reducers"
+		"/C/Users/atom/sites/film",
+		"/C/Users/atom/sites/film/src",
+		"/C/Users/atom/sites/film/src/redux",
+		"/C/Users/atom/sites/film/src/redux/reducers"
 	],
 	"file_history":
 	[
@@ -345,7 +344,7 @@
 	],
 	"find":
 	{
-		"height": 50.0
+		"height": 37.0
 	},
 	"find_in_files":
 	{
@@ -387,7 +386,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -396,26 +395,57 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2581,
+						"buffer_size": 2580,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2051,
-								2051
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"git_gutter_is_enabled": true,
+							"git_gutter_is_enabled": false,
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2742.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/redux/reducers/collection-reducers.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1438,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 870.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -426,7 +456,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 38.0
+		"height": 37.0
 	},
 	"input":
 	{
@@ -455,6 +485,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
 	"output.exec":
 	{
 		"height": 128.0
@@ -471,7 +505,7 @@
 	"project": "film.sublime-project",
 	"replace":
 	{
-		"height": 72.0
+		"height": 70.0
 	},
 	"save_all_on_build": true,
 	"select_file":
