@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import {DragDropContext, Droppable, Draggable} from 'react-beautiful-dnd';
 
 /**
  * @typedef film
@@ -28,34 +29,88 @@ import PropTypes from 'prop-types';
  * @param {Array<film>} collection.film
  * @return {HTML}
  */
-const Collection = ({
-  films,
-  watched,
-  toggleWatchedList,
-}) => (
-    <div>
-      <h2>Collection:</h2>
-      <ol>
-        {films &&
-          films.map((film) => (
-            <li key={film.imdbID}>
-              <h4>{film.Title} ({film.Year})</h4>
-              {film.Director}
-              <br />
-              <i onClick={() => {
-                toggleWatchedList({
-                  imdbID: film.imdbID,
-                });
-              }}>{
-                  watched.includes(film.imdbID)
-                    ? 'Remove from watched list'
-                    : 'Add to watched list'
-                }</i>
-            </li>
-          ))}
-      </ol>
-    </div>
-  );
+const Collection = ({films, watched, toggleWatchedList}) => (
+  <DraggableList>
+    <h2>Collection:</h2>
+    <ol>
+      <Droppable droppableId="collection" type="COLLECTION">
+        {(provided, snapshot) => (
+          <div
+            ref={provided.innerRef}
+            style={{ backgroundColor: snapshot.isDraggingOver ? 'blue' : 'grey' }}
+            {...provided.droppableProps}
+          >
+            {films &&
+              films.map((film, index) => (
+              <Draggable key={index} draggableId={index} index={index}>
+                {(provided, snapshot) => (
+                  <div
+                    ref={provided.innerRef}
+                    {...provided.draggableProps}
+                    {...provided.dragHandleProps}
+                  >
+                    <li>
+                      <h4>
+                        {film.Title} ({film.Year})
+                    </h4>
+                      {film.Director}
+                      <br />
+                      <i
+                        onClick={() => {
+                          toggleWatchedList({
+                            imdbID: film.imdbID,
+                          });
+                        }}
+                      >
+                        {watched.includes(film.imdbID)
+                          ? 'Remove from watched list'
+                          : 'Add to watched list'}
+                      </i>
+                    </li>
+                  </div>
+                )}
+                  
+                </Draggable>
+              ))}
+          </div>
+        )}
+      
+        </Droppable>
+    </ol>
+  </DraggableList>
+);
+
+/**
+ * DraggableList using DnD
+ */
+class DraggableList extends Component {
+  onDragStart = ({draggableId, type, source}) => {
+    // const type = {
+    //   draggableId: 'DraggableId',
+    //   type: 'TypeId',
+    //   source: 'DraggableLocation',
+    // };
+  };
+  onDragUpdate = ({draggableId, type, source}) => {
+    //
+  };
+  onDragEnd = (DragUpdate, DropReason) => {
+    // the only one that is required
+  };
+
+  /** @return {HTML} */
+  render() {
+    return (
+      <DragDropContext
+        onDragStart={this.onDragStart}
+        onDragUpdate={this.onDragUpdate}
+        onDragEnd={this.onDragEnd}
+      >
+        {this.props.children}
+      </DragDropContext>
+    );
+  }
+}
 
 Collection.propTypes = {
   toggleWatchedList: PropTypes.func,
