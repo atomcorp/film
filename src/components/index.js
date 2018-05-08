@@ -1,5 +1,3 @@
 import FilmApp from './FilmApp/FilmApp';
-
-export {
-  FilmApp,
-}
+import Collection from './Collection/Collection';
+export {FilmApp, Collection};

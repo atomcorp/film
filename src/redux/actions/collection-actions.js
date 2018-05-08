@@ -9,6 +9,12 @@ const TOGGLE_WATCHED_LIST = {
   ADD: 'TOGGLE_WATCHED_LIST_ADD',
   REMOVE: 'TOGGLE_WATCHED_LIST_REMOVE',
 };
+const SET_COLLECTION_VISIBILITY = 'SET_COLLECTION_VISIBILITY';
+const COLLECTION_VISIBILITY = {
+  SHOW_ALL: 'SHOW_ALL',
+  UNWATCHED: 'SHOW_UNWATCHED',
+  WATCHED: 'SHOW_WATCHED',
+};
 
 // ADD TO COLLECTION
 
@@ -108,9 +114,18 @@ const toggleWatchedList = ({imdbID}) => {
   };
 };
 
+// CHANGE FILTER
+const setCollectionVisibility = ({visibility}) => ({
+  type: SET_COLLECTION_VISIBILITY,
+  visibility,
+});
+
 export {
   ADD_TO_COLLECTION,
   addFilmImdbDataToCollection,
   TOGGLE_WATCHED_LIST,
   toggleWatchedList,
+  setCollectionVisibility,
+  COLLECTION_VISIBILITY,
+  SET_COLLECTION_VISIBILITY,
 };

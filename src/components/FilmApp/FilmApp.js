@@ -1,5 +1,5 @@
 import React from 'react';
-import {Search, Collection, SearchResults} from '../../containers';
+import {Search, Collection, SearchResults, Visibility} from '../../containers';
 // import scss from './FilmApp.module.scss';
 
 const FilmApp = () => (
@@ -8,6 +8,7 @@ const FilmApp = () => (
     <Search />
     <SearchResults />
     <Collection />
+    <Visibility />
   </div>
 );
 

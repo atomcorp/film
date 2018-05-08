@@ -1,6 +1,8 @@
 import {
   ADD_TO_COLLECTION,
   TOGGLE_WATCHED_LIST,
+  COLLECTION_VISIBILITY,
+  SET_COLLECTION_VISIBILITY,
 } from '../actions/collection-actions';
 /**
  * This will hold all the films that have been added
@@ -31,10 +33,13 @@ const collection = (
     films: [],
     message: [],
     watched: [],
+    visibility: COLLECTION_VISIBILITY.SHOW_ALL,
   },
   action
 ) => {
   switch (action.type) {
+    case SET_COLLECTION_VISIBILITY:
+      return Object.assign({}, state, {visibility: action.visibility});
     case ADD_TO_COLLECTION.SUCCESS:
       return Object.assign({}, state, {
         films: [...state.films, action.filmResult],

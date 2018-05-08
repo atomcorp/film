@@ -1,13 +1,20 @@
 Task:
-  ✔ Throttle search within Redux, so we can show loading icon when user is typing or just do it through state maybe @done (18-05-05 11:12)
-  ✔ Click on film name should add it into your collection @high @done (18-05-05 11:12)
-  ☐ Actions you can perform on collections include: watched (toggle), prioritise
-    ✔ watched @done (18-05-05 11:46)
-  ☐ Lists: Watched list, to watch list
+  ✔ Throttle search within Redux, so we can show loading icon when user is typing or just do it through state maybe @done(18-05-08 23:30)
+  ✔ Click on film name should add it into your collection @high @done(18-05-05 11:12)
+  ✔ Actions you can perform on collections include: watched (toggle), prioritise @done(18-05-08 23:30)
+    ✔ watched @done(18-05-05 11:46)
+    ✔ toggle @done(18-05-07 22:10)
+  ✔ Lists: Watched list, to watch list @done(18-05-08 23:30)
+    ✔ watched list @done(18-05-08 23:30)
+    ✘ to watched list (what is this for?) @hmm @cancelled(18-05-08 23:30)
   ☐ Filter by director etc (need another API req). Maybe get it when you add film to your collection @idea
+    ☐ Filter by common themes, actor, year, director, decade
+    ☐ decade selector
+    ☐ rating selector (acclaimed, cult, trash)
   ☐ Add user (name), maybe stats
   ☐ Drag and drop the movie names for order (omg use: https://github.com/atlassian/react-beautiful-dnd)
   ☐ Use thumbs up/down when clicking Watched
+  ☐ Random movie selector (once a day)
   
 
 Ideas: 
