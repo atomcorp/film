@@ -3,7 +3,9 @@ import {
   TOGGLE_WATCHED_LIST,
   COLLECTION_VISIBILITY,
   SET_COLLECTION_VISIBILITY,
+  REORDER_COLLECTION,
 } from '../actions/collection-actions';
+import reorderArray from '../../helpers/reorder';
 /**
  * This will hold all the films that have been added
  *
@@ -63,6 +65,10 @@ const collection = (
             return acc;
           }
         , []),
+      });
+    case REORDER_COLLECTION:
+      return Object.assign({}, state, {
+        films: reorderArray(state.films, action.from, action.to),
       });
     case TOGGLE_WATCHED_LIST.ATTEMPT:
     case ADD_TO_COLLECTION.ATTEMPT:

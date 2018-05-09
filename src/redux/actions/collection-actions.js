@@ -16,6 +16,8 @@ const COLLECTION_VISIBILITY = {
   WATCHED: 'SHOW_WATCHED',
 };
 
+const REORDER_COLLECTION = 'REORDER_COLLECTION';
+
 // ADD TO COLLECTION
 
 const addToCollectionAttempt = ({imdbID}) => ({
@@ -120,6 +122,14 @@ const setCollectionVisibility = ({visibility}) => ({
   visibility,
 });
 
+// REORDER COLLECTION
+
+const reorderCollection = ({from, to}) => ({
+  type: REORDER_COLLECTION,
+  from,
+  to,
+});
+
 export {
   ADD_TO_COLLECTION,
   addFilmImdbDataToCollection,
@@ -128,4 +138,6 @@ export {
   setCollectionVisibility,
   COLLECTION_VISIBILITY,
   SET_COLLECTION_VISIBILITY,
+  reorderCollection,
+  REORDER_COLLECTION,
 };
