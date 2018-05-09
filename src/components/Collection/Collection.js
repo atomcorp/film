@@ -30,7 +30,7 @@ import {Droppable, Draggable} from 'react-beautiful-dnd';
  * @param {Array<film>} collection.film
  * @return {HTML}
  */
-const Collection = ({films, watched, toggleWatchedList}) => (
+const Collection = ({films, watched, toggleWatchedList, allFilms}) => (
   <DraggableList>
     <h2>Collection:</h2>
     <ol>
@@ -43,7 +43,13 @@ const Collection = ({films, watched, toggleWatchedList}) => (
           >
             {films &&
               films.map((film, index) => (
-                <Draggable key={index} draggableId={film.imdbID} index={index}>
+                <Draggable
+                  key={index}
+                  draggableId={film.imdbID}
+                  index={allFilms.findIndex(
+                    (allFilm) => film.imdbID === allFilm.imdbID
+                  )}
+                >
                   {(provided, snapshot) => (
                     <div
                       ref={provided.innerRef}
@@ -105,6 +111,7 @@ Collection.propTypes = {
       Website: PropTypes.string,
     })
   ),
+  allFilms: PropTypes.arrayOf(PropTypes.object),
   watched: PropTypes.arrayOf(PropTypes.string),
 };
 

@@ -27,6 +27,7 @@ const filterCollection = ({films, visibility, watched}) => {
 
 const mapStateToProps = (state) => ({
   films: filterCollection(state.collection),
+  allFilms: state.collection.films,
   watched: state.collection.watched,
 });
 
