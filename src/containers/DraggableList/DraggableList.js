@@ -56,39 +56,17 @@ class DraggableList extends Component {
         to: DragUpdate.destination.index,
       });
     } else if (DragUpdate.destination) {
-      // 1,2,3,4,5,6
-      // 1,2, ,4, ,
-      // 1, , ,4,2,
-      // 1,3,4,2,5,6
-      // We need to find out:
-      // If the item gets move up, what index is it front of?
-      // if the item has moved down, what index is it behind
-      const realIndex = this.props.collection.films.findIndex(
-        (film) => DragUpdate.draggableId === film.imdbID
-      );
       const filteredCollection = filterCollection(this.props.collection);
-      console.log(
-        realIndex,
-        DragUpdate.source.index,
-        DragUpdate.destination.index
-      );
-      if (DragUpdate.source.index < DragUpdate.destination.index) {
-        console.log('Down');
-        const getRealIndexOfFilmInFront = this.props.collection.films.findIndex(
+      this.props.reorderCollection({
+        from: this.props.collection.films.findIndex(
+          (film) => DragUpdate.draggableId === film.imdbID
+        ),
+        to: this.props.collection.films.findIndex(
           (film) =>
-            filteredCollection[DragUpdate.destination.index].imdbID === film.imdbID
-        );
-        console.log(getRealIndexOfFilmInFront);
-        console.log('from: ', realIndex, 'to: ', getRealIndexOfFilmInFront);
-      } else {
-        console.log('Up');
-        const getRealIndexOfFilmBehind = this.props.collection.films.findIndex(
-          (film) =>
-            filteredCollection[DragUpdate.destination.index].imdbID === film.imdbID
-        );
-        console.log(getRealIndexOfFilmBehind)
-        console.log('from: ', realIndex, 'to: ', getRealIndexOfFilmBehind);
-      }
+            filteredCollection[DragUpdate.destination.index].imdbID ===
+            film.imdbID
+        ),
+      });
     }
   };
 
