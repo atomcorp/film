@@ -2,7 +2,10 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {DragDropContext} from 'react-beautiful-dnd';
-import {reorderCollection} from '../../redux/actions/collection-actions';
+import {
+  reorderCollection,
+  COLLECTION_VISIBILITY,
+} from '../../redux/actions/collection-actions';
 import filterCollection from '../../helpers/filterCollection';
 
 /**
@@ -42,18 +45,50 @@ class DraggableList extends Component {
    */
   onDragEnd = (DragUpdate, DropReason) => {
     // get the real Index
-    const realIndex = this.props.collection.films.findIndex(
-      (film) => DragUpdate.draggableId === film.imdbID
-    );
-    const filteredLength = filterCollection(this.props.collection).length;
     // get length of the current collection
-    console.log(realIndex, filteredLength, this.props.collection.films);
-    // if 
-    if (DragUpdate.destination) {
+    // this is the default
+    if (
+      DragUpdate.destination &&
+      this.props.collection.visibility === COLLECTION_VISIBILITY.SHOW_ALL
+    ) {
       this.props.reorderCollection({
         from: DragUpdate.source.index,
         to: DragUpdate.destination.index,
       });
+    } else if (DragUpdate.destination) {
+      // 1,2,3,4,5,6
+      // 1,2, ,4, ,
+      // 1, , ,4,2,
+      // 1,3,4,2,5,6
+      // We need to find out:
+      // If the item gets move up, what index is it front of?
+      // if the item has moved down, what index is it behind
+      const realIndex = this.props.collection.films.findIndex(
+        (film) => DragUpdate.draggableId === film.imdbID
+      );
+      const filteredCollection = filterCollection(this.props.collection);
+      console.log(
+        realIndex,
+        DragUpdate.source.index,
+        DragUpdate.destination.index
+      );
+      if (DragUpdate.source.index < DragUpdate.destination.index) {
+        console.log('Down');
+        const getRealIndexOfFilmInFront = this.props.collection.films.findIndex(
+          (film) =>
+            filteredCollection[DragUpdate.destination.index].imdbID === film.imdbID
+        );
+        console.log(getRealIndexOfFilmInFront);
+        console.log('from: ', realIndex, 'to: ', getRealIndexOfFilmInFront);
+      } else {
+        console.log('Up');
+        const getRealIndexOfFilmBehind = this.props.collection.films.findIndex(
+          (film) =>
+            filteredCollection[DragUpdate.destination.index].imdbID === film.imdbID
+        );
+        console.log(getRealIndexOfFilmBehind)
+        console.log('from: ', realIndex, 'to: ', getRealIndexOfFilmBehind);
+      }
     }
   };
 
@@ -76,6 +111,7 @@ DraggableList.propTypes = {
   reorderCollection: PropTypes.func,
   collection: PropTypes.shape({
     films: PropTypes.array,
+    visibility: PropTypes.shape(PropTypes.string),
   }),
 };
 
