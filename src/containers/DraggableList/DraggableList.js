@@ -58,7 +58,10 @@ class DraggableList extends Component {
           to: trueIndex - (DragUpdate.source.index - DragUpdate.destination.index),
         });
       } else {
-        
+        this.props.reorderCollection({
+          from: DragUpdate.source.index,
+          to: DragUpdate.destination.index,
+        });
       }
     }
   };
