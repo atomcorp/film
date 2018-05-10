@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {DragDropContext} from 'react-beautiful-dnd';
 import {reorderCollection} from '../../redux/actions/collection-actions';
+import filterCollection from '../../helpers/filterCollection';
 
 /**
  * DraggableList using DnD
@@ -40,6 +41,14 @@ class DraggableList extends Component {
    * @param {object} DropReason
    */
   onDragEnd = (DragUpdate, DropReason) => {
+    // get the real Index
+    const realIndex = this.props.collection.films.findIndex(
+      (film) => DragUpdate.draggableId === film.imdbID
+    );
+    const filteredLength = filterCollection(this.props.collection).length;
+    // get length of the current collection
+    console.log(realIndex, filteredLength, this.props.collection.films);
+    // if 
     if (DragUpdate.destination) {
       this.props.reorderCollection({
         from: DragUpdate.source.index,
@@ -65,11 +74,13 @@ class DraggableList extends Component {
 DraggableList.propTypes = {
   children: PropTypes.node,
   reorderCollection: PropTypes.func,
-  films: PropTypes.array,
+  collection: PropTypes.shape({
+    films: PropTypes.array,
+  }),
 };
 
 const mapStateToProps = (state) => ({
-  films: state.collection.films,
+  collection: state.collection,
 });
 
 const mapDispatchToProps = (dispatch) => ({

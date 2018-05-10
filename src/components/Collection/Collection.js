@@ -61,6 +61,12 @@ const Collection = ({films, watched, toggleWatchedList, allFilms}) => (
                         </h4>
                         {film.Director}
                         <br />
+                        Real index: {
+                          allFilms.findIndex(
+                            (allFilm) => allFilm.imdbID === film.imdbID
+                          )
+                        }
+                        <br />
                         <i
                           onClick={() => {
                             toggleWatchedList({
