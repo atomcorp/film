@@ -57,6 +57,9 @@ class DraggableList extends Component {
       });
     } else if (DragUpdate.destination) {
       const filteredCollection = filterCollection(this.props.collection);
+      // this basically just gets the film IDs from the filter
+      // (the ID that was moved, and the ID it was move to)
+      // and uses them to find the real index numbers
       this.props.reorderCollection({
         from: this.props.collection.films.findIndex(
           (film) => DragUpdate.draggableId === film.imdbID
