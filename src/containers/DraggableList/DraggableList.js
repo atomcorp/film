@@ -40,29 +40,11 @@ class DraggableList extends Component {
    * @param {object} DropReason
    */
   onDragEnd = (DragUpdate, DropReason) => {
-    // the only one that is required
-    const trueIndex = this.props.films.findIndex(
-      (film) => DragUpdate.draggableId === film.imdbID
-    );
-    console.log('true:', trueIndex);
-    console.log('from: ', DragUpdate.source.index);
-    console.log('to: ', DragUpdate.destination.index);
-    if (trueIndex !== DragUpdate.source.index) {
-      console.log('! From: ', trueIndex);
-      console.log(trueIndex - (DragUpdate.source.index - DragUpdate.destination.index));
-    }
     if (DragUpdate.destination) {
-      if (trueIndex !== DragUpdate.source.index) {
-        this.props.reorderCollection({
-          from: trueIndex,
-          to: trueIndex - (DragUpdate.source.index - DragUpdate.destination.index),
-        });
-      } else {
-        this.props.reorderCollection({
-          from: DragUpdate.source.index,
-          to: DragUpdate.destination.index,
-        });
-      }
+      this.props.reorderCollection({
+        from: DragUpdate.source.index,
+        to: DragUpdate.destination.index,
+      });
     }
   };
 

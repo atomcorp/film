@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {DraggableList} from '../../containers';
 import {Droppable, Draggable} from 'react-beautiful-dnd';
-
+import scss from './Collection.module.scss';
+scss;
 /**
  * @typedef film
  * Full film data from omdbAPI
@@ -46,9 +47,7 @@ const Collection = ({films, watched, toggleWatchedList, allFilms}) => (
                 <Draggable
                   key={index}
                   draggableId={film.imdbID}
-                  index={allFilms.findIndex(
-                    (allFilm) => film.imdbID === allFilm.imdbID
-                  )}
+                  index={index}
                 >
                   {(provided, snapshot) => (
                     <div

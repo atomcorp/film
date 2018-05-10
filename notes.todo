@@ -15,7 +15,7 @@ Task:
   ☐ Drag and drop the movie names for order (omg use: https://github.com/atlassian/react-beautiful-dnd)
   ☐ Use thumbs up/down when clicking Watched
   ☐ Random movie selector (once a day)
-  
+  ☐ add [PostCSS](https://github.com/postcss/postcss-loader)
 
 Ideas: 
   ✘ Name: The Black List? @cancelled (18-05-05 11:45)
