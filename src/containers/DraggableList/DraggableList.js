@@ -92,7 +92,7 @@ DraggableList.propTypes = {
   reorderCollection: PropTypes.func,
   collection: PropTypes.shape({
     films: PropTypes.array,
-    visibility: PropTypes.shape(PropTypes.string),
+    visibility: PropTypes.string,
   }),
 };
 

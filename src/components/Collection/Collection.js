@@ -31,7 +31,12 @@ scss;
  * @param {Array<film>} collection.film
  * @return {HTML}
  */
-const Collection = ({films, watched, toggleWatchedList, allFilms}) => (
+const Collection = ({
+  films,
+  watched,
+  toggleWatchedList,
+  allFilms,
+}) => (
   <DraggableList>
     <h2>Collection:</h2>
     <ol>
@@ -44,11 +49,7 @@ const Collection = ({films, watched, toggleWatchedList, allFilms}) => (
           >
             {films &&
               films.map((film, index) => (
-                <Draggable
-                  key={index}
-                  draggableId={film.imdbID}
-                  index={index}
-                >
+                <Draggable key={index} draggableId={film.imdbID} index={index}>
                   {(provided, snapshot) => (
                     <div
                       ref={provided.innerRef}
@@ -61,11 +62,10 @@ const Collection = ({films, watched, toggleWatchedList, allFilms}) => (
                         </h4>
                         {film.Director}
                         <br />
-                        Real index: {
-                          allFilms.findIndex(
-                            (allFilm) => allFilm.imdbID === film.imdbID
-                          )
-                        }
+                        Real index:{' '}
+                        {allFilms.findIndex(
+                          (allFilm) => allFilm.imdbID === film.imdbID
+                        )}
                         <br />
                         <i
                           onClick={() => {

@@ -5,6 +5,7 @@ import {
   SET_COLLECTION_VISIBILITY,
   REORDER_COLLECTION,
 } from '../actions/collection-actions';
+import {RECEIVED_DATA_FROM_DB} from '../actions/database-actions';
 import reorderArray from '../../helpers/reorder';
 /**
  * This will hold all the films that have been added
@@ -41,6 +42,8 @@ const collection = (
   action
 ) => {
   switch (action.type) {
+    case RECEIVED_DATA_FROM_DB:
+      return Object.assign({}, state, action.data);
     case SET_COLLECTION_VISIBILITY:
       return Object.assign({}, state, {visibility: action.visibility});
     case ADD_TO_COLLECTION.SUCCESS:
