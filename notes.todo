@@ -12,10 +12,13 @@ Task:
     ☐ decade selector
     ☐ rating selector (acclaimed, cult, trash)
   ☐ Add user (name), maybe stats
-  ☐ Drag and drop the movie names for order (omg use: https://github.com/atlassian/react-beautiful-dnd)
+  ✔ Drag and drop the movie names for order (omg use: https://github.com/atlassian/react-beautiful-dnd) @done(18-05-11 23:12)
   ☐ Use thumbs up/down when clicking Watched
   ☐ Random movie selector (once a day)
   ☐ add [PostCSS](https://github.com/postcss/postcss-loader)
+  ☐ add login / signup
+  ☐ connect to firebase
+  ☐ link users together
 
 Ideas: 
   ✘ Name: The Black List? @cancelled (18-05-05 11:45)
