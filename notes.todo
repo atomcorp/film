@@ -16,8 +16,12 @@ Task:
   ☐ Use thumbs up/down when clicking Watched
   ☐ Random movie selector (once a day)
   ☐ add [PostCSS](https://github.com/postcss/postcss-loader)
-  ☐ add login / signup
+  ✘ add login / signup @cancelled(18-05-12 17:30)
   ☐ connect to firebase
+  ✘ link users together @cancelled(18-05-12 17:30)
+
+Later:
+  ☐ add login / signup
   ☐ link users together
 
 Ideas: 
@@ -29,3 +33,5 @@ FYI:
   ~ [TSLint rules](https://palantir.github.io/tslint/rules/)
   ~ API = http://www.omdbapi.com/?&s=The Thing&apikey=
   
+Fonts:
+  [Domine](https://fonts.google.com/specimen/Domine)

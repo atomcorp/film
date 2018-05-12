@@ -44,8 +44,14 @@ const isFilmAlreadyInCollection = ({imdbID, films}) => {
 
 const addFilmImdbDataToCollection = ({imdbID}) => {
   return (dispatch, getState) => {
-    dispatch(addToCollectionAttempt({imdbID}));
     const state = getState();
+    if (state.collection.addingFilm) {
+      dispatch(addToCollectionFail({
+        message: 'Can only add one film at a time',
+      }));
+      return;
+    }
+    dispatch(addToCollectionAttempt({imdbID}));
     if (isFilmAlreadyInCollection({
       films: state.collection.films,
       imdbID,

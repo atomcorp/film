@@ -36,6 +36,7 @@ const collection = (
     message: [],
     watched: [],
     visibility: COLLECTION_VISIBILITY.SHOW_ALL,
+    addingFilm: false,
   },
   action
 ) => {
@@ -46,10 +47,12 @@ const collection = (
       return Object.assign({}, state, {
         films: [...state.films, action.filmResult],
         message: [],
+        addingFilm: false,
       });
     case ADD_TO_COLLECTION.FAIL:
       return Object.assign({}, state, {
         message: [...state.message, action.message],
+        addingFilm: false,
       });
     case TOGGLE_WATCHED_LIST.ADD:
       return Object.assign({}, state, {
@@ -72,6 +75,9 @@ const collection = (
       });
     case TOGGLE_WATCHED_LIST.ATTEMPT:
     case ADD_TO_COLLECTION.ATTEMPT:
+        return Object.assign({}, state, {
+          addingFilm: true,
+        });
     default:
       return state;
   }
