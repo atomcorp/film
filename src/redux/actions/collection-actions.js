@@ -67,7 +67,7 @@ const addFilmImdbDataToCollection = ({imdbID}) => {
       return;
     }
     fetch(
-      `http://omdbapi.com/?apikey=${API_KEY}&i=${encodeURIComponent(imdbID)}`
+      `//omdbapi.com/?apikey=${API_KEY}&i=${encodeURIComponent(imdbID)}`
     )
       .then((res) => res.json())
       .then((res) => {
