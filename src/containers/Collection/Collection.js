@@ -3,13 +3,14 @@ import {connect} from 'react-redux';
 import {
   toggleWatchedList,
   removeFilmFromCollection,
+  toggleFilmRating,
 } from '../../redux/actions/collection-actions';
 import filterCollection from '../../helpers/filterCollection';
 
 const mapStateToProps = (state) => ({
-  films: filterCollection(state.collection),
-  allFilms: state.collection.films,
+  filteredFilms: filterCollection(state.collection),
   watched: state.collection.watched,
+  loved: state.collection.loved,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -18,6 +19,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   removeFilmFromCollection: ({imdbID}) => {
     dispatch(removeFilmFromCollection({imdbID}));
+  },
+  toggleFilmRating: ({imdbID}) => {
+    dispatch(toggleFilmRating({imdbID}));
   },
 });
 

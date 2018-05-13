@@ -5,6 +5,7 @@ import {
   SET_COLLECTION_VISIBILITY,
   REORDER_COLLECTION,
   REMOVE_FROM_COLLECTION,
+  TOGGLE_RATING,
 } from '../actions/collection-actions';
 import {RECEIVED_DATA_FROM_DB} from '../actions/database-actions';
 import reorderArray from '../../helpers/reorder';
@@ -37,6 +38,7 @@ const collection = (
     films: [],
     message: [],
     watched: [],
+    loved: [],
     visibility: COLLECTION_VISIBILITY.SHOW_ALL,
     addingFilm: false,
   },
@@ -74,9 +76,24 @@ const collection = (
     case TOGGLE_WATCHED_LIST.REMOVE:
       return Object.assign({}, state, {
         watched: state.watched.reduce(
-          (acc, filmIds) => {
-            if (filmIds !== action.imdbID) {
-              return [...acc, filmIds];
+          (acc, imdbIDs) => {
+            if (imdbIDs !== action.imdbID) {
+              return [...acc, imdbIDs];
+            }
+            return acc;
+          }
+        , []),
+      });
+    case TOGGLE_RATING.ADD:
+      return Object.assign({}, state, {
+        loved: [...state.loved, action.imdbID],
+      });
+    case TOGGLE_RATING.REMOVE:
+      return Object.assign({}, state, {
+        loved: state.loved.reduce(
+          (acc, imdbIDs) => {
+            if (imdbIDs !== action.imdbID) {
+              return [...acc, imdbIDs];
             }
             return acc;
           }
@@ -90,6 +107,7 @@ const collection = (
       return Object.assign({}, state, {
         addingFilm: true,
       });
+    case TOGGLE_RATING.ATTEMPT:
     case TOGGLE_WATCHED_LIST.ATTEMPT:
     default:
       return state;

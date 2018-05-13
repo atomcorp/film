@@ -17,7 +17,7 @@ Task:
   ☐ Random movie selector (once a day)
   ☐ add [PostCSS](https://github.com/postcss/postcss-loader)
   ✘ add login / signup @cancelled(18-05-12 17:30)
-  ☐ connect to firebase
+  ✔ connect to firebase @done(18-05-13 16:10)
   ✘ link users together @cancelled(18-05-12 17:30)
 
 Later:

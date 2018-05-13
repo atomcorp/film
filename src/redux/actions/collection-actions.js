@@ -16,8 +16,12 @@ const COLLECTION_VISIBILITY = {
   UNWATCHED: 'SHOW_UNWATCHED',
   WATCHED: 'SHOW_WATCHED',
 };
-
 const REORDER_COLLECTION = 'REORDER_COLLECTION';
+const TOGGLE_RATING = {
+  ATTEMPT: 'TOGGLE_RATING_ATTEMPT',
+  ADD: 'TOGGLE_RATING_ADD',
+  REMOVE: 'TOGGLE_RATING_REMOVE',
+};
 
 // ADD TO COLLECTION
 
@@ -144,6 +148,32 @@ const reorderCollection = ({from, to}) => ({
   to,
 });
 
+const toggleRatingAttempt = () => ({
+  type: TOGGLE_RATING.ATTEMPT,
+});
+
+const toggleRatingAdd = ({imdbID}) => ({
+  type: TOGGLE_RATING.ADD,
+  imdbID,
+});
+
+const toggleRatingRemove = ({imdbID}) => ({
+  type: TOGGLE_RATING.REMOVE,
+  imdbID,
+});
+
+const toggleFilmRating = ({imdbID}) => {
+  return (dispatch, getState) => {
+    dispatch(toggleRatingAttempt());
+    const state = getState();
+    if (!state.collection.loved.includes(imdbID)) {
+      dispatch(toggleRatingAdd({imdbID}));
+    } else {
+      dispatch(toggleRatingRemove({imdbID}));
+    }
+  };
+};
+
 export {
   ADD_TO_COLLECTION,
   addFilmImdbDataToCollection,
@@ -156,4 +186,6 @@ export {
   REORDER_COLLECTION,
   removeFilmFromCollection,
   REMOVE_FROM_COLLECTION,
+  toggleFilmRating,
+  TOGGLE_RATING,
 };

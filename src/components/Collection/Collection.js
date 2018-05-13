@@ -32,11 +32,12 @@ scss;
  * @return {HTML}
  */
 const Collection = ({
-  films,
+  filteredFilms,
   watched,
   toggleWatchedList,
-  allFilms,
   removeFilmFromCollection,
+  toggleFilmRating,
+  loved,
 }) => (
   <DraggableList>
     <ol>
@@ -49,8 +50,8 @@ const Collection = ({
             }}
             {...provided.droppableProps}
           >
-            {films &&
-              films.map((film, index) => (
+            {filteredFilms &&
+              filteredFilms.map((film, index) => (
                 <Draggable key={index} draggableId={film.imdbID} index={index}>
                   {(provided, snapshot) => (
                     <div
@@ -84,6 +85,26 @@ const Collection = ({
                         >
                           Delete
                         </button>
+                        <br />
+                        {
+                          watched.includes(film.imdbID) && (
+                            <React.Fragment>
+                              <button
+                                onClick={
+                                  () => toggleFilmRating({
+                                    imdbID: film.imdbID,
+                                  })
+                                }
+                              >
+                                {
+                                  loved.includes(film.imdbID)
+                                    ? 'Unlove'
+                                    : 'Love'
+                                }
+                              </button>
+                            </React.Fragment>
+                          )
+                        }
                       </li>
                     </div>
                   )}
@@ -99,7 +120,8 @@ const Collection = ({
 Collection.propTypes = {
   toggleWatchedList: PropTypes.func,
   removeFilmFromCollection: PropTypes.func,
-  films: PropTypes.arrayOf(
+  toggleFilmRating: PropTypes.func,
+  filteredFilms: PropTypes.arrayOf(
     PropTypes.shape({
       Title: PropTypes.string,
       Director: PropTypes.string,
@@ -123,8 +145,8 @@ Collection.propTypes = {
       Website: PropTypes.string,
     })
   ),
-  allFilms: PropTypes.arrayOf(PropTypes.object),
   watched: PropTypes.arrayOf(PropTypes.string),
+  loved: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Collection;
