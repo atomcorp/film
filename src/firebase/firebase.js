@@ -1,4 +1,5 @@
-import * as firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/database';
 import FIREBASE_API from '../config/api';
 const config = {
   apiKey: FIREBASE_API,
@@ -8,7 +9,6 @@ const config = {
   storageBucket: 'film-ac003.appspot.com',
   messagingSenderId: '673002354764',
 };
-
 
 if (!firebase.apps.length) {
   firebase.initializeApp(config);
