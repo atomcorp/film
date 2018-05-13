@@ -21,13 +21,16 @@ import {
  * @return {HTML}
  */
 const SearchResult = ({Title, imdbID, addFilmImdbDataToCollection, Year}) => (
-  <div onClick={() => addFilmImdbDataToCollection({imdbID})}>{Title}({Year})</div>
+  <div onClick={() => addFilmImdbDataToCollection({imdbID})}>
+    {Title} ({Year})
+  </div>
 );
 
 SearchResult.propTypes = {
   Title: PropTypes.string,
   imdbID: PropTypes.string,
   addFilmImdbDataToCollection: PropTypes.func,
+  Year: PropTypes.string,
 };
 
 const mapStateToProps = (state) => ({});
@@ -39,4 +42,3 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchResult);
-

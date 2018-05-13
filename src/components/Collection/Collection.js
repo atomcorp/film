@@ -46,7 +46,7 @@ const Collection = ({
           <div
             ref={provided.innerRef}
             style={{
-              backgroundColor: snapshot.isDraggingOver ? 'white' : 'dodgerblue',
+              backgroundColor: snapshot.isDraggingOver ? 'white' : 'white',
             }}
             {...provided.droppableProps}
           >
@@ -64,11 +64,6 @@ const Collection = ({
                           {film.Title} ({film.Year})
                         </h4>
                         {film.Director}
-                        <br />
-                        Real index:{' '}
-                        {allFilms.findIndex(
-                          (allFilm) => allFilm.imdbID === film.imdbID
-                        )}
                         <br />
                         <button
                           onClick={() => {

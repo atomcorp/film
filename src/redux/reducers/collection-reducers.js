@@ -49,7 +49,7 @@ const collection = (
       return Object.assign({}, state, {visibility: action.visibility});
     case ADD_TO_COLLECTION.SUCCESS:
       return Object.assign({}, state, {
-        films: [...state.films, action.filmResult],
+        films: [action.filmResult, ...state.films],
         message: [],
         addingFilm: false,
       });
