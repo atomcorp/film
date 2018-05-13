@@ -36,6 +36,7 @@ const Collection = ({
   watched,
   toggleWatchedList,
   allFilms,
+  removeFilmFromCollection,
 }) => (
   <DraggableList>
     <h2>Collection:</h2>
@@ -44,7 +45,9 @@ const Collection = ({
         {(provided, snapshot) => (
           <div
             ref={provided.innerRef}
-            style={{backgroundColor: snapshot.isDraggingOver ? 'blue' : 'grey'}}
+            style={{
+              backgroundColor: snapshot.isDraggingOver ? 'white' : 'dodgerblue',
+            }}
             {...provided.droppableProps}
           >
             {films &&
@@ -67,7 +70,7 @@ const Collection = ({
                           (allFilm) => allFilm.imdbID === film.imdbID
                         )}
                         <br />
-                        <i
+                        <button
                           onClick={() => {
                             toggleWatchedList({
                               imdbID: film.imdbID,
@@ -77,7 +80,16 @@ const Collection = ({
                           {watched.includes(film.imdbID)
                             ? 'Remove from watched list'
                             : 'Add to watched list'}
-                        </i>
+                        </button>
+                        <button
+                          onClick={() =>
+                            removeFilmFromCollection({
+                              imdbID: film.imdbID,
+                            })
+                          }
+                        >
+                          Remove film from collection
+                        </button>
                       </li>
                     </div>
                   )}
@@ -92,6 +104,7 @@ const Collection = ({
 
 Collection.propTypes = {
   toggleWatchedList: PropTypes.func,
+  removeFilmFromCollection: PropTypes.func,
   films: PropTypes.arrayOf(
     PropTypes.shape({
       Title: PropTypes.string,

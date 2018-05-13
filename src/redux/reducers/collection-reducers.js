@@ -4,6 +4,7 @@ import {
   COLLECTION_VISIBILITY,
   SET_COLLECTION_VISIBILITY,
   REORDER_COLLECTION,
+  REMOVE_FROM_COLLECTION,
 } from '../actions/collection-actions';
 import {RECEIVED_DATA_FROM_DB} from '../actions/database-actions';
 import reorderArray from '../../helpers/reorder';
@@ -56,6 +57,15 @@ const collection = (
       return Object.assign({}, state, {
         message: [...state.message, action.message],
         addingFilm: false,
+      });
+    case REMOVE_FROM_COLLECTION:
+      return Object.assign({}, state, {
+        films: state.films.reduce((acc, film) => {
+          if (film.imdbID !== action.imdbID) {
+            return [...acc, film];
+          }
+          return acc;
+        }, []),
       });
     case TOGGLE_WATCHED_LIST.ADD:
       return Object.assign({}, state, {

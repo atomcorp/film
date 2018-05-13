@@ -4,6 +4,7 @@ const ADD_TO_COLLECTION = {
   SUCCESS: 'ADD_TO_COLLECTION_SUCCESS',
   FAIL: 'ADD_TO_COLLECTION_FAIL',
 };
+const REMOVE_FROM_COLLECTION = 'REMOVE_FROM_COLLECTION';
 const TOGGLE_WATCHED_LIST = {
   ATTEMPT: 'TOGGLE_WATCHED_LIST_ATTEMPT',
   ADD: 'TOGGLE_WATCHED_LIST_ADD',
@@ -81,6 +82,13 @@ const addFilmImdbDataToCollection = ({imdbID}) => {
   };
 };
 
+const removeFilmFromCollection = ({imdbID}) => ({
+  type: REMOVE_FROM_COLLECTION,
+  imdbID,
+});
+
+// WATCHLIST
+
 const isFilmInWatchList = ({imdbID, watched}) => {
   return watched.includes(imdbID);
 };
@@ -146,4 +154,6 @@ export {
   SET_COLLECTION_VISIBILITY,
   reorderCollection,
   REORDER_COLLECTION,
+  removeFilmFromCollection,
+  REMOVE_FROM_COLLECTION,
 };
