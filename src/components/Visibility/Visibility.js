@@ -4,7 +4,7 @@ import {COLLECTION_VISIBILITY} from '../../redux/actions/collection-actions';
 import scss from './Visibility.module.scss';
 
 const Visibility = ({setCollectionVisibility, visibility}) => (
-  <ul>
+  <ul className={scss.visibility}>
     <li
       className={
         visibility === COLLECTION_VISIBILITY.SHOW_ALL ? scss.active : ''

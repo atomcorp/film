@@ -82,7 +82,7 @@ const Collection = ({
                             })
                           }
                         >
-                          Remove film from collection
+                          Delete
                         </button>
                       </li>
                     </div>
