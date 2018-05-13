@@ -50,7 +50,7 @@ export const searchForAFilm = ({filmName}) => {
     dispatch(searchAttempt({
       filmName,
     }));
-    fetch(`http://omdbapi.com/?apikey=${API_KEY}&s=${encodeURIComponent(filmName)}`)
+    fetch(`//omdbapi.com/?apikey=${API_KEY}&s=${encodeURIComponent(filmName)}`)
       .then((res) => res.json())
       .then((res) => {
         if (res.Response === 'False') {

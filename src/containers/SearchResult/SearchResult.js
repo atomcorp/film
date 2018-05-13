@@ -21,9 +21,12 @@ import {
  * @return {HTML}
  */
 const SearchResult = ({Title, imdbID, addFilmImdbDataToCollection, Year}) => (
-  <div onClick={() => addFilmImdbDataToCollection({imdbID})}>
-    {Title} ({Year})
-  </div>
+  <React.Fragment>
+    <button onClick={() => addFilmImdbDataToCollection({imdbID})}>
+      {Title} ({Year})
+    </button>
+    <br />
+  </React.Fragment>
 );
 
 SearchResult.propTypes = {
