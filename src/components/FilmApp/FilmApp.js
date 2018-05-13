@@ -7,6 +7,7 @@ const FilmApp = () => (
     {<h1 className={scss.title}>Film App</h1>}
     <Search />
     <SearchResults />
+    <h2>Collection:</h2>
     <Visibility />
     <Collection />
     </div>

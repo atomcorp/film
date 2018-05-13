@@ -39,7 +39,6 @@ const Collection = ({
   removeFilmFromCollection,
 }) => (
   <DraggableList>
-    <h2>Collection:</h2>
     <ol>
       <Droppable droppableId="collection" type="COLLECTION">
         {(provided, snapshot) => (
