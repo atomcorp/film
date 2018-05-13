@@ -86,11 +86,11 @@ const collection = (
       return Object.assign({}, state, {
         films: reorderArray(state.films, action.from, action.to),
       });
-    case TOGGLE_WATCHED_LIST.ATTEMPT:
     case ADD_TO_COLLECTION.ATTEMPT:
-        return Object.assign({}, state, {
-          addingFilm: true,
-        });
+      return Object.assign({}, state, {
+        addingFilm: true,
+      });
+    case TOGGLE_WATCHED_LIST.ATTEMPT:
     default:
       return state;
   }

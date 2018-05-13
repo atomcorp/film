@@ -20,8 +20,8 @@ import {
  * @param {Object} omdbSearchResult
  * @return {HTML}
  */
-const SearchResult = ({Title, imdbID, addFilmImdbDataToCollection}) => (
-  <div onClick={() => addFilmImdbDataToCollection({imdbID})}>{Title}</div>
+const SearchResult = ({Title, imdbID, addFilmImdbDataToCollection, Year}) => (
+  <div onClick={() => addFilmImdbDataToCollection({imdbID})}>{Title}({Year})</div>
 );
 
 SearchResult.propTypes = {
