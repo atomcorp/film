@@ -62,6 +62,8 @@ const Collection = ({
                       <li>
                         <h4>
                           {film.Title} ({film.Year})
+                          {watched.includes(film.imdbID) && ' ️👀'}
+                          {loved.includes(film.imdbID) && ' 💖'}
                         </h4>
                         {film.Director}
                         <br />
@@ -76,16 +78,6 @@ const Collection = ({
                             ? 'Remove from watched list'
                             : 'Add to watched list'}
                         </button>
-                        <button
-                          onClick={() =>
-                            removeFilmFromCollection({
-                              imdbID: film.imdbID,
-                            })
-                          }
-                        >
-                          Delete
-                        </button>
-                        <br />
                         {
                           watched.includes(film.imdbID) && (
                             <React.Fragment>
@@ -105,6 +97,16 @@ const Collection = ({
                             </React.Fragment>
                           )
                         }
+                        <br />
+                        <button
+                          onClick={() =>
+                            removeFilmFromCollection({
+                              imdbID: film.imdbID,
+                            })
+                          }
+                        >
+                          Delete
+                        </button>
                       </li>
                     </div>
                   )}
