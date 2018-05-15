@@ -3,6 +3,7 @@ import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import search from '../reducers/search-reducers';
 import collection from '../reducers/collection-reducers';
+import database from '../reducers/database-reducers';
 import {
   postUsersDataToDatabase,
   getUsersDataAndUpdateSite,
@@ -11,6 +12,7 @@ import {
 const rootReducer = combineReducers({
   search,
   collection,
+  database,
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk, logger));
@@ -19,8 +21,12 @@ store.dispatch(getUsersDataAndUpdateSite());
 let currentCollection = {};
 const handleChange = () => {
   let previousCollection = currentCollection;
-  currentCollection = store.getState().collection;
-  if (currentCollection !== previousCollection) {
+  const state = store.getState();
+  currentCollection = state.collection;
+  if (
+    currentCollection !== previousCollection &&
+    !state.database.isDownloading
+  ) {
     postUsersDataToDatabase(currentCollection);
   }
 };

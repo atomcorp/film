@@ -37,5 +37,6 @@ const postUsersDataToDatabase = (collection) => {
 export {
   getUsersDataAndUpdateSite,
   RECEIVED_DATA_FROM_DB,
+  REQUEST_DATA_FROM_DB,
   postUsersDataToDatabase,
 };

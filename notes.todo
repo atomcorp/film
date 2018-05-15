@@ -19,6 +19,7 @@ Task:
   ✘ add login / signup @cancelled(18-05-12 17:30)
   ✔ connect to firebase @done(18-05-13 16:10)
   ✘ link users together @cancelled(18-05-12 17:30)
+  ✔ if you're downloading the collection, you should not be able to  send an update to the collection (otherwise might delete everything) @critical @bug @done(18-05-15 22:02)
 
 Later:
   ☐ add login / signup

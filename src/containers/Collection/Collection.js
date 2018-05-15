@@ -11,6 +11,7 @@ const mapStateToProps = (state) => ({
   filteredFilms: filterCollection(state.collection),
   watched: state.collection.watched,
   loved: state.collection.loved,
+  isDownloading: state.database.isDownloading,
 });
 
 const mapDispatchToProps = (dispatch) => ({

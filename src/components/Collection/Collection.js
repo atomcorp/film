@@ -38,9 +38,11 @@ const Collection = ({
   removeFilmFromCollection,
   toggleFilmRating,
   loved,
+  isDownloading,
 }) => (
   <DraggableList>
     <ol>
+      {isDownloading && 'Downloading...'}
       <Droppable droppableId="collection" type="COLLECTION">
         {(provided, snapshot) => (
           <div
@@ -149,6 +151,7 @@ Collection.propTypes = {
   ),
   watched: PropTypes.arrayOf(PropTypes.string),
   loved: PropTypes.arrayOf(PropTypes.string),
+  isDownloading: PropTypes.bool,
 };
 
 export default Collection;
