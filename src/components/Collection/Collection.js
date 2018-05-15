@@ -39,7 +39,7 @@ const Collection = ({
   toggleFilmRating,
   loved,
   isDownloading,
-  addHighlight,
+  showHighlight,
 }) => (
   <DraggableList>
     <ol>
@@ -62,7 +62,7 @@ const Collection = ({
                       {...provided.draggableProps}
                       {...provided.dragHandleProps}
                     >
-                      <li onClick={() => addHighlight({imdbID: film.imdbID})}>
+                      <li onClick={() => showHighlight({imdbID: film.imdbID})}>
                         <h4>
                           {film.Title} ({film.Year})
                           {watched.includes(film.imdbID) && ' ️👀'}
@@ -153,7 +153,7 @@ Collection.propTypes = {
   watched: PropTypes.arrayOf(PropTypes.string),
   loved: PropTypes.arrayOf(PropTypes.string),
   isDownloading: PropTypes.bool,
-  addHighlight: PropTypes.func,
+  showHighlight: PropTypes.func,
 };
 
 export default Collection;

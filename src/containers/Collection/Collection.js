@@ -5,7 +5,7 @@ import {
   removeFilmFromCollection,
   toggleFilmRating,
 } from '../../redux/actions/collection-actions';
-import {addHighlight} from '../../redux/actions/highlight-actions';
+import {showHighlight} from '../../redux/actions/highlight-actions';
 import filterCollection from '../../helpers/filterCollection';
 
 const mapStateToProps = (state) => ({
@@ -25,8 +25,8 @@ const mapDispatchToProps = (dispatch) => ({
   toggleFilmRating: ({imdbID}) => {
     dispatch(toggleFilmRating({imdbID}));
   },
-  addHighlight: ({imdbID}) => {
-    dispatch(addHighlight({imdbID}));
+  showHighlight: ({imdbID}) => {
+    dispatch(showHighlight({imdbID}));
   },
 });
 

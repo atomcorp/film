@@ -1,5 +1,6 @@
 const HIGHLIGHT_REQUEST = 'HIGHLIGHT_REQUEST';
 const HIGHLIGHT_SUCCESS = 'HIGHLIGHT_SUCCESS';
+const TOGGLE_HIGHLIGHT = 'TOGGLE_HIGHLIGHT';
 
 const highlightRequest = ({imdbID}) => ({
   type: HIGHLIGHT_REQUEST,
@@ -11,7 +12,11 @@ const highlightSuccess = ({film}) => ({
   film,
 });
 
-const addHighlight = ({imdbID}) => {
+const toggleHighlight = () => ({
+  type: TOGGLE_HIGHLIGHT,
+});
+
+const showHighlight = ({imdbID}) => {
   return (dispatch, getState) => {
     dispatch(highlightRequest({imdbID}));
     const state = getState();
@@ -19,7 +24,8 @@ const addHighlight = ({imdbID}) => {
       (film) => film.imdbID === imdbID
     );
     dispatch(highlightSuccess({film: film[0]}));
+    dispatch(toggleHighlight());
   };
 };
 
-export {HIGHLIGHT_REQUEST, HIGHLIGHT_SUCCESS, addHighlight};
+export {HIGHLIGHT_REQUEST, HIGHLIGHT_SUCCESS, showHighlight};

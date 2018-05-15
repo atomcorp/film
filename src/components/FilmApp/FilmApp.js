@@ -1,5 +1,11 @@
 import React from 'react';
-import {Search, Collection, SearchResults, Visibility} from '../../containers';
+import {
+  Search,
+  Collection,
+  SearchResults,
+  Visibility,
+  Highlight,
+} from '../../containers';
 import scss from './FilmApp.module.scss';
 
 const FilmApp = () => (
@@ -7,10 +13,11 @@ const FilmApp = () => (
     {<h1 className={scss.title}>Film App</h1>}
     <Search />
     <SearchResults />
+    <Highlight />
     <h2>Collection:</h2>
     <Visibility />
     <Collection />
-    </div>
+  </div>
 );
 
 export default FilmApp;

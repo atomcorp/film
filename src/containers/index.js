@@ -4,6 +4,7 @@ import Collection from './Collection/Collection';
 import SearchResults from './SearchResults/SearchResults';
 import Visibility from './Collection/Visibility';
 import DraggableList from './DraggableList/DraggableList';
+import Highlight from './Highlight/Highlight';
 
 export {
   Search,
@@ -12,4 +13,5 @@ export {
   SearchResults,
   Visibility,
   DraggableList,
+  Highlight,
 };
