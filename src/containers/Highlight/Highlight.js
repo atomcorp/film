@@ -2,7 +2,8 @@ import {Highlight} from '../../components';
 import {connect} from 'react-redux';
 
 const mapStateToProps = (state) => ({
-  highlight: state.highlight,
+  visible: state.highlight.visible,
+  film: state.highlight.film,
 });
 
 const mapDispatchToProps = (dispatch) => ({});

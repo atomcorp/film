@@ -28,4 +28,4 @@ const showHighlight = ({imdbID}) => {
   };
 };
 
-export {HIGHLIGHT_REQUEST, HIGHLIGHT_SUCCESS, showHighlight};
+export {HIGHLIGHT_REQUEST, HIGHLIGHT_SUCCESS, showHighlight, TOGGLE_HIGHLIGHT};
