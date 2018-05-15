@@ -8,6 +8,7 @@ const highlightRequest = ({imdbID}) => ({
 
 const highlightSuccess = ({film}) => ({
   type: HIGHLIGHT_SUCCESS,
+  film,
 });
 
 const addHighlight = ({imdbID}) => {
@@ -17,7 +18,7 @@ const addHighlight = ({imdbID}) => {
     const film = state.collection.films.filter(
       (film) => film.imdbID === imdbID
     );
-    dispatch(highlightSuccess({film}));
+    dispatch(highlightSuccess({film: film[0]}));
   };
 };
 
