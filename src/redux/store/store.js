@@ -4,6 +4,7 @@ import logger from 'redux-logger';
 import search from '../reducers/search-reducers';
 import collection from '../reducers/collection-reducers';
 import database from '../reducers/database-reducers';
+import highlight from '../reducers/highlight-reducer';
 import {
   postUsersDataToDatabase,
   getUsersDataAndUpdateSite,
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
   search,
   collection,
   database,
+  highlight,
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk, logger));
