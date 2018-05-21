@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import css from './Highlight.css';
 
 const Film = ({film}) => (
-  <div className={css.thing}>
+  <div>
     <h2>{film.Title} ({film.Year})</h2>
     <h4>dir: {film.Director}</h4>
     <img src={film.Poster} />
@@ -22,7 +21,7 @@ const Film = ({film}) => (
 );
 
 Film.propTypes = {
-  film: PropTypes.func,
+  film: PropTypes.object,
 };
 
 const Highlight = ({
@@ -31,13 +30,13 @@ const Highlight = ({
 }) => (
   <div style={{display: visible ? 'block' : 'none'}}>
     {
-      film.Response ? <Film film={film} /> : <div>Nope</div>
+      film && film.Response ? <Film film={film} /> : <div></div>
     }
   </div>
 );
 
 Highlight.propTypes = {
-  film: PropTypes.func,
+  film: PropTypes.object,
   visible: PropTypes.bool,
 };
 

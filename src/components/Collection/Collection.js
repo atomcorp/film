@@ -62,7 +62,9 @@ const Collection = ({
                       {...provided.draggableProps}
                       {...provided.dragHandleProps}
                     >
-                      <li onClick={() => showHighlight({imdbID: film.imdbID})}>
+                      <li onMouseOver={
+                        () => showHighlight({imdbID: film.imdbID})
+                      }>
                         <h4>
                           {film.Title} ({film.Year})
                           {watched.includes(film.imdbID) && ' ️👀'}
