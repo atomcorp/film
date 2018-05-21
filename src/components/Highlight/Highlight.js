@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import css from './Highlight.css';
 
 const Film = ({film}) => (
-  <div>
+  <div className={css.thing}>
     <h2>{film.Title} ({film.Year})</h2>
     <h4>dir: {film.Director}</h4>
     <img src={film.Poster} />
