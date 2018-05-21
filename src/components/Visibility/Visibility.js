@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {COLLECTION_VISIBILITY} from '../../redux/actions/collection-actions';
-import scss from './Visibility.module.scss';
+import scss from './Visibility.css';
 
 const Visibility = ({setCollectionVisibility, visibility}) => (
   <ul className={scss.visibility}>

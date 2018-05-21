@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {DraggableList} from '../../containers';
 import {Droppable, Draggable} from 'react-beautiful-dnd';
-import scss from './Collection.module.scss';
+import scss from './Collection.css';
 scss;
 /**
  * @typedef film

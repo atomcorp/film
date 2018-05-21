@@ -6,7 +6,7 @@ import {
   Visibility,
   Highlight,
 } from '../../containers';
-import scss from './FilmApp.module.scss';
+import scss from './FilmApp.module.css';
 
 const FilmApp = () => (
   <div className="film-app">
