@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Film = ({film}) => (
   <div>
@@ -19,6 +20,10 @@ const Film = ({film}) => (
   </div>
 );
 
+Film.propTypes = {
+  film: PropTypes.func,
+};
+
 const Highlight = ({
   visible,
   film,
@@ -29,5 +34,10 @@ const Highlight = ({
     }
   </div>
 );
+
+Highlight.propTypes = {
+  film: PropTypes.func,
+  visible: PropTypes.bool,
+};
 
 export default Highlight;
