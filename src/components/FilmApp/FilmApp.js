@@ -10,7 +10,7 @@ import css from './FilmApp.css';
 
 const FilmApp = () => (
   <div className="film-app">
-    {<h1 className={css.title}>You&#39;re Next</h1>}
+    {<h1 className={css.title}>Your Next</h1>}
     <Search />
     <SearchResults />
     <h2>Collection:</h2>

@@ -62,7 +62,7 @@ const Collection = ({
                       {...provided.draggableProps}
                       {...provided.dragHandleProps}
                     >
-                      <li onMouseOver={
+                      <li onClick={
                         () => showHighlight({imdbID: film.imdbID})
                       }>
                         <h4>

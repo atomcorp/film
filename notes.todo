@@ -15,7 +15,7 @@ Task:
   ✔ Drag and drop the movie names for order (omg use: https://github.com/atlassian/react-beautiful-dnd) @done(18-05-11 23:12)
   ☐ Use thumbs up/down when clicking Watched
   ☐ Random movie selector (once a day)
-  ☐ add [PostCSS](https://github.com/postcss/postcss-loader)
+  ✔ add [PostCSS](https://github.com/postcss/postcss-loader) @done(18-05-21 23:28)
   ✘ add login / signup @cancelled(18-05-12 17:30)
   ✔ connect to firebase @done(18-05-13 16:10)
   ✘ link users together @cancelled(18-05-12 17:30)
@@ -27,6 +27,7 @@ Later:
 
 Ideas: 
   ✘ Name: The Black List? @cancelled (18-05-05 11:45)
+  ☐ https://github.com/jariz/vibrant.js/
 
 FYI:
   ~ Use [CSSNext](http://cssnext.io/features/) for CSS Modules
