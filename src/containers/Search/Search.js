@@ -28,20 +28,28 @@ class Search extends Component {
     super(props);
     /** @type {SearchState} */
     this.state = {
-      filmName: '',
+      filmName: 'Burning',
+      year: 2018,
+      advanced: false,
+      page: 1,
     };
     this.staggerFilmSearchRequests = _staggerRequests(500);
   }
   /**
    * @param {InputChange} event Text changed in input
+   * @param {string} key
    * @listens InputChange
    */
-  handleChange = (event) => {
+  handleChange = (event, key) => {
     const filmName = event.currentTarget.value;
     this.setState({
       filmName,
     });
-    this.staggerFilmSearchRequests(() => this.props.searchForAFilm(filmName));
+    this.staggerFilmSearchRequests(() =>
+      this.props.searchForAFilm({
+        filmName: this.state.filmName,
+      })
+    );
   };
   /**
    * @param {FormSubmit} event Search form submitted
@@ -49,20 +57,35 @@ class Search extends Component {
    */
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.searchForAFilm(this.state.filmName);
+    this.props.searchForAFilm({
+      filmName: this.state.filmName,
+    });
+  };
+  toggleAdvanced = () => {
+    this.setState({
+      advanced: !this.state.advanced,
+    });
   };
   /** @return {HTML} Search */
   render() {
     return (
       <div className="search">
         <form onSubmit={this.handleSubmit}>
-          <input
-            type="text"
-            value={this.state.filmName}
-            onChange={this.handleChange}
-          />
-          <input type="submit" value="Search" />
+          <div>
+            <input
+              type="text"
+              value={this.state.filmName}
+              onChange={this.handleChange}
+            />
+            <input type="submit" value="Search" />
+          </div>
+          {this.state.advanced && (
+            <div>
+              Year: <input onChange={this.handleChange} />
+            </div>
+          )}
         </form>
+        <button onClick={this.toggleAdvanced}>Advanced</button>
       </div>
     );
   }
@@ -79,7 +102,7 @@ const mapStateToProps = (state) => ({});
  * @return {object}
  */
 const mapDispatchToProps = (dispatch) => ({
-  searchForAFilm: (filmName) =>
+  searchForAFilm: ({filmName}) =>
     dispatch(
       searchForAFilm({
         filmName,
@@ -87,4 +110,7 @@ const mapDispatchToProps = (dispatch) => ({
     ),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Search);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Search);

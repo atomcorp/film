@@ -88,20 +88,31 @@
 	"buffers":
 	[
 		{
-			"file": "src/redux/actions/collection-actions.js",
+			"file": "src/containers/Collection/Collection.js",
 			"settings":
 			{
-				"buffer_size": 2580,
+				"buffer_size": 1037,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/redux/reducers/collection-reducers.js",
+			"file": "src/containers/Search/Search.js",
 			"settings":
 			{
-				"buffer_size": 1438,
+				"buffer_size": 2115,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Package Control Messages\n========================\n\nSublimeLinter-eslint\n--------------------\n\n  SublimeLinter-eslint\n  -------------------------------\n  This linter plugin for SublimeLinter provides an interface to ESLint.\n  \n  Please read the installation instructions at:\n  \n  https://github.com/roadhump/SublimeLinter-eslint\n",
+			"settings":
+			{
+				"buffer_size": 328,
+				"line_ending": "Windows",
+				"name": "Package Control Messages",
+				"read_only": true,
+				"scratch": true
 			}
 		}
 	],
@@ -113,9 +124,25 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "ui",
+		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"user set",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"set",
+				"Preferences: Settings"
+			],
 			[
 				"ui",
 				"UI: Select Theme"
@@ -147,10 +174,6 @@
 			[
 				"twig",
 				"Set Syntax: HTML (Twig)"
-			],
-			[
-				"ins",
-				"Package Control: Install Package"
 			],
 			[
 				"ht",
@@ -208,11 +231,13 @@
 	[
 		"/C/Users/atom/sites/film",
 		"/C/Users/atom/sites/film/src",
-		"/C/Users/atom/sites/film/src/redux",
-		"/C/Users/atom/sites/film/src/redux/reducers"
+		"/C/Users/atom/sites/film/src/containers",
+		"/C/Users/atom/sites/film/src/containers/Search"
 	],
 	"file_history":
 	[
+		"/C/Users/atom/sites/film/src/redux/actions/collection-actions.js",
+		"/C/Users/atom/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
 		"/C/Users/tom/sites/film/src/redux/reducers/collection-reducers.js",
 		"/C/Users/tom/sites/film/src/redux/actions/collection-actions.js",
 		"/C/Users/tom/sites/film/src/containers/Collection/Collection.js",
@@ -338,9 +363,7 @@
 		"/C/xampp/htdocs/constellations/sites/default/settings.php",
 		"/C/Users/tom/AppData/Roaming/Sublime Text 3/Packages/User/node.sublime-build",
 		"/C/Users/tom/Sites/wp_portfolio/wp-content/themes/bones-child/library/sass/style.scss",
-		"/C/xampp/htdocs/pro-drupal/sites/all/modules/custom/annotate/annotate.admin.inc",
-		"/C/xampp/htdocs/pro-drupal/modules/field/field.crud.inc",
-		"/C/xampp/htdocs/pro-drupal/sites/all/modules/custom/annotate/annotate.install"
+		"/C/xampp/htdocs/pro-drupal/sites/all/modules/custom/annotate/annotate.admin.inc"
 	],
 	"find":
 	{
@@ -391,23 +414,27 @@
 			[
 				{
 					"buffer": 0,
-					"file": "src/redux/actions/collection-actions.js",
+					"file": "src/containers/Collection/Collection.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2580,
+						"buffer_size": 1037,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								573,
+								573
 							]
 						],
 						"settings":
 						{
+							"SL.57.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
 							"git_gutter_is_enabled": false,
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
 							"tab_size": 2,
@@ -422,33 +449,67 @@
 				},
 				{
 					"buffer": 1,
-					"file": "src/redux/reducers/collection-reducers.js",
+					"file": "src/containers/Search/Search.js",
 					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 1438,
+						"buffer_size": 2115,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								378,
+								378
 							]
 						],
 						"settings":
 						{
+							"SL.81.region_keys":
+							[
+							],
 							"git_gutter_is_enabled": false,
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 870.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 328,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								328,
+								328
+							]
+						],
+						"settings":
+						{
+							"auto_indent": false,
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_width": 2,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -487,7 +548,7 @@
 	"menu_visible": true,
 	"output.SublimeLinter":
 	{
-		"height": 0.0
+		"height": 74.0
 	},
 	"output.exec":
 	{

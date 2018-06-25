@@ -2,12 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {SearchResult} from '../';
+import {SearchPager} from '../../components/';
+import {
+  turnPagerAndGetNewSearchResults,
+} from '../../redux/actions/search-actions';
 
-const SearchResults = ({search}) => (
+const SearchResults = ({search, turnPager}) => (
   <div className="search-results">
     {search.searchResults.map((result) => (
       <SearchResult key={result.imdbID} {...result} />
     ))}
+    {search.totalPages > 1 && (
+      <SearchPager
+        currentPage={search.currentPage}
+        totalPages={search.totalResults}
+        handlePager={turnPager}
+      />
+    )}
   </div>
 );
 
@@ -19,13 +30,20 @@ SearchResults.propTypes = {
       })
     ),
   }),
+  turnPager: PropTypes.func,
 };
 
 const mapStateToProps = (state) => ({
   search: state.search,
 });
 
-const mapDispatchToProps = (dispatch) => ({});
+const mapDispatchToProps = (dispatch) => ({
+  turnPager: ({page}) => {
+    dispatch(turnPagerAndGetNewSearchResults({page}));
+  },
+});
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchResults);
-
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SearchResults);

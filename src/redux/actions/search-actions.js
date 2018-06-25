@@ -2,6 +2,7 @@ import {API_KEY} from '../../config/api';
 export const SEARCH_ATTEMPT = 'SEARCH_ATTEMPT';
 export const SEARCH_SUCCESS = 'SEARCH_SUCCESS';
 export const SEARCH_FAIL = 'SEARCH_FAIL';
+export const TURN_PAGER = 'TURN_PAGER';
 
 /**
  * @description Set the search paramaters
@@ -29,9 +30,15 @@ export const searchAttempt = ({filmName}) => ({
  * @param {Array<omdbSearchResult>} searchResults
  * @return {object}
  */
-export const searchSuccess = ({searchResults}) => ({
+export const searchSuccess = ({searchResults, totalResults}) => ({
   type: SEARCH_SUCCESS,
   searchResults,
+  totalResults,
+});
+
+const turnPager = ({page}) => ({
+  type: TURN_PAGER,
+  page,
 });
 
 /**
@@ -46,20 +53,47 @@ export const searchFail = (error) => ({
 });
 
 export const searchForAFilm = ({filmName}) => {
-  return (dispatch) => {
-    dispatch(searchAttempt({
-      filmName,
-    }));
-    fetch(`//omdbapi.com/?apikey=${API_KEY}&s=${encodeURIComponent(filmName)}`)
+  return (dispatch, getState) => {
+    dispatch(
+      searchAttempt({
+        filmName,
+      })
+    );
+    const searchState = getState().search;
+    fetch(
+      /* eslint-disable-next-line max-len */
+      `//omdbapi.com/?apikey=${API_KEY}&type=movie&plot=full&page=${
+        searchState.currentPage
+      }&s=${encodeURIComponent(filmName)}`
+    )
       .then((res) => res.json())
       .then((res) => {
         if (res.Response === 'False') {
           throw new Error(res.Error);
         }
-        dispatch(searchSuccess({searchResults: res.Search}));
+        dispatch(searchSuccess({
+          searchResults: res.Search,
+          totalResults: res.totalResults,
+        }));
       })
       .catch((err) => {
         dispatch(searchFail(err.message));
       });
+  };
+};
+
+export const turnPagerAndGetNewSearchResults = ({page}) => {
+  return (dispatch, getState) => {
+    dispatch(
+      turnPager({
+        page,
+      })
+    );
+    const searchState = getState().search;
+    dispatch(
+      searchForAFilm({
+        filmName: searchState.filmName,
+      })
+    );
   };
 };

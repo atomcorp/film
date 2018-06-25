@@ -2,6 +2,7 @@ import {
   SEARCH_ATTEMPT,
   SEARCH_FAIL,
   SEARCH_SUCCESS,
+  TURN_PAGER,
 } from '../actions/search-actions';
 
 /**
@@ -26,6 +27,9 @@ const search = (state = {
   filmName: '',
   searchResults: [],
   message: '',
+  currentPage: 1,
+  totalResults: 0,
+  totalPages: 1,
 }, action) => {
   switch (action.type) {
     case SEARCH_ATTEMPT:
@@ -33,12 +37,18 @@ const search = (state = {
     case SEARCH_SUCCESS:
       return Object.assign({}, state, {
         searchResults: action.searchResults,
+        totalResults: action.totalResults,
         message: '',
+        totalPages: Math.ceil(action.totalResults / 10),
       });
     case SEARCH_FAIL:
       return Object.assign({}, state, {
         message: action.message,
         searchResults: [],
+      });
+    case TURN_PAGER:
+      return Object.assign({}, state, {
+        currentPage: action.page,
       });
     default:
       return state;
