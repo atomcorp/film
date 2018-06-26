@@ -3,18 +3,15 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {SearchResult} from '../';
 import {SearchPager} from '../../components/';
-import {
-  turnPagerAndGetNewSearchResults,
-} from '../../redux/actions/search-actions';
+import {turnPagerAndGetNewSearchResults} from '../../redux/actions/search-actions';
 
 const SearchResults = ({search, turnPager}) => (
   <div className="search-results">
-  {
-    search.isSearching && 'Loading...'
-  }
-  {!search.isSearching && search.searchResults.map((result) => (
-      <SearchResult key={result.imdbID} {...result} />
-    ))}
+    {search.isSearching && 'Loading...'}
+    {!search.isSearching &&
+      search.searchResults.map((result) => (
+        <SearchResult key={result.imdbID} {...result} />
+      ))}
     {search.totalPages > 1 && (
       <SearchPager
         currentPage={search.currentPage}
