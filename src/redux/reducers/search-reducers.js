@@ -3,6 +3,7 @@ import {
   SEARCH_FAIL,
   SEARCH_SUCCESS,
   TURN_PAGER,
+  NEW_SEARCH,
 } from '../actions/search-actions';
 
 /**
@@ -23,19 +24,24 @@ import {
  * @param {string} action.message - Error message
  * @return {SearchState}
  */
-const search = (state = {
-  filmName: '',
-  searchResults: [],
-  message: '',
-  currentPage: 1,
-  totalResults: 0,
-  totalPages: 1,
-  isSearching: false,
-}, action) => {
+const search = (
+  state = {
+    filmName: '',
+    searchResults: [],
+    message: '',
+    currentPage: 1,
+    totalResults: 0,
+    totalPages: 1,
+    isSearching: false,
+    year: null,
+  },
+  action
+) => {
   switch (action.type) {
     case SEARCH_ATTEMPT:
       return Object.assign({}, state, {
         filmName: action.filmName,
+        year: action.year,
         isSearching: true,
       });
     case SEARCH_SUCCESS:
@@ -55,6 +61,12 @@ const search = (state = {
     case TURN_PAGER:
       return Object.assign({}, state, {
         currentPage: action.page,
+      });
+    case NEW_SEARCH:
+      return Object.assign({}, state, {
+        currentPage: 1,
+        totalPages: 1,
+        totalResults: 0,
       });
     default:
       return state;

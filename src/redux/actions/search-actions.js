@@ -3,6 +3,11 @@ export const SEARCH_ATTEMPT = 'SEARCH_ATTEMPT';
 export const SEARCH_SUCCESS = 'SEARCH_SUCCESS';
 export const SEARCH_FAIL = 'SEARCH_FAIL';
 export const TURN_PAGER = 'TURN_PAGER';
+export const NEW_SEARCH = 'NEW_SEARCH';
+
+export const newSearch = () => ({
+  type: NEW_SEARCH,
+});
 
 /**
  * @description Set the search paramaters
@@ -10,9 +15,10 @@ export const TURN_PAGER = 'TURN_PAGER';
  * @param {string} search.filmName - Name of the film
  * @return {Object} searchParams
  */
-export const searchAttempt = ({filmName}) => ({
+export const searchAttempt = ({filmName, year}) => ({
   type: SEARCH_ATTEMPT,
   filmName,
+  year,
 });
 
 /**
@@ -52,11 +58,12 @@ export const searchFail = (error) => ({
   message: error,
 });
 
-export const searchForAFilm = ({filmName}) => {
+export const searchForAFilm = ({filmName, year = null}) => {
   return (dispatch, getState) => {
     dispatch(
       searchAttempt({
         filmName,
+        year,
       })
     );
     const searchState = getState().search;
@@ -64,7 +71,7 @@ export const searchForAFilm = ({filmName}) => {
       /* eslint-disable-next-line max-len */
       `//omdbapi.com/?apikey=${API_KEY}&type=movie&plot=full&page=${
         searchState.currentPage
-      }&s=${encodeURIComponent(filmName)}`
+      }&s=${encodeURIComponent(filmName)}&y=${year}`
     )
       .then((res) => res.json())
       .then((res) => {
@@ -93,6 +100,7 @@ export const turnPagerAndGetNewSearchResults = ({page}) => {
     dispatch(
       searchForAFilm({
         filmName: searchState.filmName,
+        year: searchState.year,
       })
     );
   };

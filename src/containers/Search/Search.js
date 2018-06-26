@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {staggerRequests as _staggerRequests} from '../../helpers';
 import {connect} from 'react-redux';
-import {searchForAFilm} from '../../redux/actions/search-actions';
+import {searchForAFilm, newSearch} from '../../redux/actions/search-actions';
 
 /**
   @typedef SearchState
@@ -29,7 +29,7 @@ class Search extends Component {
     /** @type {SearchState} */
     this.state = {
       filmName: 'Burning',
-      year: 2018,
+      year: '',
       advanced: false,
       page: 1,
     };
@@ -41,15 +41,17 @@ class Search extends Component {
    * @listens InputChange
    */
   handleChange = (event, key) => {
-    const filmName = event.currentTarget.value;
+    const value = event.currentTarget.value;
     this.setState({
-      filmName,
+      [key]: value,
     });
-    this.staggerFilmSearchRequests(() =>
+    this.staggerFilmSearchRequests(() => {
+      this.props.newSearch();
       this.props.searchForAFilm({
         filmName: this.state.filmName,
-      })
-    );
+        year: this.state.year,
+      });
+    });
   };
   /**
    * @param {FormSubmit} event Search form submitted
@@ -57,13 +59,16 @@ class Search extends Component {
    */
   handleSubmit = (event) => {
     event.preventDefault();
+    this.props.newSearch();
     this.props.searchForAFilm({
       filmName: this.state.filmName,
+      year: this.state.year,
     });
   };
   toggleAdvanced = () => {
     this.setState({
       advanced: !this.state.advanced,
+      year: !this.state.advanced ? this.state.year : '',
     });
   };
   /** @return {HTML} Search */
@@ -75,13 +80,17 @@ class Search extends Component {
             <input
               type="text"
               value={this.state.filmName}
-              onChange={this.handleChange}
+              onChange={(e) => this.handleChange(e, 'filmName')}
             />
             <input type="submit" value="Search" />
           </div>
           {this.state.advanced && (
             <div>
-              Year: <input onChange={this.handleChange} />
+              Year:{' '}
+              <input
+                value={this.state.year}
+                onChange={(e) => this.handleChange(e, 'year')}
+              />
             </div>
           )}
         </form>
@@ -93,6 +102,7 @@ class Search extends Component {
 
 Search.propTypes = {
   searchForAFilm: PropTypes.func,
+  newSearch: PropTypes.func,
 };
 
 const mapStateToProps = (state) => ({});
@@ -102,12 +112,14 @@ const mapStateToProps = (state) => ({});
  * @return {object}
  */
 const mapDispatchToProps = (dispatch) => ({
-  searchForAFilm: ({filmName}) =>
+  searchForAFilm: ({filmName, year}) =>
     dispatch(
       searchForAFilm({
         filmName,
+        year,
       })
     ),
+  newSearch: () => dispatch(newSearch()),
 });
 
 export default connect(
