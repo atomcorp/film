@@ -9,7 +9,10 @@ import {
 
 const SearchResults = ({search, turnPager}) => (
   <div className="search-results">
-    {search.searchResults.map((result) => (
+  {
+    search.isSearching && 'Loading...'
+  }
+  {!search.isSearching && search.searchResults.map((result) => (
       <SearchResult key={result.imdbID} {...result} />
     ))}
     {search.totalPages > 1 && (

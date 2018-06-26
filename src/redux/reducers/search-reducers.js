@@ -30,21 +30,27 @@ const search = (state = {
   currentPage: 1,
   totalResults: 0,
   totalPages: 1,
+  isSearching: false,
 }, action) => {
   switch (action.type) {
     case SEARCH_ATTEMPT:
-      return Object.assign({}, state, {filmName: action.filmName});
+      return Object.assign({}, state, {
+        filmName: action.filmName,
+        isSearching: true,
+      });
     case SEARCH_SUCCESS:
       return Object.assign({}, state, {
         searchResults: action.searchResults,
         totalResults: action.totalResults,
         message: '',
         totalPages: Math.ceil(action.totalResults / 10),
+        isSearching: false,
       });
     case SEARCH_FAIL:
       return Object.assign({}, state, {
         message: action.message,
         searchResults: [],
+        isSearching: false,
       });
     case TURN_PAGER:
       return Object.assign({}, state, {
