@@ -6,11 +6,15 @@ import {
   Visibility,
   Highlight,
 } from '../../containers';
+import {
+  Welcome,
+} from '../';
 import css from './FilmApp.css';
 
 const FilmApp = () => (
   <div className="film-app">
     {<h1 className={css.title}>Your Next</h1>}
+    <Welcome />
     <Search />
     <SearchResults />
     <h2>Collection:</h2>

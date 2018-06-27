@@ -20,7 +20,7 @@ module.exports = {
         use: [
           {
             loader: 'html-loader',
-            options: { minimize: true },
+            options: {minimize: true},
           },
         ],
       },
@@ -48,29 +48,36 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          'style-loader',
+          {loader: 'style-loader', options: {sourceMap: true}},
           {
             loader: 'css-loader',
             options: {
               modules: true,
               importLoaders: 1,
-              localIdentName: '[name]_[hash:base64]',
+              localIdentName: '[local]_[name]_[hash:6]',
               sourceMap: true,
               minimize: true,
             },
           },
-          'postcss-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
         ],
       },
       {
         test: /\.(png|jp(e*)g|svg)$/,
-        use: [{
-          loader: 'url-loader',
-          options: {
-            limit: 8000, // Convert images < 8kb to base64 strings
-            name: 'images/[hash]-[name].[ext]',
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8000, // Convert images < 8kb to base64 strings
+              name: 'images/[hash]-[name].[ext]',
+            },
           },
-        }],
+        ],
       },
     ],
   },

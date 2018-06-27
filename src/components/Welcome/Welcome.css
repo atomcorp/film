@@ -1,0 +1,12 @@
+.welcome {
+}
+
+.logo {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: block;
+}
+
+.logo path {
+  fill: #c00000;
+}
