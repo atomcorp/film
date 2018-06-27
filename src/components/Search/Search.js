@@ -2,8 +2,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {staggerRequests as _staggerRequests} from '../../helpers';
-import {connect} from 'react-redux';
-import {searchForAFilm, newSearch} from '../../redux/actions/search-actions';
 
 /**
   @typedef SearchState
@@ -16,6 +14,7 @@ import {searchForAFilm, newSearch} from '../../redux/actions/search-actions';
   @type {object}
   @property {Array<omdbSearchResult>} searchResults -the filmName typed
   @property {func} searchForAFilm
+  @property {func} newSearch
  */
 
 /** Class representing searching for a movie */
@@ -105,24 +104,4 @@ Search.propTypes = {
   newSearch: PropTypes.func,
 };
 
-const mapStateToProps = (state) => ({});
-
-/**
- * @param {Dispatch} dispatch - redux function
- * @return {object}
- */
-const mapDispatchToProps = (dispatch) => ({
-  searchForAFilm: ({filmName, year}) =>
-    dispatch(
-      searchForAFilm({
-        filmName,
-        year,
-      })
-    ),
-  newSearch: () => dispatch(newSearch()),
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Search);
+export default Search;

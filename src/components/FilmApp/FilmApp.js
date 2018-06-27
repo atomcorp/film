@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Search,
+  SearchInput,
   Collection,
   SearchResults,
   Visibility,
@@ -15,7 +15,7 @@ const FilmApp = () => (
   <div className="film-app">
     {<h1 className={css.title}>Your Next</h1>}
     <Welcome />
-    <Search />
+    <SearchInput />
     <SearchResults />
     <h2>Collection:</h2>
     <Visibility />

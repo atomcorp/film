@@ -69,7 +69,7 @@ export const searchForAFilm = ({filmName, year = null}) => {
     const searchState = getState().search;
     fetch(
       /* eslint-disable-next-line max-len */
-      `//omdbapi.com/?apikey=${API_KEY}&type=movie&plot=full&page=${
+      `//omdbapi.com/?apikey=${API_KEY}&type=movie&page=${
         searchState.currentPage
       }&s=${encodeURIComponent(filmName)}&y=${year}`
     )

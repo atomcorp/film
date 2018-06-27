@@ -4,7 +4,8 @@ import css from './Welcome.css';
 
 const Welcome = () => (
   <div className={css.welcome}>
-    <Logo className={css.logo} />
+    <Logo className={css.logo} alt="Your next" />
+    <h1>Curate your movie collection</h1>
   </div>
 );
 

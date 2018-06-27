@@ -1,4 +1,4 @@
-import Search from './Search/Search';
+import SearchInput from './SearchInput/SearchInput';
 import SearchResult from './SearchResult/SearchResult';
 import Collection from './Collection/Collection';
 import SearchResults from './SearchResults/SearchResults';
@@ -7,7 +7,7 @@ import DraggableList from './DraggableList/DraggableList';
 import Highlight from './Highlight/Highlight';
 
 export {
-  Search,
+  SearchInput,
   SearchResult,
   Collection,
   SearchResults,
