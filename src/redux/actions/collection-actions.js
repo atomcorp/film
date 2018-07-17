@@ -51,23 +51,31 @@ const addFilmImdbDataToCollection = ({imdbID}) => {
   return (dispatch, getState) => {
     const state = getState();
     if (state.collection.addingFilm) {
-      dispatch(addToCollectionFail({
-        message: 'Can only add one film at a time',
-      }));
+      dispatch(
+        addToCollectionFail({
+          message: 'Can only add one film at a time',
+        })
+      );
       return;
     }
     dispatch(addToCollectionAttempt({imdbID}));
-    if (isFilmAlreadyInCollection({
-      films: state.collection.films,
-      imdbID,
-    })) {
-      dispatch(addToCollectionFail({
-        message: 'Film has already been added',
-      }));
+    if (
+      isFilmAlreadyInCollection({
+        films: state.collection.films,
+        imdbID,
+      })
+    ) {
+      dispatch(
+        addToCollectionFail({
+          message: 'Film has already been added',
+        })
+      );
       return;
     }
     fetch(
-      `//omdbapi.com/?apikey=${API_KEY}&i=${encodeURIComponent(imdbID)}&plot=full`
+      `//omdbapi.com/?apikey=${API_KEY}&i=${encodeURIComponent(
+        imdbID
+      )}&plot=full`
     )
       .then((res) => res.json())
       .then((res) => {
@@ -80,9 +88,13 @@ const addFilmImdbDataToCollection = ({imdbID}) => {
           })
         );
       })
-      .catch((err) => dispatch(addToCollectionFail({
-        message: err,
-      })));
+      .catch((err) =>
+        dispatch(
+          addToCollectionFail({
+            message: err,
+          })
+        )
+      );
   };
 };
 
@@ -121,10 +133,12 @@ const toggleWatchedList = ({imdbID}) => {
   return (dispatch, getState) => {
     const state = getState();
     dispatch(toggleWatchedListAttempt());
-    if (!isFilmInWatchList({
-      watched: state.collection.watched,
-      imdbID,
-    })) {
+    if (
+      !isFilmInWatchList({
+        watched: state.collection.watched,
+        imdbID,
+      })
+    ) {
       // add to watched list
       dispatch(toggleWatchedListAdd({imdbID}));
     } else {
