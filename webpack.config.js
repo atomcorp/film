@@ -1,10 +1,20 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const WebpackMessages = require('webpack-messages');
 
 module.exports = {
   devtool: 'source-map',
+  output: {
+    publicPath: '/',
+  },
+  stats: 'minimal',
   devServer: {
-    stats: 'errors-only',
+    historyApiFallback: true,
+    stats: {
+      builtAt: false,
+      children: false,
+      modules: false,
+    },
   },
   module: {
     rules: [
@@ -87,5 +97,10 @@ module.exports = {
       filename: './index.html',
     }),
     new CleanWebpackPlugin(['dist']),
+    new WebpackMessages({
+      name: 'FilmApp',
+      /* eslint-disable no-console */
+      logger: (str) => console.log(`>> ${str}`),
+    }),
   ],
 };

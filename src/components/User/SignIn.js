@@ -1,8 +1,8 @@
 import React from 'react';
-import {withRouter, Redirect} from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 import fakeAuth from '../../router/fakeAuth';
 /**
- *
+ * Fake login
  */
 class Login extends React.Component {
   state = {
@@ -19,28 +19,27 @@ class Login extends React.Component {
    * @return {el}
    */
   render() {
-    const {from} = this.props.location.state || {from: {pathname: '/'}};
     const {redirectToReferrer} = this.state;
 
     if (redirectToReferrer) {
-      return <Redirect to={from} />;
+      return <Redirect to="/app" />;
     }
 
     return (
       <div>
-        <p>You must log in to view the page at {from.pathname}</p>
+        <p>You must log in to view the app</p>
         <button onClick={this.login}>Log in</button>
       </div>
     );
   }
 }
 
-const RouteredSignIn = withRouter(Login);
+const FakeSignIn = Login;
 
 const SignIn = () => (
   <div>
     Sign in
-    <RouteredSignIn />
+    <FakeSignIn />
   </div>
 );
 

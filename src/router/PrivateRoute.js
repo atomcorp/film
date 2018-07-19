@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Route, Redirect} from 'react-router-dom';
+import {Route, Redirect, withRouter} from 'react-router-dom';
 import fakeAuth from './fakeAuth';
 
 const PrivateRoute = ({component: Component, ...rest}) => (
@@ -12,7 +12,7 @@ const PrivateRoute = ({component: Component, ...rest}) => (
       ) : (
         <Redirect
           to={{
-            pathname: '/login',
+            pathname: '/',
             state: {from: props.location},
           }}
         />
@@ -25,4 +25,4 @@ PrivateRoute.propTypes = {
   component: PropTypes.func,
 };
 
-export default PrivateRoute;
+export default withRouter(PrivateRoute);
