@@ -1,14 +1,13 @@
-const user = (
-  state = {
-    name: '',
-    id: '',
-    email: '',
-    collections: [],
-    watched: [],
-    loved: [],
-  },
-  action
-) => {
+const defaultState = {
+  name: '',
+  id: '',
+  email: '',
+  collections: [],
+  watched: [],
+  loved: [],
+};
+
+const user = (state = defaultState, action) => {
   switch (action.type) {
     default:
       return state;

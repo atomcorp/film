@@ -1,5 +1,8 @@
-import {auth} from '../../firebase/firebase';
-import {addToLocalStorage} from '../../helpers/localstorage';
+import {auth, database} from '../../firebase/firebase';
+import {
+  addToLocalStorage,
+  clearFromLocalStorage,
+} from '../../helpers/localstorage';
 import {validateUsername} from '../../helpers/validateUsername';
 
 export const SIGN_IN = {
@@ -18,14 +21,18 @@ export const SIGN_UP = {
   FAIL: 'SIGN_UP_FAIL',
 };
 
+export const INIT_USER = {
+  ATTEMPT: 'INIT_USER_ATTEMPT',
+  SUCCESS: 'INIT_USER_SUCCESS',
+  FAIL: 'INIT_USER_FAIL',
+};
+
 const signUpAttempt = () => ({
   type: SIGN_UP.ATTEMPT,
 });
 
-const signUpSuccess = ({email, name = 'default'}) => ({
+const signUpSuccess = () => ({
   type: SIGN_UP.SUCCESS,
-  email,
-  name,
 });
 
 const signUpFail = ({message}) => ({
@@ -45,9 +52,9 @@ export const signUp = ({email, password, name}) => {
         .createUserWithEmailAndPassword(email, password)
         .then(({user}) => {
           // console.log(user);
-          dispatch(signUpSuccess({email}));
+          dispatch(signUpSuccess());
           // set up a database entry
-
+          dispatch(initUser({id: user.uid, name, email}));
           // then signIn?
         })
         .catch((err) => dispatch(signUpFail({message: err.message})));
@@ -77,8 +84,61 @@ export const signIn = ({email, password}) => {
       .then((user) => {
         dispatch(signInSuccess({id: user.uid}));
         // then download user data
-        addToLocalStorage(SIGN_IN.SUCCESS, user.uid);
+        addToLocalStorage('id', user.uid);
       })
       .catch((err) => dispatch(signInFail({message: err.message})));
+  };
+};
+
+const signOutAttempt = () => ({
+  type: SIGN_OUT.ATTEMPT,
+});
+
+const signOutSuccess = () => ({
+  type: SIGN_OUT.SUCCESS,
+});
+
+export const signOut = () => {
+  return (dispatch) => {
+    dispatch(signOutAttempt());
+    return auth.signOut().then(() => {
+      clearFromLocalStorage('id');
+      return dispatch(signOutSuccess());
+    });
+  };
+};
+
+const initUserAttempt = () => ({
+  type: INIT_USER.ATTEMPT,
+});
+
+const initUserSuccess = ({id, email, name}) => ({
+  type: INIT_USER.SUCCESS,
+  id,
+  email,
+  name,
+});
+
+const initUserFail = ({message}) => ({
+  type: INIT_USER.FAIL,
+  message,
+});
+
+export const initUser = ({id, name, email}) => {
+  return (dispatch, getState) => {
+    dispatch(initUserAttempt());
+    database
+      .ref(`users/${id}`)
+      .set({
+        id,
+        name,
+        email,
+      })
+      .then(() => {
+        dispatch(initUserSuccess({id, name, email}));
+      })
+      .catch((error) => {
+        dispatch(initUserFail({message: error.message}));
+      });
   };
 };

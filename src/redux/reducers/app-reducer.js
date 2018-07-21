@@ -1,5 +1,5 @@
 import {COLLECTION_VISIBILITY} from '../actions/collection-actions';
-import {SIGN_IN, SIGN_OUT, SIGN_UP} from '../actions/app-actions';
+import {SIGN_IN, SIGN_OUT, SIGN_UP, INIT_USER} from '../actions/app-actions';
 
 const defaultState = {
   isAuthenticated: false,
@@ -11,6 +11,9 @@ const defaultState = {
   isSigningUp: false,
   signUpFail: false,
   signUpMessage: [],
+  isInitilising: false,
+  hasInitialisingFailed: false,
+  initialisingFailureReason: [],
 };
 
 const app = (state = defaultState, action) => {
@@ -45,6 +48,25 @@ const app = (state = defaultState, action) => {
         signInFail: true,
         signInFailMessage: [...action.message],
       });
+    case INIT_USER.ATTEMPT:
+      return Object.assign({}, defaultState, {
+        isInitilising: true,
+      });
+    case INIT_USER.SUCCESS:
+      return Object.assign({}, state, {
+        isInitilising: false,
+        name: action.name,
+        email: action.email,
+        id: action.id,
+      });
+    case INIT_USER.FAIL:
+      return Object.assign({}, state, {
+        isInitilising: false,
+        hasInitialisingFailed: true,
+        initialisingFailureReason: [action.message],
+      });
+
+    case SIGN_OUT.ATTEMPT:
     case SIGN_OUT.SUCCESS:
       return defaultState;
     default:

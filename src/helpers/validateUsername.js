@@ -14,11 +14,6 @@ export const validateUsername = (name) => {
       isValid: false,
       error: 'Username must have 5-15 characters',
     };
-  } else if (/\W/.test(name)) {
-    return {
-      isValid: false,
-      error: 'Please enter valid Username. Use only numbers and alphabets',
-    };
   }
   return {isValid: true};
 };

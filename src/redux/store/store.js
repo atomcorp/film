@@ -6,6 +6,7 @@ import collection from '../reducers/collection-reducers';
 import database from '../reducers/database-reducers';
 import highlight from '../reducers/highlight-reducer';
 import app from '../reducers/app-reducer';
+import user from '../reducers/user-reducers';
 import {
   postUsersDataToDatabase,
   getUsersDataAndUpdateSite,
@@ -17,6 +18,7 @@ const rootReducer = combineReducers({
   database,
   highlight,
   app,
+  user,
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk, logger));
