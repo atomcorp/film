@@ -1,7 +1,8 @@
 import firebase from 'firebase/app';
 import 'firebase/database';
 import 'firebase/auth';
-import FIREBASE_API from '../config/api';
+import {FIREBASE_API} from '../config/api';
+
 const config = {
   apiKey: FIREBASE_API,
   authDomain: 'film-ac003.firebaseapp.com',
