@@ -1,7 +1,11 @@
 const user = (
   state = {
+    name: '',
     id: '',
+    email: '',
     collections: [],
+    watched: [],
+    loved: [],
   },
   action
 ) => {

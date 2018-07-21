@@ -75,14 +75,12 @@ const collection = (
       });
     case TOGGLE_WATCHED_LIST.REMOVE:
       return Object.assign({}, state, {
-        watched: state.watched.reduce(
-          (acc, imdbIDs) => {
-            if (imdbIDs !== action.imdbID) {
-              return [...acc, imdbIDs];
-            }
-            return acc;
+        watched: state.watched.reduce((acc, imdbIDs) => {
+          if (imdbIDs !== action.imdbID) {
+            return [...acc, imdbIDs];
           }
-        , []),
+          return acc;
+        }, []),
       });
     case TOGGLE_RATING.ADD:
       return Object.assign({}, state, {
@@ -90,14 +88,12 @@ const collection = (
       });
     case TOGGLE_RATING.REMOVE:
       return Object.assign({}, state, {
-        loved: state.loved.reduce(
-          (acc, imdbIDs) => {
-            if (imdbIDs !== action.imdbID) {
-              return [...acc, imdbIDs];
-            }
-            return acc;
+        loved: state.loved.reduce((acc, imdbIDs) => {
+          if (imdbIDs !== action.imdbID) {
+            return [...acc, imdbIDs];
           }
-        , []),
+          return acc;
+        }, []),
       });
     case REORDER_COLLECTION:
       return Object.assign({}, state, {

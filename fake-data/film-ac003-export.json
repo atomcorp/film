@@ -1,0 +1,1299 @@
+{
+  "collection" : {
+    "addingFilm" : false,
+    "films" : [ {
+      "Actors" : "Dennis Quaid, Martin Short, Meg Ryan, Kevin McCarthy",
+      "Awards" : "Won 1 Oscar. Another 1 win & 4 nominations.",
+      "BoxOffice" : "N/A",
+      "Country" : "USA",
+      "DVD" : "09 Jul 2002",
+      "Director" : "Joe Dante",
+      "Genre" : "Action, Adventure, Comedy",
+      "Language" : "English",
+      "Metascore" : "66",
+      "Plot" : "Tuck Pendleton is a cocky pilot, who is taking part in a miniaturization experiment. When some bad guys break into the lab to steal the technology, one of the scientists takes a syringe which contains the miniaturized Tuck and vessel. Now in the vessel is part of the material needed to restore him. But the other part which is the lab is stolen. The scientist's shot but before dying he injects Tuck into Jack Putter, a hypochondriac, who feels that something is wrong with him all the time. When Tuck links himself to Jack's systems, he discovers that something happened. So they go back to the lab, and discover what happened. Now they are told that unless they retrieve the material that was stolen they won't be able to restore Tuck before his oxygen is depleted. Now the government rep decides that the only thing that matters that as long as they have the other half of the material, it is useless to the thieves. So Tuck eggs Jack to go out and find the thieves. They enlist the aid of Tuck's old girlfriend, Lydia, who is a reporter. And it's fortunate for them that she has a lead that pans out.",
+      "Poster" : "https://m.media-amazon.com/images/M/MV5BNDk1NzNiMGQtNGQ4Yy00NmMzLTkyNWQtZjM4MDU2Y2Q2NDVlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "Production" : "Warner Bros. Pictures",
+      "Rated" : "PG",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "6.8/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "82%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "66/100"
+      } ],
+      "Released" : "01 Jul 1987",
+      "Response" : "True",
+      "Runtime" : "120 min",
+      "Title" : "Innerspace",
+      "Type" : "movie",
+      "Website" : "N/A",
+      "Writer" : "Chip Proser (story), Jeffrey Boam (screenplay), Chip Proser (screenplay)",
+      "Year" : "1987",
+      "imdbID" : "tt0093260",
+      "imdbRating" : "6.8",
+      "imdbVotes" : "47,336"
+    }, {
+      "Actors" : "Ok-bin Kim, Ha-kyun Shin, Jun Sung, Seo-hyeong Kim",
+      "Awards" : "4 wins & 7 nominations.",
+      "BoxOffice" : "$27,442",
+      "Country" : "South Korea",
+      "DVD" : "21 Nov 2017",
+      "Director" : "Byung-gil Jung",
+      "Genre" : "Action, Crime, Drama",
+      "Language" : "Korean",
+      "Metascore" : "64",
+      "Plot" : "Sook-hee is a trained assassin who was born to kill. She was just a little girl when the training started in Yanbian, China. After the death of her mentor, when the chance of starting a new life was given to her, she came to South Korea as a government agent. They promised her that she will be free after ten years of service. So she begins her new life as a theatre actress. But soon two men Joong-sang and Hyun-soo appear in her new life. And she started to find deep dark secrets about her past. Eventually she take matters into her own hands.",
+      "Poster" : "https://ia.media-imdb.com/images/M/MV5BNzRiZjFkMjgtYjAxMy00NjNhLThlZmEtMDk1N2Q3MjFjMTBmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+      "Production" : "Next Entertainment World",
+      "Rated" : "NOT RATED",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "6.7/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "83%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "64/100"
+      } ],
+      "Released" : "08 Jun 2017",
+      "Response" : "True",
+      "Runtime" : "129 min",
+      "Title" : "The Villainess",
+      "Type" : "movie",
+      "Website" : "N/A",
+      "Writer" : "Byeong-sik Jung, Byung-gil Jung",
+      "Year" : "2017",
+      "imdbID" : "tt6777338",
+      "imdbRating" : "6.7",
+      "imdbVotes" : "6,304"
+    }, {
+      "Actors" : "Chloë Sevigny, Kate Beckinsale, Chris Eigeman, Mackenzie Astin",
+      "Awards" : "1 win & 1 nomination.",
+      "BoxOffice" : "N/A",
+      "Country" : "USA",
+      "DVD" : "08 Dec 1998",
+      "Director" : "Whit Stillman",
+      "Genre" : "Comedy, Drama, Music",
+      "Language" : "English",
+      "Metascore" : "76",
+      "Plot" : "Story of two female Manhattan book editors fresh out of college, both finding love and themselves while frequenting the local disco.",
+      "Poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BNjZmYzFkZTAtMTM5Ni00OGVkLWI4YmEtNzM4NTAyYmJhMzcyXkEyXkFqcGdeQXVyNjQ2MjQ5NzM@._V1_SX300.jpg",
+      "Production" : "Gramercy",
+      "Rated" : "R",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "6.6/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "73%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "76/100"
+      } ],
+      "Released" : "12 Jun 1998",
+      "Response" : "True",
+      "Runtime" : "113 min",
+      "Title" : "The Last Days of Disco",
+      "Type" : "movie",
+      "Website" : "N/A",
+      "Writer" : "Whit Stillman",
+      "Year" : "1998",
+      "imdbID" : "tt0120728",
+      "imdbRating" : "6.6",
+      "imdbVotes" : "10,692"
+    }, {
+      "Actors" : "Kris Kristofferson, Christopher Walken, John Hurt, Sam Waterston",
+      "Awards" : "Nominated for 1 Oscar. Another 2 wins & 8 nominations.",
+      "BoxOffice" : "N/A",
+      "Country" : "USA",
+      "DVD" : "15 May 2001",
+      "Director" : "Michael Cimino",
+      "Genre" : "Adventure, Drama, Western",
+      "Language" : "English, Russian, French, Polish, German",
+      "Metascore" : "57",
+      "Plot" : "A dramatization of the real-life Johnson County War in 1890 Wyoming, in which a Sheriff born into wealth, attempts to protect immigrant farmers from rich cattle interests.",
+      "Poster" : "https://ia.media-imdb.com/images/M/MV5BMjAxNDE5MzQ5M15BMl5BanBnXkFtZTcwNTk3MTE3NA@@._V1_SX300.jpg",
+      "Production" : "MGM/UA",
+      "Rated" : "R",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "6.8/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "57%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "57/100"
+      } ],
+      "Released" : "19 Nov 1980",
+      "Response" : "True",
+      "Runtime" : "325 min",
+      "Title" : "Heaven's Gate",
+      "Type" : "movie",
+      "Website" : "http://www.criterion.com/films/28036-heaven-s-gate",
+      "Writer" : "Michael Cimino",
+      "Year" : "1980",
+      "imdbID" : "tt0080855",
+      "imdbRating" : "6.8",
+      "imdbVotes" : "11,412"
+    }, {
+      "Actors" : "Mickey Rourke, John Lone, Ariane, Leonard Termo",
+      "Awards" : "Nominated for 2 Golden Globes. Another 1 win & 7 nominations.",
+      "BoxOffice" : "N/A",
+      "Country" : "USA",
+      "DVD" : "31 May 2005",
+      "Director" : "Michael Cimino",
+      "Genre" : "Action, Crime, Drama",
+      "Language" : "Mandarin, English, Cantonese, Vietnamese, Polish",
+      "Metascore" : "N/A",
+      "Plot" : "A police detective cracks down on organized crime in Chinatown after the murders of Triad and Mafia leaders.",
+      "Poster" : "https://m.media-amazon.com/images/M/MV5BNzcyOWI0N2ItMzA4Yi00NjQxLTg5NWUtZjI5ODNkMGMyMDU2XkEyXkFqcGdeQXVyNDkzNTM2ODg@._V1_SX300.jpg",
+      "Production" : "MGM Home Entertainment",
+      "Rated" : "R",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "6.9/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "56%"
+      } ],
+      "Released" : "16 Aug 1985",
+      "Response" : "True",
+      "Runtime" : "134 min",
+      "Title" : "Year of the Dragon",
+      "Type" : "movie",
+      "Website" : "N/A",
+      "Writer" : "Robert Daley (novel), Oliver Stone (screenplay), Michael Cimino (screenplay)",
+      "Year" : "1985",
+      "imdbID" : "tt0090350",
+      "imdbRating" : "6.9",
+      "imdbVotes" : "11,985"
+    }, {
+      "Actors" : "James Woods, Jim Belushi, Michael Murphy, John Savage",
+      "Awards" : "Nominated for 2 Oscars. Another 3 wins & 7 nominations.",
+      "BoxOffice" : "N/A",
+      "Country" : "UK, USA",
+      "DVD" : "05 Jun 2001",
+      "Director" : "Oliver Stone",
+      "Genre" : "Drama, History, Thriller",
+      "Language" : "English, Spanish",
+      "Metascore" : "N/A",
+      "Plot" : "An American photojournalist gets caught in a political struggle at El Salvador in 1980.",
+      "Poster" : "https://ia.media-imdb.com/images/M/MV5BNmJkODUxMzItNzZmOC00ZjA4LTlmOTQtYzFmMTBlMWMyNDE2XkEyXkFqcGdeQXVyMTA0MjU0Ng@@._V1_SX300.jpg",
+      "Production" : "MGM Pictures, Inc.",
+      "Rated" : "R",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "7.5/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "92%"
+      } ],
+      "Released" : "23 Apr 1986",
+      "Response" : "True",
+      "Runtime" : "122 min",
+      "Title" : "Salvador",
+      "Type" : "movie",
+      "Website" : "N/A",
+      "Writer" : "Oliver Stone, Richard Boyle",
+      "Year" : "1986",
+      "imdbID" : "tt0091886",
+      "imdbRating" : "7.5",
+      "imdbVotes" : "16,848"
+    }, {
+      "Actors" : "Ben Affleck, Terry Camilleri, David Backus, Lenny Venito",
+      "Awards" : "12 wins & 13 nominations.",
+      "BoxOffice" : "N/A",
+      "Country" : "USA",
+      "DVD" : "25 Jan 2005",
+      "Director" : "Martin Brest",
+      "Genre" : "Comedy, Crime, Romance",
+      "Language" : "English",
+      "Metascore" : "18",
+      "Plot" : "The violent story about how a criminal lesbian, a tough-guy hitman with a heart of gold, and a mentally challenged man came to be best friends through a hostage.",
+      "Poster" : "https://ia.media-imdb.com/images/M/MV5BMTE5MTYxMDg5NV5BMl5BanBnXkFtZTYwNjc5MzQ3._V1_SX300.jpg",
+      "Production" : "N/A",
+      "Rated" : "R",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "2.4/10"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "18/100"
+      } ],
+      "Released" : "01 Aug 2003",
+      "Response" : "True",
+      "Runtime" : "121 min",
+      "Title" : "Gigli",
+      "Type" : "movie",
+      "Website" : "N/A",
+      "Writer" : "Martin Brest",
+      "Year" : "2003",
+      "imdbID" : "tt0299930",
+      "imdbRating" : "2.4",
+      "imdbVotes" : "43,351"
+    }, {
+      "Actors" : "Brad Davis, Irene Miracle, Bo Hopkins, Paolo Bonacelli",
+      "Awards" : "Won 2 Oscars. Another 14 wins & 14 nominations.",
+      "BoxOffice" : "N/A",
+      "Country" : "UK, USA, Turkey, France",
+      "DVD" : "22 May 2001",
+      "Director" : "Alan Parker",
+      "Genre" : "Biography, Crime, Drama",
+      "Language" : "English, Maltese, French, Turkish",
+      "Metascore" : "59",
+      "Plot" : "Billy Hayes, an American college student, is caught smuggling drugs out of Turkey and thrown into prison.",
+      "Poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BNDU1MjQ0YWMtMWQ2MS00NTdmLTg1MGItNDA5NTNkNTRhOTIyXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg",
+      "Production" : "Sony Pictures Home Entertainment",
+      "Rated" : "R",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "7.6/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "96%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "59/100"
+      } ],
+      "Released" : "06 Oct 1978",
+      "Response" : "True",
+      "Runtime" : "121 min",
+      "Title" : "Midnight Express",
+      "Type" : "movie",
+      "Website" : "N/A",
+      "Writer" : "Oliver Stone (screenplay), Billy Hayes (book), William Hoffer (book)",
+      "Year" : "1978",
+      "imdbID" : "tt0077928",
+      "imdbRating" : "7.6",
+      "imdbVotes" : "60,815"
+    }, {
+      "Actors" : "Ice Cube, Chris Tucker, Nia Long, Tommy 'Tiny' Lister",
+      "Awards" : "1 win & 5 nominations.",
+      "BoxOffice" : "N/A",
+      "Country" : "USA",
+      "DVD" : "10 Sep 2002",
+      "Director" : "F. Gary Gray",
+      "Genre" : "Comedy, Drama",
+      "Language" : "English",
+      "Metascore" : "54",
+      "Plot" : "Two homies, Smokey and Craig, smoke a dope dealer's weed and try to figure a way to get the $200 they owe to the dealer by 10 p.m. that same night.",
+      "Poster" : "https://ia.media-imdb.com/images/M/MV5BYmEwNjNlZTUtNzkwMS00ZTlhLTkyY2MtMjM2MzlmODQyZGVhXkEyXkFqcGdeQXVyNTI4MjkwNjA@._V1_SX300.jpg",
+      "Production" : "Zebra",
+      "Rated" : "R",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "7.3/10"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "54/100"
+      } ],
+      "Released" : "26 Apr 1995",
+      "Response" : "True",
+      "Runtime" : "91 min",
+      "Title" : "Friday",
+      "Type" : "movie",
+      "Website" : "N/A",
+      "Writer" : "Ice Cube, DJ Pooh",
+      "Year" : "1995",
+      "imdbID" : "tt0113118",
+      "imdbRating" : "7.3",
+      "imdbVotes" : "85,398"
+    }, {
+      "Actors" : "Logan Marshall-Green, Richard Anastasios, Rosco Campbell, Richard Cawthorne",
+      "Awards" : "N/A",
+      "BoxOffice" : "N/A",
+      "Country" : "Australia",
+      "DVD" : "N/A",
+      "Director" : "Leigh Whannell",
+      "Genre" : "Action, Horror, Sci-Fi",
+      "Language" : "English",
+      "Metascore" : "65",
+      "Plot" : "Set in the near-future, technology controls nearly all aspects of life. But when Grey, a self-identified technophobe, has his world turned upside down, his only hope for revenge is an experimental computer chip implant called Stem.",
+      "Poster" : "https://m.media-amazon.com/images/M/MV5BMjI0NzcyMjM5Ml5BMl5BanBnXkFtZTgwMzk2NzAyNTM@._V1_SX300.jpg",
+      "Production" : "Blumhouse Productions",
+      "Rated" : "R",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "7.8/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "85%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "65/100"
+      } ],
+      "Released" : "01 Jun 2018",
+      "Response" : "True",
+      "Runtime" : "100 min",
+      "Title" : "Upgrade",
+      "Type" : "movie",
+      "Website" : "N/A",
+      "Writer" : "Leigh Whannell",
+      "Year" : "2018",
+      "imdbID" : "tt6499752",
+      "imdbRating" : "7.8",
+      "imdbVotes" : "6,140"
+    }, {
+      "Actors" : "Adamo Dionisi, Edoardo Pesce, Francesco Acquaroli, Laura Pizzirani",
+      "Awards" : "N/A",
+      "BoxOffice" : "N/A",
+      "Country" : "Italy, France",
+      "DVD" : "N/A",
+      "Director" : "Matteo Garrone",
+      "Genre" : "Drama",
+      "Language" : "Italian",
+      "Metascore" : "N/A",
+      "Plot" : "Marcello, a small and gentle dog groomer, finds himself involved in a dangerous relationship of subjugation with Simone, a former violent boxer who terrorizes the entire neighborhood. In an...",
+      "Poster" : "https://ia.media-imdb.com/images/M/MV5BZmRjYTc2OTgtOGExYy00YmUzLWFhOGUtYWRiNjRjMmM4MTJiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+      "Production" : "N/A",
+      "Rated" : "N/A",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "7.7/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "69%"
+      } ],
+      "Released" : "17 May 2018",
+      "Response" : "True",
+      "Runtime" : "120 min",
+      "Title" : "Dogman",
+      "Type" : "movie",
+      "Website" : "N/A",
+      "Writer" : "Ugo Chiti, Massimo Gaudioso, Matteo Garrone, Damiano D'Innocenzo (collaborating writer), Fabio D'Innocenzo (collaborating writer)",
+      "Year" : "2018",
+      "imdbID" : "tt6768578",
+      "imdbRating" : "7.7",
+      "imdbVotes" : "14"
+    }, {
+      "Actors" : "Yvonne Strahovski, Olivia Munn, Sterling K. Brown, Boyd Holbrook",
+      "Awards" : "N/A",
+      "BoxOffice" : "N/A",
+      "Country" : "USA",
+      "DVD" : "N/A",
+      "Director" : "Shane Black",
+      "Genre" : "Action, Adventure, Horror",
+      "Language" : "English",
+      "Metascore" : "N/A",
+      "Plot" : "When a young boy accidentally triggers the universe's most lethal hunters return to Earth, only a ragtag crew of ex-soldiers and a disgruntled science teacher can prevent the end of the human race.",
+      "Poster" : "https://ia.media-imdb.com/images/M/MV5BMTM1MjUxNmEtNzA4Zi00N2U3LTliMjItYzg4ZjYxOWE1MDMzXkEyXkFqcGdeQXVyNjQyMDMzNzc@._V1_SX300.jpg",
+      "Production" : "N/A",
+      "Rated" : "N/A",
+      "Released" : "14 Sep 2018",
+      "Response" : "True",
+      "Runtime" : "N/A",
+      "Title" : "The Predator",
+      "Type" : "movie",
+      "Website" : "N/A",
+      "Writer" : "Fred Dekker, Shane Black, Jim Thomas (based on characters created by), John Thomas (based on characters created by)",
+      "Year" : "2018",
+      "imdbID" : "tt3829266",
+      "imdbRating" : "N/A",
+      "imdbVotes" : "N/A"
+    }, {
+      "Actors" : "Ethan Hawke, John Travolta, Taissa Farmiga, James Ransone",
+      "Awards" : "N/A",
+      "BoxOffice" : "$50,381",
+      "Country" : "USA",
+      "DVD" : "27 Dec 2016",
+      "Director" : "Ti West",
+      "Genre" : "Action, Crime, Drama",
+      "Language" : "English",
+      "Metascore" : "64",
+      "Plot" : "A mysterious stranger and a random act of violence drag a town of misfits and nitwits into the bloody crosshairs of revenge.",
+      "Poster" : "https://ia.media-imdb.com/images/M/MV5BMTUxMjExOTA2OF5BMl5BanBnXkFtZTgwMzI3NTgxMDI@._V1_SX300.jpg",
+      "Production" : "Blumhouse Productions",
+      "Rated" : "R",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "6.0/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "77%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "64/100"
+      } ],
+      "Released" : "21 Oct 2016",
+      "Response" : "True",
+      "Runtime" : "104 min",
+      "Title" : "In a Valley of Violence",
+      "Type" : "movie",
+      "Website" : "http://valleyofviolencethemovie.com/",
+      "Writer" : "Ti West",
+      "Year" : "2016",
+      "imdbID" : "tt3608930",
+      "imdbRating" : "6.0",
+      "imdbVotes" : "11,143"
+    }, {
+      "Actors" : "Blake Lively, Óscar Jaenada, Angelo Josue Lozano Corzo, Joseph Salas",
+      "Awards" : "15 nominations.",
+      "BoxOffice" : "$55,121,623",
+      "Country" : "USA, Australia, Spain",
+      "DVD" : "27 Sep 2016",
+      "Director" : "Jaume Collet-Serra",
+      "Genre" : "Drama, Horror, Thriller",
+      "Language" : "English, Spanish",
+      "Metascore" : "59",
+      "Plot" : "A mere 200 yards from shore, surfer Nancy is attacked by a great white shark, with her short journey to safety becoming the ultimate contest of wills.",
+      "Poster" : "https://ia.media-imdb.com/images/M/MV5BMjA1MTA4MzU4Ml5BMl5BanBnXkFtZTgwNjUxNjczODE@._V1_SX300.jpg",
+      "Production" : "Ombra Films",
+      "Rated" : "PG-13",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "6.3/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "78%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "59/100"
+      } ],
+      "Released" : "24 Jun 2016",
+      "Response" : "True",
+      "Runtime" : "86 min",
+      "Title" : "The Shallows",
+      "Type" : "movie",
+      "Website" : "http://www.theshallows-movie.com/site/",
+      "Writer" : "Anthony Jaswinski",
+      "Year" : "2016",
+      "imdbID" : "tt4052882",
+      "imdbRating" : "6.3",
+      "imdbVotes" : "94,673"
+    }, {
+      "Actors" : "Callie Hernandez, Sydney Sweeney, Jimmi Simpson, Riley Keough",
+      "Awards" : "N/A",
+      "BoxOffice" : "N/A",
+      "Country" : "USA",
+      "DVD" : "N/A",
+      "Director" : "David Robert Mitchell",
+      "Genre" : "Comedy, Crime, Drama",
+      "Language" : "English",
+      "Metascore" : "59",
+      "Plot" : "A man becomes obsessed with the strange circumstances of a billionaire mogul's murder and the kidnapping of a girl.",
+      "Poster" : "https://ia.media-imdb.com/images/M/MV5BYjY0NTA5MGItNDU1Yy00ZmE3LWI5NGItZDY5OGUxZjYzZGQ5XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+      "Production" : "A24",
+      "Rated" : "R",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "6.3/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "60%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "59/100"
+      } ],
+      "Released" : "22 Jun 2018",
+      "Response" : "True",
+      "Runtime" : "139 min",
+      "Title" : "Under the Silver Lake",
+      "Type" : "movie",
+      "Website" : "N/A",
+      "Writer" : "David Robert Mitchell",
+      "Year" : "2018",
+      "imdbID" : "tt5691670",
+      "imdbRating" : "6.3",
+      "imdbVotes" : "262"
+    }, {
+      "Actors" : "Takuto Sueoka, Himeka Asami, Masataka Kubota, Shôta Sometani",
+      "Awards" : "1 nomination.",
+      "BoxOffice" : "$5,532",
+      "Country" : "Japan",
+      "DVD" : "08 Dec 2015",
+      "Director" : "Takashi Murakami",
+      "Genre" : "Comedy, Fantasy",
+      "Language" : "Japanese",
+      "Metascore" : "34",
+      "Plot" : "In Japan, the small Masashi moves from one evacuation center to a small town. There you will discover that every child has the right to communicate with a fantastic creature, but these are ...",
+      "Poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BMTk2MDY1MjY5Ml5BMl5BanBnXkFtZTgwMTc0NjYyNjE@._V1_SX300.jpg",
+      "Production" : "Janus Films",
+      "Rated" : "NOT RATED",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "4.8/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "18%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "34/100"
+      } ],
+      "Released" : "23 Apr 2013",
+      "Response" : "True",
+      "Runtime" : "101 min",
+      "Title" : "Jellyfish Eyes",
+      "Type" : "movie",
+      "Website" : "http://jellyfisheyesthemovie.com/",
+      "Writer" : "Takashi Murakami (story), Yoshihiro Nishimura (screenplay), Jun Tsugita (screenplay)",
+      "Year" : "2013",
+      "imdbID" : "tt2006181",
+      "imdbRating" : "4.8",
+      "imdbVotes" : "278"
+    }, {
+      "Actors" : "Tatsuya Nakadai, Akira Terao, Jinpachi Nezu, Daisuke Ryû",
+      "Awards" : "Won 1 Oscar. Another 28 wins & 21 nominations.",
+      "BoxOffice" : "N/A",
+      "Country" : "Japan, France",
+      "DVD" : "22 Nov 2005",
+      "Director" : "Akira Kurosawa",
+      "Genre" : "Action, Drama",
+      "Language" : "Japanese",
+      "Metascore" : "96",
+      "Plot" : "In Medieval Japan, an elderly warlord retires, handing over his empire to his three sons. However, he vastly underestimates how the new-found power will corrupt them and cause them to turn on each other...and him.",
+      "Poster" : "https://ia.media-imdb.com/images/M/MV5BZDBjZTM4ZmEtOTA5ZC00NTQzLTkyNzYtMmUxNGU2YjI5YjU5L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg",
+      "Production" : "Rialto Pictures",
+      "Rated" : "R",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "8.2/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "96%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "96/100"
+      } ],
+      "Released" : "01 Jun 1985",
+      "Response" : "True",
+      "Runtime" : "162 min",
+      "Title" : "Ran",
+      "Type" : "movie",
+      "Website" : "N/A",
+      "Writer" : "Akira Kurosawa (screenplay), Hideo Oguni (screenplay), Masato Ide (screenplay), William Shakespeare (play)",
+      "Year" : "1985",
+      "imdbID" : "tt0089881",
+      "imdbRating" : "8.2",
+      "imdbVotes" : "92,904"
+    }, {
+      "Actors" : "Sylvester Stallone, Wesley Snipes, Sandra Bullock, Nigel Hawthorne",
+      "Awards" : "1 win & 6 nominations.",
+      "BoxOffice" : "N/A",
+      "Country" : "USA",
+      "DVD" : "30 Sep 1997",
+      "Director" : "Marco Brambilla",
+      "Genre" : "Action, Crime, Sci-Fi",
+      "Language" : "English",
+      "Metascore" : "34",
+      "Plot" : "A police officer is brought out of suspended animation in prison to pursue an old ultra-violent nemesis who is loose in a non-violent future society.",
+      "Poster" : "https://ia.media-imdb.com/images/M/MV5BMDBmNDhjOTYtZWVlMC00YzUwLWIyZjEtYzFjMWM5OTdiZDJkXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg",
+      "Production" : "Warner Home Video",
+      "Rated" : "R",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "6.6/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "61%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "34/100"
+      } ],
+      "Released" : "08 Oct 1993",
+      "Response" : "True",
+      "Runtime" : "115 min",
+      "Title" : "Demolition Man",
+      "Type" : "movie",
+      "Website" : "N/A",
+      "Writer" : "Peter M. Lenkov (story), Robert Reneau (story), Daniel Waters (screenplay), Robert Reneau (screenplay), Peter M. Lenkov (screenplay)",
+      "Year" : "1993",
+      "imdbID" : "tt0106697",
+      "imdbRating" : "6.6",
+      "imdbVotes" : "137,915"
+    }, {
+      "Actors" : "Takeshi Kitano, Tadanobu Asano, Michiyo Ohkusu, Taka Guadalcanal",
+      "Awards" : "21 wins & 10 nominations.",
+      "BoxOffice" : "$584,553",
+      "Country" : "Japan",
+      "DVD" : "09 Nov 2004",
+      "Director" : "Takeshi Kitano",
+      "Genre" : "Action, Comedy, Crime",
+      "Language" : "Japanese",
+      "Metascore" : "75",
+      "Plot" : "The blind masseur/swordsman comes to a town in control of warring gangs, and while bunking with a farming family, he meets two women with their own agenda.",
+      "Poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BNTNlYzU0OGEtODdmOS00Y2E3LTgyYzgtZWMzNmRhMDdmN2YyL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg",
+      "Production" : "Miramax Films",
+      "Rated" : "R",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "7.6/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "87%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "75/100"
+      } ],
+      "Released" : "06 Sep 2003",
+      "Response" : "True",
+      "Runtime" : "116 min",
+      "Title" : "The Blind Swordsman: Zatoichi",
+      "Type" : "movie",
+      "Website" : "http://www.justice-is-blind.com/",
+      "Writer" : "Takeshi Kitano (screenplay), Kan Shimozawa (novels)",
+      "Year" : "2003",
+      "imdbID" : "tt0363226",
+      "imdbRating" : "7.6",
+      "imdbVotes" : "43,354"
+    }, {
+      "Actors" : "Luis Guzmán, Burt Reynolds, Julianne Moore, Rico Bueno",
+      "Awards" : "Nominated for 3 Oscars. Another 29 wins & 49 nominations.",
+      "BoxOffice" : "N/A",
+      "Country" : "USA",
+      "DVD" : "07 Apr 1998",
+      "Director" : "Paul Thomas Anderson",
+      "Genre" : "Drama",
+      "Language" : "English",
+      "Metascore" : "85",
+      "Plot" : "The story of a young man's adventures in the Californian pornography industry of the late 1970s and early 1980s.",
+      "Poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BY2E2YWYxY2QtZmJmZi00MjJlLWFiYWItZTk5Y2IyMWQ1ZThhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+      "Production" : "New Line Cinema",
+      "Rated" : "R",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "7.9/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "93%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "85/100"
+      } ],
+      "Released" : "31 Oct 1997",
+      "Response" : "True",
+      "Runtime" : "155 min",
+      "Title" : "Boogie Nights",
+      "Type" : "movie",
+      "Website" : "N/A",
+      "Writer" : "Paul Thomas Anderson",
+      "Year" : "1997",
+      "imdbID" : "tt0118749",
+      "imdbRating" : "7.9",
+      "imdbVotes" : "207,531"
+    }, {
+      "Actors" : "Marcello Mastroianni, Claudia Cardinale, Anouk Aimée, Sandra Milo",
+      "Awards" : "Won 2 Oscars. Another 16 wins & 8 nominations.",
+      "BoxOffice" : "N/A",
+      "Country" : "Italy, France",
+      "DVD" : "04 Dec 2001",
+      "Director" : "Federico Fellini",
+      "Genre" : "Drama",
+      "Language" : "Italian, French, English, German",
+      "Metascore" : "N/A",
+      "Plot" : "A harried movie director retreats into his memories and fantasies.",
+      "Poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ4MTA0NjEzMF5BMl5BanBnXkFtZTgwMDg4NDYxMzE@._V1_SX300.jpg",
+      "Production" : "Cinerez",
+      "Rated" : "NOT RATED",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "8.1/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "98%"
+      } ],
+      "Released" : "25 Jun 1963",
+      "Response" : "True",
+      "Runtime" : "138 min",
+      "Title" : "8½",
+      "Type" : "movie",
+      "Website" : "N/A",
+      "Writer" : "Federico Fellini (story), Ennio Flaiano (story), Federico Fellini (screenplay), Tullio Pinelli (screenplay), Ennio Flaiano (screenplay), Brunello Rondi (screenplay)",
+      "Year" : "1963",
+      "imdbID" : "tt0056801",
+      "imdbRating" : "8.1",
+      "imdbVotes" : "89,684"
+    }, {
+      "Actors" : "Jonathan Pryce, Robert De Niro, Katherine Helmond, Ian Holm",
+      "Awards" : "Nominated for 2 Oscars. Another 8 wins & 3 nominations.",
+      "BoxOffice" : "N/A",
+      "Country" : "UK",
+      "DVD" : "31 Mar 1998",
+      "Director" : "Terry Gilliam",
+      "Genre" : "Drama, Sci-Fi",
+      "Language" : "English",
+      "Metascore" : "88",
+      "Plot" : "A bureaucrat, in a retro-future world, tries to correct an administrative error, and becomes an enemy of the state.",
+      "Poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BMDM0YTM3Y2UtNzY5MC00OTc4LThhZTYtMmM0ZGZjMmU1ZjdmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
+      "Production" : "Universal Pictures",
+      "Rated" : "R",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "8.0/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "98%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "88/100"
+      } ],
+      "Released" : "18 Dec 1985",
+      "Response" : "True",
+      "Runtime" : "132 min",
+      "Title" : "Brazil",
+      "Type" : "movie",
+      "Website" : "N/A",
+      "Writer" : "Terry Gilliam (screenplay), Tom Stoppard (screenplay), Charles McKeown (screenplay)",
+      "Year" : "1985",
+      "imdbID" : "tt0088846",
+      "imdbRating" : "8.0",
+      "imdbVotes" : "166,218"
+    }, {
+      "Actors" : "Toshirô Mifune, Isuzu Yamada, Takashi Shimura, Akira Kubo",
+      "Awards" : "3 wins & 1 nomination.",
+      "BoxOffice" : "N/A",
+      "Country" : "Japan",
+      "DVD" : "27 May 2003",
+      "Director" : "Akira Kurosawa",
+      "Genre" : "Drama",
+      "Language" : "Japanese",
+      "Metascore" : "N/A",
+      "Plot" : "A war-hardened general, egged on by his ambitious wife, works to fulfill a prophecy that he would become lord of Spider's Web Castle.",
+      "Poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BNzBiMDVlNWItNzY1My00YzZjLWJmNDEtNzY0NmY4Yjg2YzgzXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
+      "Production" : "Media Home Entertainment",
+      "Rated" : "NOT RATED",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "8.1/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "98%"
+      } ],
+      "Released" : "22 Nov 1961",
+      "Response" : "True",
+      "Runtime" : "110 min",
+      "Title" : "Throne of Blood",
+      "Type" : "movie",
+      "Website" : "N/A",
+      "Writer" : "Hideo Oguni (screenplay), Shinobu Hashimoto (screenplay), Ryûzô Kikushima (screenplay), Akira Kurosawa (screenplay)",
+      "Year" : "1957",
+      "imdbID" : "tt0050613",
+      "imdbRating" : "8.1",
+      "imdbVotes" : "36,101"
+    }, {
+      "Actors" : "Harry Dean Stanton, Emilio Estevez, Tracey Walter, Olivia Barash",
+      "Awards" : "2 wins & 3 nominations.",
+      "BoxOffice" : "N/A",
+      "Country" : "USA",
+      "DVD" : "28 Aug 2000",
+      "Director" : "Alex Cox",
+      "Genre" : "Comedy, Crime, Sci-Fi",
+      "Language" : "English, Spanish",
+      "Metascore" : "75",
+      "Plot" : "Young punk Otto becomes a repo man after helping to steal a car, and stumbles into a world of wackiness as a result.",
+      "Poster" : "https://ia.media-imdb.com/images/M/MV5BNzdkMzVhNTgtMjlhNC00M2JkLWI3MzktYzdkNzYxNTk1NjcwXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "Production" : "Universal Pictures",
+      "Rated" : "R",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "6.9/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "98%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "75/100"
+      } ],
+      "Released" : "02 Mar 1984",
+      "Response" : "True",
+      "Runtime" : "92 min",
+      "Title" : "Repo Man",
+      "Type" : "movie",
+      "Website" : "N/A",
+      "Writer" : "Alex Cox",
+      "Year" : "1984",
+      "imdbID" : "tt0087995",
+      "imdbRating" : "6.9",
+      "imdbVotes" : "28,530"
+    }, {
+      "Actors" : "Anton Yelchin, Joe Cole, Alia Shawkat, Callum Turner",
+      "Awards" : "9 wins & 24 nominations.",
+      "BoxOffice" : "$3,219,029",
+      "Country" : "USA",
+      "DVD" : "12 Jul 2016",
+      "Director" : "Jeremy Saulnier",
+      "Genre" : "Crime, Horror, Thriller",
+      "Language" : "English",
+      "Metascore" : "79",
+      "Plot" : "A punk rock band is forced to fight for survival after witnessing a murder at a neo-Nazi skinhead bar.",
+      "Poster" : "https://ia.media-imdb.com/images/M/MV5BMjU1ODQ5NzA0N15BMl5BanBnXkFtZTgwMDg5MTA5NzE@._V1_SX300.jpg",
+      "Production" : "A24 Films",
+      "Rated" : "R",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "7.0/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "90%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "79/100"
+      } ],
+      "Released" : "13 May 2016",
+      "Response" : "True",
+      "Runtime" : "95 min",
+      "Title" : "Green Room",
+      "Type" : "movie",
+      "Website" : "http://greenroom-movie.com/",
+      "Writer" : "Jeremy Saulnier",
+      "Year" : "2015",
+      "imdbID" : "tt4062536",
+      "imdbRating" : "7.0",
+      "imdbVotes" : "76,305"
+    }, {
+      "Actors" : "Macon Blair, Ydaiber Orozco, Ronald Sarcos, Dani Santiago",
+      "Awards" : "8 wins & 18 nominations.",
+      "BoxOffice" : "N/A",
+      "Country" : "USA, France",
+      "DVD" : "22 Jul 2014",
+      "Director" : "Jeremy Saulnier",
+      "Genre" : "Crime, Drama, Thriller",
+      "Language" : "English",
+      "Metascore" : "77",
+      "Plot" : "A mysterious outsider's quiet life is turned upside down when he returns to his childhood home to carry out an act of vengeance. Proving himself an amateur assassin, he winds up in a brutal fight to protect his estranged family.",
+      "Poster" : "https://ia.media-imdb.com/images/M/MV5BMTY4NTM2MDg5OV5BMl5BanBnXkFtZTgwMDA3OTAwMTE@._V1_SX300.jpg",
+      "Production" : "Radius-TWC",
+      "Rated" : "R",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "7.1/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "96%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "77/100"
+      } ],
+      "Released" : "09 Jul 2014",
+      "Response" : "True",
+      "Runtime" : "90 min",
+      "Title" : "Blue Ruin",
+      "Type" : "movie",
+      "Website" : "http://blueruinmovie.com/",
+      "Writer" : "Jeremy Saulnier",
+      "Year" : "2013",
+      "imdbID" : "tt2359024",
+      "imdbRating" : "7.1",
+      "imdbVotes" : "54,172"
+    }, {
+      "Actors" : "Josh Brolin, Miles Teller, Jeff Bridges, Jennifer Connelly",
+      "Awards" : "3 nominations.",
+      "BoxOffice" : "$18,255,680",
+      "Country" : "USA",
+      "DVD" : "06 Feb 2018",
+      "Director" : "Joseph Kosinski",
+      "Genre" : "Biography, Drama",
+      "Language" : "English",
+      "Metascore" : "72",
+      "Plot" : "Based on the true story of the Granite Mountain Hotshots, a group of elite firefighters who risk everything to protect a town from a historic wildfire.",
+      "Poster" : "https://ia.media-imdb.com/images/M/MV5BYWFlOWI3YTMtYTk3NS00YWQ2LTlmYTMtZjk0ZDk4Y2NjODI0XkEyXkFqcGdeQXVyNTQxNTQ4Mg@@._V1_SX300.jpg",
+      "Production" : "Columbia Pictures",
+      "Rated" : "PG-13",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "7.7/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "87%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "72/100"
+      } ],
+      "Released" : "20 Oct 2017",
+      "Response" : "True",
+      "Runtime" : "134 min",
+      "Title" : "Only the Brave",
+      "Type" : "movie",
+      "Website" : "http://www.onlythebrave-movie.com/site/#",
+      "Writer" : "Sean Flynn (based on the GQ article \"No Exit\" by), Ken Nolan, Eric Warren Singer",
+      "Year" : "2017",
+      "imdbID" : "tt3829920",
+      "imdbRating" : "7.7",
+      "imdbVotes" : "25,821"
+    }, {
+      "Actors" : "Michael Douglas, Robert Duvall, Barbara Hershey, Rachel Ticotin",
+      "Awards" : "1 win & 2 nominations.",
+      "BoxOffice" : "N/A",
+      "Country" : "France, USA, UK",
+      "DVD" : "26 May 2009",
+      "Director" : "Joel Schumacher",
+      "Genre" : "Crime, Drama, Thriller",
+      "Language" : "English, Spanish, Korean",
+      "Metascore" : "56",
+      "Plot" : "An unemployed defense worker frustrated with the various flaws he sees in society, begins to psychotically and violently lash out against them.",
+      "Poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BYjcxMzM3OWMtNmM3Yy00YzBkLTkxMmQtMDk4MmM3Y2Y4MDliL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "Production" : "Warner Bros. Pictures",
+      "Rated" : "R",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "7.6/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "72%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "56/100"
+      } ],
+      "Released" : "26 Feb 1993",
+      "Response" : "True",
+      "Runtime" : "113 min",
+      "Title" : "Falling Down",
+      "Type" : "movie",
+      "Website" : "N/A",
+      "Writer" : "Ebbe Roe Smith",
+      "Year" : "1993",
+      "imdbID" : "tt0106856",
+      "imdbRating" : "7.6",
+      "imdbVotes" : "146,546"
+    }, {
+      "Actors" : "Yiorgos Kendros, Panos Koronis, Vangelis Mourikis, Makis Papadimitriou",
+      "Awards" : "8 wins & 18 nominations.",
+      "BoxOffice" : "$25,676",
+      "Country" : "Greece",
+      "DVD" : "N/A",
+      "Director" : "Athina Rachel Tsangari",
+      "Genre" : "Comedy, Drama",
+      "Language" : "Greek, English",
+      "Metascore" : "76",
+      "Plot" : "In the middle of the Aegean Sea, six men on a fishing trip on a luxury yacht decide to play a game. During this game, things will be compared. Things will be measured. Songs will be ...",
+      "Poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BMTUyODQ3NjM1Ml5BMl5BanBnXkFtZTgwNjYwNDc2ODE@._V1_SX300.jpg",
+      "Production" : "Haos Film",
+      "Rated" : "UNRATED",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "6.4/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "83%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "76/100"
+      } ],
+      "Released" : "26 Nov 2015",
+      "Response" : "True",
+      "Runtime" : "105 min",
+      "Title" : "Chevalier",
+      "Type" : "movie",
+      "Website" : "N/A",
+      "Writer" : "Efthymis Filippou, Athina Rachel Tsangari",
+      "Year" : "2015",
+      "imdbID" : "tt3526706",
+      "imdbRating" : "6.4",
+      "imdbVotes" : "3,051"
+    }, {
+      "Actors" : "Emile Hirsch, Nicholas Elia, Susan Sarandon, Melissa Holroyd",
+      "Awards" : "13 nominations.",
+      "BoxOffice" : "$43,929,341",
+      "Country" : "USA, Australia, Germany",
+      "DVD" : "16 Sep 2008",
+      "Director" : "Lana Wachowski, Lilly Wachowski",
+      "Genre" : "Action, Family, Sci-Fi",
+      "Language" : "English",
+      "Metascore" : "37",
+      "Plot" : "A young driver, Speed Racer, aspires to be champion of the racing world with the help of his family and his high-tech Mach 5 automobile.",
+      "Poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BMWU4Y2RhYzMtYzIxZC00NmRlLTk0OTctNDg1NTg5Yjk4YjQzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "Production" : "Warner Bros. Pictures",
+      "Rated" : "PG",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "6.0/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "40%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "37/100"
+      } ],
+      "Released" : "09 May 2008",
+      "Response" : "True",
+      "Runtime" : "135 min",
+      "Title" : "Speed Racer",
+      "Type" : "movie",
+      "Website" : "http://speedracerthemovie.warnerbros.com/",
+      "Writer" : "Lilly Wachowski, Lana Wachowski, Tatsuo Yoshida (animated series \"Speed Racer\")",
+      "Year" : "2008",
+      "imdbID" : "tt0811080",
+      "imdbRating" : "6.0",
+      "imdbVotes" : "61,972"
+    }, {
+      "Actors" : "Christos Stergioglou, Michele Valley, Angeliki Papoulia, Hristos Passalis",
+      "Awards" : "Nominated for 1 Oscar. Another 20 wins & 16 nominations.",
+      "BoxOffice" : "$110,197",
+      "Country" : "Greece",
+      "DVD" : "25 Jan 2011",
+      "Director" : "Yorgos Lanthimos",
+      "Genre" : "Drama, Horror, Thriller",
+      "Language" : "Greek",
+      "Metascore" : "73",
+      "Plot" : "Three teenagers live isolated, without leaving their house, because their over-protective parents say they can only leave when their dogtooth falls out.",
+      "Poster" : "https://ia.media-imdb.com/images/M/MV5BMjIyOTkyMDE5N15BMl5BanBnXkFtZTcwNjIwNzQwMw@@._V1_SX300.jpg",
+      "Production" : "Kino International",
+      "Rated" : "NOT RATED",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "7.3/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "92%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "73/100"
+      } ],
+      "Released" : "11 Nov 2009",
+      "Response" : "True",
+      "Runtime" : "94 min",
+      "Title" : "Dogtooth",
+      "Type" : "movie",
+      "Website" : "http://www.dogtooth.gr/",
+      "Writer" : "Efthymis Filippou, Yorgos Lanthimos",
+      "Year" : "2009",
+      "imdbID" : "tt1379182",
+      "imdbRating" : "7.3",
+      "imdbVotes" : "58,781"
+    }, {
+      "Actors" : "Paz de la Huerta, Nathaniel Brown, Cyril Roy, Olly Alexander",
+      "Awards" : "3 wins & 7 nominations.",
+      "BoxOffice" : "$336,467",
+      "Country" : "France, Germany, Italy, Canada",
+      "DVD" : "25 Jan 2011",
+      "Director" : "Gaspar Noé",
+      "Genre" : "Drama, Fantasy",
+      "Language" : "English, Japanese",
+      "Metascore" : "69",
+      "Plot" : "A French drug dealer living in Tokyo is betrayed by his best friend and killed in a drug deal. His soul, observing the repercussions of his death, seeks resurrection.",
+      "Poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BMjEzNzMzNzQzNl5BMl5BanBnXkFtZTcwNjExMTE3Mw@@._V1_SX300.jpg",
+      "Production" : "IFC Films",
+      "Rated" : "NOT RATED",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "7.3/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "71%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "69/100"
+      } ],
+      "Released" : "05 May 2010",
+      "Response" : "True",
+      "Runtime" : "161 min",
+      "Title" : "Enter the Void",
+      "Type" : "movie",
+      "Website" : "http://www.enterthevoid-lefilm.com/",
+      "Writer" : "Gaspar Noé, Lucile Hadzihalilovic (with the help of)",
+      "Year" : "2009",
+      "imdbID" : "tt1191111",
+      "imdbRating" : "7.3",
+      "imdbVotes" : "53,770"
+    }, {
+      "Actors" : "Monica Bellucci, Vincent Cassel, Albert Dupontel, Jo Prestia",
+      "Awards" : "3 wins & 10 nominations.",
+      "BoxOffice" : "$573,018",
+      "Country" : "France",
+      "DVD" : "05 Aug 2003",
+      "Director" : "Gaspar Noé",
+      "Genre" : "Crime, Drama, Mystery",
+      "Language" : "French, Spanish, Italian, English",
+      "Metascore" : "51",
+      "Plot" : "Events over the course of one traumatic night in Paris unfold in reverse-chronological order as the beautiful Alex is brutally raped and beaten by a stranger in the underpass.",
+      "Poster" : "https://ia.media-imdb.com/images/M/MV5BMzcyNjcwNzg2Nl5BMl5BanBnXkFtZTYwNzA5Mzc2._V1_SX300.jpg",
+      "Production" : "Mars Films",
+      "Rated" : "NOT RATED",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "7.4/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "57%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "51/100"
+      } ],
+      "Released" : "22 May 2002",
+      "Response" : "True",
+      "Runtime" : "97 min",
+      "Title" : "Irreversible",
+      "Type" : "movie",
+      "Website" : "http://www.irreversiblethemovie.com",
+      "Writer" : "Gaspar Noé",
+      "Year" : "2002",
+      "imdbID" : "tt0290673",
+      "imdbRating" : "7.4",
+      "imdbVotes" : "98,794"
+    }, {
+      "Actors" : "Sharni Vinson, Nicholas Tucci, Wendy Glenn, AJ Bowen",
+      "Awards" : "11 wins & 20 nominations.",
+      "BoxOffice" : "$25,064,090",
+      "Country" : "USA, UK",
+      "DVD" : "14 Jan 2014",
+      "Director" : "Adam Wingard",
+      "Genre" : "Horror, Thriller",
+      "Language" : "English",
+      "Metascore" : "66",
+      "Plot" : "When the Davison family comes under attack during their wedding anniversary getaway, the gang of mysterious killers soon learns that one of the victims harbors a secret talent for fighting back.",
+      "Poster" : "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQwODAxMTE1NF5BMl5BanBnXkFtZTcwNTQ0MjY3OQ@@._V1_SX300.jpg",
+      "Production" : "Lionsgate",
+      "Rated" : "R",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "6.5/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "76%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "66/100"
+      } ],
+      "Released" : "23 Aug 2013",
+      "Response" : "True",
+      "Runtime" : "95 min",
+      "Title" : "You're Next",
+      "Type" : "movie",
+      "Website" : "http://yourenextmovie.com/",
+      "Writer" : "Simon Barrett",
+      "Year" : "2011",
+      "imdbID" : "tt1853739",
+      "imdbRating" : "6.5",
+      "imdbVotes" : "73,074"
+    }, {
+      "Actors" : "Megumi Ogata, Megumi Hayashibara, Yûko Miyamura, Kotono Mitsuishi",
+      "Awards" : "2 wins.",
+      "BoxOffice" : "N/A",
+      "Country" : "Japan",
+      "DVD" : "24 Sep 2002",
+      "Director" : "Hideaki Anno, Kazuya Tsurumaki",
+      "Genre" : "Animation, Action, Drama",
+      "Language" : "Japanese",
+      "Metascore" : "N/A",
+      "Plot" : "Concurrent theatrical ending of the TV series \"Shin Seiki Evangelion\" (1995).",
+      "Poster" : "https://ia.media-imdb.com/images/M/MV5BYmE1ZTFjZTMtMDVjYy00ZWYwLTg2ZGUtODhhODgxMjdhYjAxXkEyXkFqcGdeQXVyMzM4MjM0Nzg@._V1_SX300.jpg",
+      "Production" : "N/A",
+      "Rated" : "NOT RATED",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "8.3/10"
+      } ],
+      "Released" : "01 Jun 2002",
+      "Response" : "True",
+      "Runtime" : "90 min",
+      "Title" : "Neon Genesis Evangelion: The End of Evangelion",
+      "Type" : "movie",
+      "Website" : "N/A",
+      "Writer" : "Hideaki Anno (screenplay)",
+      "Year" : "1997",
+      "imdbID" : "tt0169858",
+      "imdbRating" : "8.3",
+      "imdbVotes" : "23,114"
+    }, {
+      "Actors" : "Mitsuo Iwata, Nozomu Sasaki, Mami Koyama, Tesshô Genda",
+      "Awards" : "1 win.",
+      "BoxOffice" : "N/A",
+      "Country" : "Japan",
+      "DVD" : "17 Jul 2001",
+      "Director" : "Katsuhiro Ôtomo",
+      "Genre" : "Animation, Action, Drama",
+      "Language" : "Japanese",
+      "Metascore" : "N/A",
+      "Plot" : "A secret military project endangers Neo-Tokyo when it turns a biker gang member into a rampaging psychic psychopath that only two teenagers and a group of psychics can stop.",
+      "Poster" : "https://ia.media-imdb.com/images/M/MV5BM2ZiZTk1ODgtMTZkNS00NTYxLWIxZTUtNWExZGYwZTRjODViXkEyXkFqcGdeQXVyMTE2MzA3MDM@._V1_SX300.jpg",
+      "Production" : "Streamline Pictures",
+      "Rated" : "R",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "8.1/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "87%"
+      } ],
+      "Released" : "16 Jul 1988",
+      "Response" : "True",
+      "Runtime" : "124 min",
+      "Title" : "Akira",
+      "Type" : "movie",
+      "Website" : "N/A",
+      "Writer" : "Katsuhiro Ôtomo (screenplay), Izô Hashimoto (screenplay), Katsuhiro Ôtomo (manga)",
+      "Year" : "1988",
+      "imdbID" : "tt0094625",
+      "imdbRating" : "8.1",
+      "imdbVotes" : "125,515"
+    }, {
+      "Actors" : "Min-sik Choi, Ji-tae Yu, Hye-jeong Kang, Dae-han Ji",
+      "Awards" : "38 wins & 18 nominations.",
+      "BoxOffice" : "$637,778",
+      "Country" : "South Korea",
+      "DVD" : "23 Aug 2005",
+      "Director" : "Chan-wook Park",
+      "Genre" : "Action, Drama, Mystery",
+      "Language" : "Korean",
+      "Metascore" : "74",
+      "Plot" : "After being kidnapped and imprisoned for fifteen years, Oh Dae-Su is released, only to find that he must find his captor in five days.",
+      "Poster" : "https://ia.media-imdb.com/images/M/MV5BMTI3NTQyMzU5M15BMl5BanBnXkFtZTcwMTM2MjgyMQ@@._V1_SX300.jpg",
+      "Production" : "Tartan Films",
+      "Rated" : "R",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "8.4/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "80%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "74/100"
+      } ],
+      "Released" : "21 Nov 2003",
+      "Response" : "True",
+      "Runtime" : "120 min",
+      "Title" : "Oldboy",
+      "Type" : "movie",
+      "Website" : "http://oldboy.film.ru/",
+      "Writer" : "Garon Tsuchiya (story), Nobuaki Minegishi (comic), Chan-wook Park (screenplay), Joon-hyung Lim (screenplay), Jo-yun Hwang (screenplay)",
+      "Year" : "2003",
+      "imdbID" : "tt0364569",
+      "imdbRating" : "8.4",
+      "imdbVotes" : "424,272"
+    }, {
+      "Actors" : "Atsuko Tanaka, Akio Ôtsuka, Kôichi Yamadera, Yutaka Nakano",
+      "Awards" : "5 wins & 2 nominations.",
+      "BoxOffice" : "N/A",
+      "Country" : "Japan, UK",
+      "DVD" : "18 Nov 2003",
+      "Director" : "Mamoru Oshii",
+      "Genre" : "Animation, Action, Crime",
+      "Language" : "Japanese",
+      "Metascore" : "76",
+      "Plot" : "A cyborg policewoman and her partner hunt a mysterious and powerful hacker called the Puppet Master.",
+      "Poster" : "https://ia.media-imdb.com/images/M/MV5BYWRiYjQyOGItNzQ1Mi00MGI1LWE3NjItNTg1ZDQwNjUwNDM2XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg",
+      "Production" : "Palm Pictures",
+      "Rated" : "NOT RATED",
+      "Ratings" : [ {
+        "Source" : "Internet Movie Database",
+        "Value" : "8.0/10"
+      }, {
+        "Source" : "Rotten Tomatoes",
+        "Value" : "96%"
+      }, {
+        "Source" : "Metacritic",
+        "Value" : "76/100"
+      } ],
+      "Released" : "29 Mar 1996",
+      "Response" : "True",
+      "Runtime" : "83 min",
+      "Title" : "Ghost in the Shell",
+      "Type" : "movie",
+      "Website" : "N/A",
+      "Writer" : "Shirow Masamune (based on the manga by), Kazunori Itô (screenplay)",
+      "Year" : "1995",
+      "imdbID" : "tt0113568",
+      "imdbRating" : "8.0",
+      "imdbVotes" : "106,967"
+    } ],
+    "loved" : [ "tt0084787", "tt0094625", "tt0113568", "tt0169858" ],
+    "visibility" : "SHOW_ALL",
+    "watched" : [ "tt5088308", "tt0194071", "tt0084787", "tt0074256", "tt0094625", "tt0113568", "tt0169858", "tt1853739", "tt1379182", "tt1191111", "tt0290673", "tt0364569", "tt0087995" ]
+  }
+}
