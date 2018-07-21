@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {appStateType} from '../../types';
 
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 
 /**
   @typedef Props
@@ -51,6 +51,9 @@ class SignUp extends React.Component {
    * @return {HTML} Link
    */
   render() {
+    if (this.props.app.hasInitialised) {
+      return <Redirect to="/signin" />;
+    }
     return (
       <div>
         <Link to="/signin">Sign in</Link>

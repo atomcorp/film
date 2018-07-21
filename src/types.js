@@ -13,4 +13,8 @@ export const appStateType = PropTypes.shape({
   isInitilising: PropTypes.bool,
   hasInitialisingFailed: PropTypes.bool,
   initialisingFailureReason: PropTypes.array,
+  hasInitialised: PropTypes.bool,
+  name: PropTypes.string,
+  email: PropTypes.string,
+  id: PropTypes.string,
 });

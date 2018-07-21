@@ -14,6 +14,10 @@ const defaultState = {
   isInitilising: false,
   hasInitialisingFailed: false,
   initialisingFailureReason: [],
+  hasInitialised: false,
+  name: '',
+  email: '',
+  id: '',
 };
 
 const app = (state = defaultState, action) => {
@@ -56,6 +60,7 @@ const app = (state = defaultState, action) => {
     case INIT_USER.SUCCESS:
       return Object.assign({}, state, {
         isInitilising: false,
+        hasInitialised: true,
         name: action.name,
         email: action.email,
         id: action.id,

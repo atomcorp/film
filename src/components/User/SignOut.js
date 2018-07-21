@@ -1,44 +1,15 @@
 import React from 'react';
-import {Redirect} from 'react-router-dom';
-import fakeAuth from '../../router/fakeAuth';
+import PropTypes from 'prop-types';
 
-/**
- * Fake log out
- */
-class LogOut extends React.Component {
-  state = {
-    redirectToReferrer: false,
-  };
-
-  logout = () => {
-    fakeAuth.signout(() => {
-      this.setState({redirectToReferrer: true});
-    });
-  };
-
-  /**
-   * @return {el}
-   */
-  render() {
-    const {redirectToReferrer} = this.state;
-
-    if (redirectToReferrer) {
-      return <Redirect to="/" />;
-    }
-
-    return (
-      <div>
-        <button onClick={this.logout}>Log out</button>
-      </div>
-    );
-  }
-}
-
-const SignOut = () => (
+const SignOut = (props) => (
   <div>
     Sign Out<br />
-    <LogOut />
+    <button onClick={props.signOut}>Sign out</button>
   </div>
 );
+
+SignOut.propTypes = {
+  signOut: PropTypes.func,
+};
 
 export default SignOut;

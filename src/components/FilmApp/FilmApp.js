@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import {
   SearchInput,
   Collection,
@@ -7,6 +6,7 @@ import {
   Visibility,
   Highlight,
 } from '../../containers';
+import SignOutContainer from '../../containers/SignOutContainer';
 import {Welcome} from '../';
 import css from './FilmApp.css';
 
@@ -26,7 +26,7 @@ const FilmApp = () => (
         <Highlight />
       </div>
     </div>
-    <Link to="/signout">Sign out</Link>
+    <SignOutContainer />
   </div>
 );
 

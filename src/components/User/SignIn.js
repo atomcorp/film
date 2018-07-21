@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {appStateType} from '../../types';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 
 /**
  * SignIn
@@ -43,8 +43,13 @@ class SignIn extends React.Component {
    * @return {HTML} Link
    */
   render() {
+    if (this.props.app.isAuthenticated) {
+      return <Redirect to="/app" />;
+    }
+
     return (
       <div>
+        <Link to="/signup">Sign up</Link>
         <h2>Sign in</h2>
         {this.props.app.signInFail &&
           this.props.app.signInMessage.map((message) => message)}

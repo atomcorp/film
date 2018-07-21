@@ -16,5 +16,13 @@ if (!firebase.apps.length) {
   firebase.initializeApp(config);
 }
 
+// firebase.auth().onAuthStateChanged(function(user) {
+//   if (user) {
+//     console.log(user);
+//   } else {
+//     console.log('no user');
+//   }
+// });
+
 export const database = firebase.database();
 export const auth = firebase.auth();
