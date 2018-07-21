@@ -1,4 +1,5 @@
 import {auth, database} from '../../firebase/firebase';
+import {usersPath} from '../../config/paths';
 import {
   addToLocalStorage,
   clearFromLocalStorage,
@@ -66,9 +67,8 @@ const signInAttempt = () => ({
   type: SIGN_IN.ATTEMPT,
 });
 
-const signInSuccess = ({id}) => ({
+const signInSuccess = () => ({
   type: SIGN_IN.SUCCESS,
-  id,
 });
 
 const signInFail = ({message}) => ({
@@ -80,11 +80,19 @@ export const signIn = ({email, password}) => {
   return (dispatch, getState) => {
     dispatch(signInAttempt());
     auth
-      .signInAndRetrieveDataWithEmailAndPassword(email, password)
-      .then((user) => {
-        dispatch(signInSuccess({id: user.uid}));
-        // then download user data
+      .signInWithEmailAndPassword(email, password)
+      .then(({user}) => {
+        dispatch(signInSuccess());
         addToLocalStorage('id', user.uid);
+        return user;
+      })
+      .then((user) => {
+        database
+          .ref(`${usersPath}/${user.uid}`)
+          .once('value')
+          .then((snapshot) => {
+            /* eslint-disable no-console */
+          });
       })
       .catch((err) => dispatch(signInFail({message: err.message})));
   };
@@ -128,7 +136,7 @@ export const initUser = ({id, name, email}) => {
   return (dispatch, getState) => {
     dispatch(initUserAttempt());
     database
-      .ref(`users/${id}`)
+      .ref(`${usersPath}/${id}`)
       .set({
         id,
         name,

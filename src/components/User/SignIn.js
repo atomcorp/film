@@ -1,46 +1,85 @@
 import React from 'react';
-import {Redirect} from 'react-router-dom';
-import fakeAuth from '../../router/fakeAuth';
-/**
- * Fake login
- */
-class Login extends React.Component {
-  state = {
-    redirectToReferrer: false,
-  };
+import PropTypes from 'prop-types';
+import {appStateType} from '../../types';
+// import {Redirect} from 'react-router-dom';
 
-  login = () => {
-    fakeAuth.authenticate(() => {
-      this.setState({redirectToReferrer: true});
+/**
+ * SignIn
+ */
+class SignIn extends React.Component {
+  /**
+   * Search constructor
+   * @param {object} props
+   */
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: '',
+      password: '',
+    };
+  }
+  /**
+   * Handle input
+   * @param {Event} event
+   */
+  handleInputs = ({target}) => {
+    this.setState({
+      [target.id]: target.value,
     });
   };
-
   /**
-   * @return {el}
+   * Handle input
+   * @param {Event} event
+   */
+  handleSubmit = (event) => {
+    event.preventDefault();
+    this.props.signIn({
+      email: this.state.email,
+      password: this.state.password,
+    });
+  };
+  /**
+   * Render
+   * @return {HTML} Link
    */
   render() {
-    const {redirectToReferrer} = this.state;
-
-    if (redirectToReferrer) {
-      return <Redirect to="/app" />;
-    }
-
     return (
       <div>
-        <p>You must log in to view the app</p>
-        <button onClick={this.login}>Log in</button>
+        <h2>Sign in</h2>
+        {this.props.app.signInFail &&
+          this.props.app.signInMessage.map((message) => message)}
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            <div>Email</div>
+            <input
+              type="email"
+              value={this.state.email}
+              id="email"
+              onChange={this.handleInputs}
+            />
+          </label>
+          <label>
+            <div>Password</div>
+            <input
+              type="password"
+              value={this.state.password}
+              id="password"
+              onChange={this.handleInputs}
+            />
+          </label>
+          <div>
+            <input type="submit" value="Sign in" />
+          </div>
+          {this.props.app.isSigningIn && 'Signing in'}
+        </form>
       </div>
     );
   }
 }
 
-const FakeSignIn = Login;
-
-const SignIn = () => (
-  <div>
-    Sign in
-    <FakeSignIn />
-  </div>
-);
+SignIn.propTypes = {
+  app: appStateType,
+  signIn: PropTypes.func,
+};
 
 export default SignIn;

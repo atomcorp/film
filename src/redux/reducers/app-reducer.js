@@ -7,7 +7,7 @@ const defaultState = {
   visibility: COLLECTION_VISIBILITY.SHOW_ALL,
   isSigningIn: false,
   signInFail: false,
-  signInFailMessage: [],
+  signInMessage: [],
   isSigningUp: false,
   signUpFail: false,
   signUpMessage: [],
@@ -25,6 +25,7 @@ const app = (state = defaultState, action) => {
     case SIGN_UP.SUCCESS:
       return Object.assign({}, state, {
         isSigningUp: false,
+        isAuthenticated: false,
       });
     case SIGN_UP.FAIL:
       return Object.assign({}, state, {
@@ -46,7 +47,7 @@ const app = (state = defaultState, action) => {
         isSigningIn: false,
         isAuthenticated: false,
         signInFail: true,
-        signInFailMessage: [...action.message],
+        signInMessage: [...action.message],
       });
     case INIT_USER.ATTEMPT:
       return Object.assign({}, defaultState, {
@@ -63,7 +64,7 @@ const app = (state = defaultState, action) => {
       return Object.assign({}, state, {
         isInitilising: false,
         hasInitialisingFailed: true,
-        initialisingFailureReason: [action.message],
+        initialisingFailureReason: [...action.message],
       });
 
     case SIGN_OUT.ATTEMPT:

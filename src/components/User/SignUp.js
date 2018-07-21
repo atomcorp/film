@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {appStateType} from '../../types';
 
 import {Link} from 'react-router-dom';
 
@@ -42,7 +43,7 @@ class SignUp extends React.Component {
     this.props.signUp({
       name: this.state.name,
       email: this.state.email,
-      password: this.state.email,
+      password: this.state.password,
     });
   };
   /**
@@ -97,17 +98,7 @@ class SignUp extends React.Component {
 }
 
 SignUp.propTypes = {
-  app: PropTypes.shape({
-    isAuthenticated: PropTypes.bool,
-    addingFilm: PropTypes.bool,
-    visibility: PropTypes.string,
-    isSigningIn: PropTypes.bool,
-    signInFail: PropTypes.bool,
-    signInFailMessage: PropTypes.array,
-    isSigningUp: PropTypes.bool,
-    signUpFail: PropTypes.bool,
-    signUpMessage: PropTypes.array,
-  }),
+  app: appStateType,
   signUp: PropTypes.func,
 };
 
