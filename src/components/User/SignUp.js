@@ -57,7 +57,6 @@ class SignUp extends React.Component {
           <h2>Sign up</h2>
           {this.props.app.signUpFail &&
             this.props.app.signUpMessage.map((message) => message)}
-          {}
           <form onSubmit={this.handleSubmit}>
             <label>
               <div>Username</div>
@@ -86,7 +85,10 @@ class SignUp extends React.Component {
                 onChange={this.handleInputs}
               />
             </label>
-            <input type="submit" value="Sign up" />
+            <div>
+              <input type="submit" value="Sign up" />
+            </div>
+            {this.props.app.isSigningUp && 'Signing up'}
           </form>
         </div>
       </div>
