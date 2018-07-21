@@ -19,6 +19,7 @@ class SignUp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      name: '',
       email: '',
       password: '',
     };
@@ -39,6 +40,7 @@ class SignUp extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.signUp({
+      name: this.state.name,
       email: this.state.email,
       password: this.state.email,
     });
@@ -53,19 +55,37 @@ class SignUp extends React.Component {
         <Link to="/signin">Sign in</Link>
         <div>
           <h2>Sign up</h2>
+          {this.props.app.signUpFail &&
+            this.props.app.signUpMessage.map((message) => message)}
+          {}
           <form onSubmit={this.handleSubmit}>
-            <input
-              type="email"
-              value={this.state.email}
-              id="email"
-              onChange={this.handleInputs}
-            />
-            <input
-              type="password"
-              value={this.state.password}
-              id="password"
-              onChange={this.handleInputs}
-            />
+            <label>
+              <div>Username</div>
+              <input
+                type="text"
+                value={this.state.name}
+                id="name"
+                onChange={this.handleInputs}
+              />
+            </label>
+            <label>
+              <div>Email</div>
+              <input
+                type="email"
+                value={this.state.email}
+                id="email"
+                onChange={this.handleInputs}
+              />
+            </label>
+            <label>
+              <div>Password</div>
+              <input
+                type="password"
+                value={this.state.password}
+                id="password"
+                onChange={this.handleInputs}
+              />
+            </label>
             <input type="submit" value="Sign up" />
           </form>
         </div>
@@ -81,6 +101,10 @@ SignUp.propTypes = {
     visibility: PropTypes.string,
     isSigningIn: PropTypes.bool,
     signInFail: PropTypes.bool,
+    signInFailMessage: PropTypes.array,
+    isSigningUp: PropTypes.bool,
+    signUpFail: PropTypes.bool,
+    signUpMessage: PropTypes.array,
   }),
   signUp: PropTypes.func,
 };
