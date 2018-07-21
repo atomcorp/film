@@ -88,20 +88,22 @@
 	"buffers":
 	[
 		{
+			"contents": "import Collection from '../../components/Collection/Collection';\nimport {connect} from 'react-redux';\nimport {\n  toggleWatchedList,\n  removeFilmFromCollection,\n  toggleFilmRating,\n} from '../../redux/actions/collection-actions';\nimport {showHighlight} from '../../redux/actions/highlight-actions';\nimport filterCollection from '../../helpers/filterCollection';\n\n\n\nvar x = 'thing';\n\nconst mapStateToProps = (state) => ({\n  filteredFilms: filterCollection(state.collection),\n  watched: state.collection.watched,\n  loved: state.collection.loved,\n  isDownloading: state.database.isDownloading,\n});\n\nconst mapDispatchToProps = (dispatch) => ({\n  toggleWatchedList: (imdbID) => {\n    dispatch(toggleWatchedList(imdbID));\n  },\n  removeFilmFromCollection: ({imdbID}) => {\n    dispatch(removeFilmFromCollection({imdbID}));\n  },\n  toggleFilmRating: ({imdbID}) => {\n    dispatch(toggleFilmRating({imdbID}));\n  },\n  showHighlight: ({imdbID}) => {\n    dispatch(showHighlight({imdbID}));\n  },\n});\n\nexport default connect(mapStateToProps, mapDispatchToProps)(Collection);\n",
 			"file": "src/containers/Collection/Collection.js",
+			"file_size": 1070,
+			"file_write_time": 131740922166283271,
 			"settings":
 			{
-				"buffer_size": 1037,
-				"encoding": "UTF-8",
+				"buffer_size": 1057,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/containers/Search/Search.js",
+			"file": "/C/Users/atom/sites/portfolio-react/node_modules/dom-helpers/style/removeStyle.js",
 			"settings":
 			{
-				"buffer_size": 2115,
-				"line_ending": "Windows"
+				"buffer_size": 291,
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -231,8 +233,7 @@
 	[
 		"/C/Users/atom/sites/film",
 		"/C/Users/atom/sites/film/src",
-		"/C/Users/atom/sites/film/src/containers",
-		"/C/Users/atom/sites/film/src/containers/Search"
+		"/C/Users/atom/sites/film/src/containers"
 	],
 	"file_history":
 	[
@@ -418,19 +419,27 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1037,
+						"buffer_size": 1057,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								573,
-								573
+								562,
+								562
 							]
 						],
 						"settings":
 						{
+							"SL.27.region_keys":
+							[
+								"sublime_linter.protected_regions",
+								"SL.eslint.Highlights.|940bdf7877842838cac97f227b6e83dc3f2e6aa099e9036696b7bf0090fc96c0|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Highlights.|5960822eb2443a8bfa376c1bf4ee1692794e59383945c403fd2bfa3697e258df|region.redish markup.error.sublime_linter|32",
+								"SL.eslint.Gutter.|region.redish markup.error.sublime_linter|dot",
+								"SL.eslint.Highlights.|00fd4e535bd8042d23726a268c4798c93f9a4b2ccfb6dc29980fad09829481de|region.redish markup.error.sublime_linter|32"
+							],
 							"SL.57.region_keys":
 							[
 								"sublime_linter.protected_regions"
@@ -449,30 +458,24 @@
 				},
 				{
 					"buffer": 1,
-					"file": "src/containers/Search/Search.js",
-					"semi_transient": true,
+					"file": "/C/Users/atom/sites/portfolio-react/node_modules/dom-helpers/style/removeStyle.js",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2115,
+						"buffer_size": 291,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								378,
-								378
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"SL.81.region_keys":
-							[
-							],
-							"git_gutter_is_enabled": false,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

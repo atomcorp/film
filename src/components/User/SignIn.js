@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {appStateType} from '../../types';
-// import {Redirect} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 /**
  * SignIn
@@ -72,6 +72,7 @@ class SignIn extends React.Component {
           </div>
           {this.props.app.isSigningIn && 'Signing in'}
         </form>
+        {this.props.app.isAuthenticated && <Link to="/app">App</Link>}
       </div>
     );
   }

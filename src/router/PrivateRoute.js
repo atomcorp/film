@@ -1,19 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Route, Redirect, withRouter} from 'react-router-dom';
-import fakeAuth from './fakeAuth';
+import {Route, Redirect} from 'react-router-dom';
+import {connect} from 'react-redux';
 
 const PrivateRoute = ({component: Component, ...rest}) => (
   <Route
     {...rest}
     render={(props) =>
-      fakeAuth.isAuthenticated ? (
+      rest.app.isAuthenticated ? (
         <Component {...props} />
       ) : (
         <Redirect
           to={{
             pathname: '/',
-            state: {from: props.location},
           }}
         />
       )
@@ -25,4 +24,8 @@ PrivateRoute.propTypes = {
   component: PropTypes.func,
 };
 
-export default withRouter(PrivateRoute);
+const mapStateToProps = (state) => ({
+  app: state.app,
+});
+
+export default connect(mapStateToProps)(PrivateRoute);
