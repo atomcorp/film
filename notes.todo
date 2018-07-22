@@ -23,6 +23,8 @@ Task:
   ✔ if you're downloading the collection, you should not be able to  send an update to the collection (otherwise might delete everything) @critical @bug @done(18-05-15 22:02)
   ✔ add year, and other possible search filters @done(18-06-27 00:05)
   ☐ add loading screen when user has ID in localStorage
+  ☐ Allow non-users to view private pages @future @enhancement
+    They're the same pages, but editing features are disabled for logout people
 
 Later:
   ✔ add login / signup @done(18-07-22 12:44)
@@ -43,3 +45,5 @@ FYI:
 Fonts:
   [Domine](https://fonts.google.com/specimen/Domine)
   [Permanent+Marker](https://fonts.google.com/specimen/Permanent+Marker)
+
+  - You have to create

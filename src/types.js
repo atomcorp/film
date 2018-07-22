@@ -20,15 +20,23 @@ export const appStateType = PropTypes.shape({
 });
 
 export const userStateType = PropTypes.shape({
-  name: PropTypes.string,
-  id: PropTypes.string,
-  email: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
   collections: PropTypes.arrayOf(PropTypes.string),
   watched: PropTypes.arrayOf(PropTypes.string),
   loved: PropTypes.arrayOf(PropTypes.string),
   downloadingData: PropTypes.bool,
   downloadingDataFailed: PropTypes.bool,
   downloadedData: PropTypes.bool,
+});
+
+export const collectionStateType = PropTypes.shape({
+  name: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  admin: PropTypes.string.isRequired,
+  users: PropTypes.arrayOf(PropTypes.string),
+  public: PropTypes.bool,
 });
 
 export const omdbFilm = PropTypes.shape({

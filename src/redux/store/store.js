@@ -15,6 +15,8 @@ import {auth} from '../../firebase/firebase';
 import {getUserData} from '../actions/user-actions';
 import {signOut, signInSuccess} from '../actions/app-actions';
 
+import {initNewCollection} from '../actions/collection-actions';
+
 const rootReducer = combineReducers({
   search,
   collection,
@@ -25,6 +27,12 @@ const rootReducer = combineReducers({
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk, logger));
+store.dispatch(
+  initNewCollection({
+    usersId: 'DQptYcFM5uhhVxLmmEctUqnjf0f2',
+    usersName: 'Thomas',
+  })
+);
 // store.dispatch(getUsersDataAndUpdateSite());
 
 // This is for updating our state

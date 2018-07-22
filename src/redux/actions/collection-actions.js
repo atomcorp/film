@@ -1,4 +1,6 @@
 import {API_KEY} from '../../config/api';
+import {collectionsPath} from '../../config/paths';
+import {database} from '../../firebase/firebase';
 const ADD_TO_COLLECTION = {
   ATTEMPT: 'ADD_TO_COLLECTION_ATTEMPT',
   SUCCESS: 'ADD_TO_COLLECTION_SUCCESS',
@@ -21,6 +23,51 @@ const TOGGLE_RATING = {
   ATTEMPT: 'TOGGLE_RATING_ATTEMPT',
   ADD: 'TOGGLE_RATING_ADD',
   REMOVE: 'TOGGLE_RATING_REMOVE',
+};
+
+const INIT_NEW_COLLECTION = {
+  ATTEMPT: 'INIT_NEW_COLLECTION_ATTEMPT',
+  SUCCESS: 'INIT_NEW_COLLECTION_SUCCESS',
+  FAIL: 'INIT_NEW_COLLECTION_FAIL',
+};
+
+// INIT_NEW_COLLECTION
+const initNewCollectionAttempt = ({imdbID}) => ({
+  type: INIT_NEW_COLLECTION.ATTEMPT,
+  imdbID,
+});
+
+const initNewCollectionSuccess = () => ({
+  type: INIT_NEW_COLLECTION.SUCCESS,
+});
+
+const initNewCollectionFail = ({message}) => ({
+  type: INIT_NEW_COLLECTION.FAIL,
+  message,
+});
+
+export const initNewCollection = ({usersId, usersName}) => (
+  dispatch,
+  getState
+) => {
+  dispatch(initNewCollectionAttempt);
+  const newCollectionRef = database.ref(`${collectionsPath}`).push();
+  newCollectionRef
+    .set({
+      admin: usersId,
+      name: `${usersName}'s Collection`,
+      id: newCollectionRef.key,
+    })
+    .then((id) => {
+      initNewCollectionSuccess();
+    })
+    .catch((err) =>
+      dispatch(
+        initNewCollectionFail({
+          message: err,
+        })
+      )
+    );
 };
 
 // ADD TO COLLECTION
