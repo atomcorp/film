@@ -6,6 +6,7 @@ import {
   REORDER_COLLECTION,
   REMOVE_FROM_COLLECTION,
   TOGGLE_RATING,
+  INIT_NEW_COLLECTION,
 } from '../actions/collection-actions';
 import {RECEIVED_DATA_FROM_DB} from '../actions/database-actions';
 import reorderArray from '../../helpers/reorder';
@@ -33,18 +34,30 @@ import reorderArray from '../../helpers/reorder';
  * @param {string} action.imdbID
  * @return {CollectionState}
  */
-const collection = (
-  state = {
-    films: [],
-    message: [],
-    watched: [],
-    loved: [],
-    visibility: COLLECTION_VISIBILITY.SHOW_ALL,
-    addingFilm: false,
-  },
-  action
-) => {
+
+const defaultState = {
+  films: [],
+  message: [],
+  watched: [],
+  loved: [],
+  visibility: COLLECTION_VISIBILITY.SHOW_ALL,
+  addingFilm: false,
+  id: null,
+  admin: null,
+};
+
+const collection = (state = defaultState, action) => {
   switch (action.type) {
+    case INIT_NEW_COLLECTION.ATTEMPT:
+      return Object.assign({}, defaultState);
+    case INIT_NEW_COLLECTION.SUCCESS:
+      return Object.assign({}, state, {
+        admin: action.admin,
+        name: action.name,
+        id: action.id,
+      });
+    case INIT_NEW_COLLECTION.FAIL:
+      return Object.assign({}, defaultState);
     case RECEIVED_DATA_FROM_DB:
       return Object.assign({}, state, action.data);
     case SET_COLLECTION_VISIBILITY:

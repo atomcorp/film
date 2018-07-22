@@ -1,4 +1,5 @@
 import {GET_USER_DATA} from '../actions/user-actions';
+import {INIT_NEW_COLLECTION} from '../actions/collection-actions';
 const defaultState = {
   name: '',
   id: '',
@@ -26,6 +27,13 @@ const user = (state = defaultState, action) => {
       return Object.assign({}, state, {
         downloadingData: false,
         downloadingDataFailed: true,
+      });
+    case INIT_NEW_COLLECTION.SUCCESS:
+      return Object.assign({}, state, {
+        collections:
+          state.id === action.admin
+            ? [...state.collections, action.id]
+            : state.collection,
       });
     default:
       return state;

@@ -25,20 +25,22 @@ const TOGGLE_RATING = {
   REMOVE: 'TOGGLE_RATING_REMOVE',
 };
 
-const INIT_NEW_COLLECTION = {
+export const INIT_NEW_COLLECTION = {
   ATTEMPT: 'INIT_NEW_COLLECTION_ATTEMPT',
   SUCCESS: 'INIT_NEW_COLLECTION_SUCCESS',
   FAIL: 'INIT_NEW_COLLECTION_FAIL',
 };
 
 // INIT_NEW_COLLECTION
-const initNewCollectionAttempt = ({imdbID}) => ({
+const initNewCollectionAttempt = () => ({
   type: INIT_NEW_COLLECTION.ATTEMPT,
-  imdbID,
 });
 
-const initNewCollectionSuccess = () => ({
+const initNewCollectionSuccess = ({admin, name, id}) => ({
   type: INIT_NEW_COLLECTION.SUCCESS,
+  admin,
+  name,
+  id,
 });
 
 const initNewCollectionFail = ({message}) => ({
@@ -50,7 +52,8 @@ export const initNewCollection = ({usersId, usersName}) => (
   dispatch,
   getState
 ) => {
-  dispatch(initNewCollectionAttempt);
+  // console.log('Col');
+  dispatch(initNewCollectionAttempt());
   const newCollectionRef = database.ref(`${collectionsPath}`).push();
   newCollectionRef
     .set({
@@ -59,7 +62,13 @@ export const initNewCollection = ({usersId, usersName}) => (
       id: newCollectionRef.key,
     })
     .then((id) => {
-      initNewCollectionSuccess();
+      dispatch(
+        initNewCollectionSuccess({
+          admin: usersId,
+          name: `${usersName}'s Collection`,
+          id: newCollectionRef.key,
+        })
+      );
     })
     .catch((err) =>
       dispatch(
@@ -70,6 +79,12 @@ export const initNewCollection = ({usersId, usersName}) => (
     );
 };
 
+/* const ref = database.ref(`${collectionsPath}`).push();
+const initNewCollectionWithUniqueRef = (uniqueRef) => ({usersId, usersName}) =>
+  initNewCollection({uniqueRef, usersId, usersName});
+
+initNewCollectionWithUniqueRef(ref)({usersId: 'Id', usersName: 'Tom'});
+ */
 // ADD TO COLLECTION
 
 const addToCollectionAttempt = ({imdbID}) => ({
