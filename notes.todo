@@ -11,25 +11,28 @@ Task:
     ☐ Filter by common themes, actor, year, director, decade
     ☐ decade selector
     ☐ rating selector (acclaimed, cult, trash)
-  ☐ Add user (name), maybe stats
+  ✔ Add user (name) @done(18-07-22 12:45)
+  ☐ Add user stats
   ✔ Drag and drop the movie names for order (omg use: https://github.com/atlassian/react-beautiful-dnd) @done(18-05-11 23:12)
   ☐ Use thumbs up/down when clicking Watched
   ☐ Random movie selector (once a day)
   ✔ add [PostCSS](https://github.com/postcss/postcss-loader) @done(18-05-21 23:28)
-  ✘ add login / signup @cancelled(18-05-12 17:30)
+  ✔ add login / signup @done(18-07-22 12:44)
   ✔ connect to firebase @done(18-05-13 16:10)
   ✘ link users together @cancelled(18-05-12 17:30)
   ✔ if you're downloading the collection, you should not be able to  send an update to the collection (otherwise might delete everything) @critical @bug @done(18-05-15 22:02)
   ✔ add year, and other possible search filters @done(18-06-27 00:05)
+  ☐ add loading screen when user has ID in localStorage
 
 Later:
-  ☐ add login / signup
+  ✔ add login / signup @done(18-07-22 12:44)
   ☐ link users together
 
 Ideas: 
   ✘ Name: The Black List? @cancelled (18-05-05 11:45)
   ☐ https://github.com/jariz/vibrant.js/
   ☐ Colour: Snail Mail red. #f70a02
+  ☐ #fe0000 + #000100 (see: https://www.siteinspire.com/websites/8275-general-type-studio)
 
 FYI:
   ~ Use [CSSNext](http://cssnext.io/features/) for CSS Modules
