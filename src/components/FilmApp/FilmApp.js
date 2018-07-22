@@ -1,11 +1,7 @@
 import React from 'react';
-import {
-  SearchInput,
-  Collection,
-  SearchResults,
-  Visibility,
-  Highlight,
-} from '../../containers';
+import {SearchInput, SearchResults, Highlight} from '../../containers';
+import CollectionContainer from '../../containers/CollectionContainer';
+import VisibilityContainer from '../../containers/VisibilityContainer';
 import SignOutContainer from '../../containers/SignOutContainer';
 import {Welcome} from '../';
 import css from './FilmApp.css';
@@ -17,10 +13,10 @@ const FilmApp = () => (
     <SearchInput />
     <SearchResults />
     <h2>Collection:</h2>
-    <Visibility />
+    <VisibilityContainer />
     <div className={css.content}>
       <div className={css.collection}>
-        <Collection />
+        <CollectionContainer />
       </div>
       <div className={css.highlights}>
         <Highlight />

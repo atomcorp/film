@@ -38,12 +38,14 @@ import reorderArray from '../../helpers/reorder';
 const defaultState = {
   films: [],
   message: [],
+  name: '',
   watched: [],
   loved: [],
   visibility: COLLECTION_VISIBILITY.SHOW_ALL,
   addingFilm: false,
   id: null,
   admin: null,
+  filmIds: [],
 };
 
 const collection = (state = defaultState, action) => {

@@ -32,14 +32,15 @@ export const userStateType = PropTypes.shape({
 });
 
 export const collectionStateType = PropTypes.shape({
-  name: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
-  admin: PropTypes.string.isRequired,
+  name: PropTypes.string,
+  id: PropTypes.string,
+  admin: PropTypes.string,
   users: PropTypes.arrayOf(PropTypes.string),
   public: PropTypes.bool,
+  filmIds: PropTypes.arrayOf(PropTypes.string),
 });
 
-export const omdbFilm = PropTypes.shape({
+export const omdbFilmType = PropTypes.shape({
   Title: PropTypes.string,
   Director: PropTypes.string,
   imdbID: PropTypes.string,

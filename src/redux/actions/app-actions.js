@@ -1,7 +1,7 @@
 import {auth, database} from '../../firebase/firebase';
 import {usersPath} from '../../config/paths';
 import {getUserData} from './user-actions';
-import {initNewCollection} from './collection-actions';
+// import {initNewCollection} from './collection-actions';
 import {
   addToLocalStorage,
   clearFromLocalStorage,
@@ -139,14 +139,14 @@ export const initUser = ({id, name, email}) => {
         name,
         email,
       })
-      .then(() => {
-        dispatch(
-          initNewCollection({
-            usersId: id,
-            usersName: name,
-          })
-        );
-      })
+      // .then(() => {
+      //   dispatch(
+      //     initNewCollection({
+      //       usersId: id,
+      //       usersName: name,
+      //     })
+      //   );
+      // })
       .then(() => {
         dispatch(initUserSuccess({id, name, email}));
       })
