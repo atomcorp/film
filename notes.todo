@@ -1,3 +1,8 @@
+Next: 
+  ☐ Add films to a collection
+  ☐ save new collection data 
+  ☐ redo async loading, or research better ways of doing it
+
 Task:
   ✔ Throttle search within Redux, so we can show loading icon when user is typing or just do it through state maybe @done(18-05-08 23:30)
   ✔ Click on film name should add it into your collection @high @done(18-05-05 11:12)
@@ -25,6 +30,7 @@ Task:
   ☐ add loading screen when user has ID in localStorage
   ☐ Allow non-users to view private pages @future @enhancement
     They're the same pages, but editing features are disabled for logout people
+  ☐ You can only have one Collection loaded at a time
 
 Later:
   ✔ add login / signup @done(18-07-22 12:44)
