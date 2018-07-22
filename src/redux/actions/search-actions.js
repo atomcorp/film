@@ -78,10 +78,12 @@ export const searchForAFilm = ({filmName, year = null}) => {
         if (res.Response === 'False') {
           throw new Error(res.Error);
         }
-        dispatch(searchSuccess({
-          searchResults: res.Search,
-          totalResults: res.totalResults,
-        }));
+        dispatch(
+          searchSuccess({
+            searchResults: res.Search,
+            totalResults: parseInt(res.totalResults, 10),
+          })
+        );
       })
       .catch((err) => {
         dispatch(searchFail(err.message));

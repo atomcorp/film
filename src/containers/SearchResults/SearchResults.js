@@ -15,7 +15,7 @@ const SearchResults = ({search, turnPager}) => (
     {search.totalPages > 1 && (
       <SearchPager
         currentPage={search.currentPage}
-        totalPages={search.totalResults}
+        totalPages={search.totalPages}
         handlePager={turnPager}
       />
     )}
@@ -43,7 +43,4 @@ const mapDispatchToProps = (dispatch) => ({
   },
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SearchResults);
+export default connect(mapStateToProps, mapDispatchToProps)(SearchResults);
