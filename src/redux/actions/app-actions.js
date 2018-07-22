@@ -1,5 +1,6 @@
 import {auth, database} from '../../firebase/firebase';
 import {usersPath} from '../../config/paths';
+import {getUserData} from './user-actions';
 import {
   addToLocalStorage,
   clearFromLocalStorage,
@@ -67,7 +68,7 @@ const signInAttempt = () => ({
   type: SIGN_IN.ATTEMPT,
 });
 
-const signInSuccess = () => ({
+export const signInSuccess = () => ({
   type: SIGN_IN.SUCCESS,
 });
 
@@ -87,12 +88,7 @@ export const signIn = ({email, password}) => {
         return user;
       })
       .then((user) => {
-        database
-          .ref(`${usersPath}/${user.uid}`)
-          .once('value')
-          .then((snapshot) => {
-            /* eslint-disable no-console */
-          });
+        dispatch(getUserData({id: user.uid}));
       })
       .catch((err) => dispatch(signInFail({message: err.message})));
   };

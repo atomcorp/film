@@ -7,7 +7,7 @@ const PrivateRoute = ({component: Component, ...rest}) => (
   <Route
     {...rest}
     render={(props) =>
-      rest.app.isAuthenticated ? (
+      rest.app.isAuthenticated && rest.user.downloadedData ? (
         <Component {...props} />
       ) : (
         <Redirect
@@ -26,6 +26,7 @@ PrivateRoute.propTypes = {
 
 const mapStateToProps = (state) => ({
   app: state.app,
+  user: state.user,
 });
 
 export default connect(mapStateToProps)(PrivateRoute);

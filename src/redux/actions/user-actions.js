@@ -1,42 +1,36 @@
-// import {database} from '../../firebase/firebase';
+import {database} from '../../firebase/firebase';
+import {usersPath} from '../../config/paths';
 
-// export const INIT_USER = {
-//   ATTEMPT: 'INIT_USER_ATTEMPT',
-//   SUCCESS: 'INIT_USER_SUCCESS',
-//   FAIL: 'INIT_USER_FAIL',
-// };
+export const GET_USER_DATA = {
+  ATTEMPT: 'GET_USER_DATA_ATTEMPT',
+  SUCCESS: 'GET_USER_DATA_SUCCESS',
+  FAIL: 'GET_USER_DATA_FAIL',
+};
 
-// const initUserAttempt = () => ({
-//   type: INIT_USER.ATTEMPT,
-// });
+const getUserDataAttempt = () => ({
+  type: GET_USER_DATA.ATTEMPT,
+});
 
-// const initUserSuccess = ({id, email, name}) => ({
-//   type: INIT_USER.SUCCESS,
-//   id,
-//   email,
-//   name,
-// });
+const getUserDataSuccess = ({userData}) => ({
+  type: GET_USER_DATA.SUCCESS,
+  userData,
+});
 
-// const initUserFail = ({message}) => ({
-//   type: INIT_USER.FAIL,
-//   message,
-// });
+const getUserDataFail = ({message}) => ({
+  type: GET_USER_DATA.FAIL,
+  message,
+});
 
-// export const initUser = ({id, name, email}) => {
-//   return (dispatch, getState) => {
-//     dispatch(initUserAttempt());
-//     database
-//       .ref(`users/${id}`)
-//       .set({
-//         id,
-//         name,
-//         email,
-//       })
-//       .then(() => {
-//         dispatch(initUserSuccess({id, name, email}));
-//       })
-//       .catch((error) => {
-//         dispatch(initUserFail({message: error.message}));
-//       });
-//   };
-// };
+export const getUserData = ({id}) => {
+  return (dispatch, getState) => {
+    dispatch(getUserDataAttempt());
+    database
+      .ref(`${usersPath}/${id}`)
+      .once('value')
+      .then((snapshot) => {
+        /* eslint-disable no-console */
+        dispatch(getUserDataSuccess({userData: snapshot.val()}));
+      })
+      .catch((err) => dispatch(getUserDataFail({message: err.message})));
+  };
+};
