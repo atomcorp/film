@@ -128,7 +128,8 @@ const addFilmImdbDataToCollection = ({imdbID}) => {
         })
       );
     }
-
+    // this does need to run off and fetch the movie info still
+    // maybe use Indexed DB
     // fetch(
     //   `//omdbapi.com/?apikey=${API_KEY}&i=${encodeURIComponent(
     //     imdbID

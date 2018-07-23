@@ -2,6 +2,8 @@ Next:
   ☐ Add films to a collection
   ☐ save new collection data 
   ☐ redo async loading, or research better ways of doing it
+  ☐ Use indexedDB to save film information
+  ☐ Work out how to use cache or download info if necessary 
 
 Task:
   ✔ Throttle search within Redux, so we can show loading icon when user is typing or just do it through state maybe @done(18-05-08 23:30)

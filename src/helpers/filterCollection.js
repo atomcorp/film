@@ -1,24 +1,24 @@
 import {COLLECTION_VISIBILITY} from '../redux/actions/collection-actions';
 
-const filterCollection = ({films, visibility, watched}) => {
+const filterCollection = ({imdbIDs, visibility, watched}) => {
   switch (visibility) {
     case COLLECTION_VISIBILITY.UNWATCHED:
-      return films.reduce((acc, film) => {
-        if (!watched.includes(film.imdbID)) {
-          return [...acc, film];
+      return imdbIDs.reduce((acc, imdbID) => {
+        if (!watched.includes(imdbID)) {
+          return [...acc, imdbID];
         }
         return acc;
       }, []);
     case COLLECTION_VISIBILITY.WATCHED:
-      return films.reduce((acc, film) => {
-        if (watched.includes(film.imdbID)) {
-          return [...acc, film];
+      return imdbIDs.reduce((acc, imdbID) => {
+        if (watched.includes(imdbID)) {
+          return [...acc, imdbID];
         }
         return acc;
       }, []);
     case COLLECTION_VISIBILITY.SHOW_ALL:
     default:
-      return films;
+      return imdbIDs;
   }
 };
 

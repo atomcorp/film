@@ -65,6 +65,7 @@ const CollectionList = ({
                     >
                       <li onClick={() => showHighlight({imdbID: film.imdbID})}>
                         <h4>
+                          Imdb Id = {film}
                           {film.Title} ({film.Year})
                           {collection.watched.includes(film.imdbID) && ' ️👀'}
                           {collection.loved.includes(film.imdbID) && ' 💖'}
