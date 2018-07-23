@@ -12,7 +12,7 @@ import filterCollection from '../helpers/filterCollection';
 const mapStateToProps = (state) => ({
   isDownloading: state.database.isDownloading,
   collection: state.collection,
-  filteredCollection: filterCollection(state.collection.filmIds),
+  filteredCollection: filterCollection(state.collection.imdbIDs),
 });
 
 const mapDispatchToProps = (dispatch) => ({

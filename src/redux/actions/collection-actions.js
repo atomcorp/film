@@ -1,4 +1,4 @@
-import {API_KEY} from '../../config/api';
+// import {API_KEY} from '../../config/api';
 import {collectionsPath} from '../../config/paths';
 import {database} from '../../firebase/firebase';
 const ADD_TO_COLLECTION = {
@@ -92,22 +92,15 @@ const addToCollectionAttempt = ({imdbID}) => ({
   imdbID,
 });
 
-const addToCollectionSuccess = ({filmResult}) => ({
+const addToCollectionSuccess = ({imdbID}) => ({
   type: ADD_TO_COLLECTION.SUCCESS,
-  filmResult,
+  imdbID,
 });
 
 const addToCollectionFail = ({message}) => ({
   type: ADD_TO_COLLECTION.FAIL,
   message,
 });
-
-const isFilmAlreadyInCollection = ({imdbID, films}) => {
-  if (films.length < 1) {
-    return false;
-  }
-  return films.some((film) => film.imdbID === imdbID);
-};
 
 const addFilmImdbDataToCollection = ({imdbID}) => {
   return (dispatch, getState) => {
@@ -121,42 +114,44 @@ const addFilmImdbDataToCollection = ({imdbID}) => {
       return;
     }
     dispatch(addToCollectionAttempt({imdbID}));
-    if (
-      isFilmAlreadyInCollection({
-        films: state.collection.films,
-        imdbID,
-      })
-    ) {
+    if (state.collection.imdbIDs.includes(imdbID)) {
       dispatch(
         addToCollectionFail({
           message: 'Film has already been added',
         })
       );
       return;
-    }
-    fetch(
-      `//omdbapi.com/?apikey=${API_KEY}&i=${encodeURIComponent(
-        imdbID
-      )}&plot=full`
-    )
-      .then((res) => res.json())
-      .then((res) => {
-        if (res.Response === 'False') {
-          throw new Error(res.Error);
-        }
-        dispatch(
-          addToCollectionSuccess({
-            filmResult: res,
-          })
-        );
-      })
-      .catch((err) =>
-        dispatch(
-          addToCollectionFail({
-            message: err,
-          })
-        )
+    } else {
+      dispatch(
+        addToCollectionSuccess({
+          imdbID,
+        })
       );
+    }
+
+    // fetch(
+    //   `//omdbapi.com/?apikey=${API_KEY}&i=${encodeURIComponent(
+    //     imdbID
+    //   )}&plot=full`
+    // )
+    //   .then((res) => res.json())
+    //   .then((res) => {
+    //     if (res.Response === 'False') {
+    //       throw new Error(res.Error);
+    //     }
+    //     dispatch(
+    //       addToCollectionSuccess({
+    //         filmResult: res,
+    //       })
+    //     );
+    //   })
+    //   .catch((err) =>
+    //     dispatch(
+    //       addToCollectionFail({
+    //         message: err,
+    //       })
+    //     )
+    //   );
   };
 };
 

@@ -37,7 +37,7 @@ export const collectionStateType = PropTypes.shape({
   admin: PropTypes.string,
   users: PropTypes.arrayOf(PropTypes.string),
   public: PropTypes.bool,
-  filmIds: PropTypes.arrayOf(PropTypes.string),
+  imdbIDs: PropTypes.arrayOf(PropTypes.string),
 });
 
 export const omdbFilmType = PropTypes.shape({

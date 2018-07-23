@@ -36,7 +36,6 @@ import reorderArray from '../../helpers/reorder';
  */
 
 const defaultState = {
-  films: [],
   message: [],
   name: '',
   watched: [],
@@ -45,8 +44,11 @@ const defaultState = {
   addingFilm: false,
   id: null,
   admin: null,
-  filmIds: [],
+  imdbIDs: [],
 };
+
+// const removeAndReturnState = ({state, itemToRemove}) =>
+//   state.filter((item) => item !== itemToRemove);
 
 const collection = (state = defaultState, action) => {
   switch (action.type) {
@@ -66,7 +68,7 @@ const collection = (state = defaultState, action) => {
       return Object.assign({}, state, {visibility: action.visibility});
     case ADD_TO_COLLECTION.SUCCESS:
       return Object.assign({}, state, {
-        films: [action.filmResult, ...state.films],
+        imdbIDs: [action.imdbID, ...state.imdbIDs],
         message: [],
         addingFilm: false,
       });
@@ -77,12 +79,7 @@ const collection = (state = defaultState, action) => {
       });
     case REMOVE_FROM_COLLECTION:
       return Object.assign({}, state, {
-        films: state.films.reduce((acc, film) => {
-          if (film.imdbID !== action.imdbID) {
-            return [...acc, film];
-          }
-          return acc;
-        }, []),
+        imdbIDs: state.imdbIDs.filter((imdbID) => imdbID !== action.imdbID),
       });
     case TOGGLE_WATCHED_LIST.ADD:
       return Object.assign({}, state, {
@@ -90,12 +87,7 @@ const collection = (state = defaultState, action) => {
       });
     case TOGGLE_WATCHED_LIST.REMOVE:
       return Object.assign({}, state, {
-        watched: state.watched.reduce((acc, imdbIDs) => {
-          if (imdbIDs !== action.imdbID) {
-            return [...acc, imdbIDs];
-          }
-          return acc;
-        }, []),
+        watched: state.watched.filter((imdbID) => imdbID !== action.imdbID),
       });
     case TOGGLE_RATING.ADD:
       return Object.assign({}, state, {
@@ -103,16 +95,11 @@ const collection = (state = defaultState, action) => {
       });
     case TOGGLE_RATING.REMOVE:
       return Object.assign({}, state, {
-        loved: state.loved.reduce((acc, imdbIDs) => {
-          if (imdbIDs !== action.imdbID) {
-            return [...acc, imdbIDs];
-          }
-          return acc;
-        }, []),
+        loved: state.loved.filter((imdbID) => imdbID !== action.imdbID),
       });
     case REORDER_COLLECTION:
       return Object.assign({}, state, {
-        films: reorderArray(state.films, action.from, action.to),
+        imdbIDs: reorderArray(state.imdbIDs, action.from, action.to),
       });
     case ADD_TO_COLLECTION.ATTEMPT:
       return Object.assign({}, state, {
