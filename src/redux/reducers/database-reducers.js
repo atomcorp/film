@@ -3,9 +3,13 @@ import {
   RECEIVED_DATA_FROM_DB,
 } from '../actions/database-actions';
 
-const database = (state = {
-  isDownloading: false,
-}, action) => {
+const database = (
+  state = {
+    isDownloading: false,
+    isUploading: false,
+  },
+  action
+) => {
   switch (action.type) {
     case REQUEST_DATA_FROM_DB:
       return Object.assign({}, state, {
