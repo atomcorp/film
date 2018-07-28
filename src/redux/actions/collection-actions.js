@@ -1,4 +1,4 @@
-// import {API_KEY} from '../../config/api';
+import {API_KEY} from '../../config/api';
 import {collectionsPath} from '../../config/paths';
 import {setUserData} from './user-actions';
 import {database} from '../../firebase/firebase';
@@ -106,9 +106,9 @@ const addToCollectionAttempt = ({imdbID}) => ({
   imdbID,
 });
 
-const addToCollectionSuccess = ({imdbID}) => ({
+const addToCollectionSuccess = ({filmData}) => ({
   type: ADD_TO_COLLECTION.SUCCESS,
-  imdbID,
+  filmData,
 });
 
 const addToCollectionFail = ({message}) => ({
@@ -128,46 +128,50 @@ const addFilmImdbDataToCollection = ({imdbID}) => {
       return;
     }
     dispatch(addToCollectionAttempt({imdbID}));
-    if (state.collection.imdbIDs.includes(imdbID)) {
+    if (state.collection.films.find((filmData) => filmData.imdbID === imdbID)) {
       dispatch(
         addToCollectionFail({
           message: 'Film has already been added',
         })
       );
       return;
-    } else {
-      dispatch(
-        addToCollectionSuccess({
-          imdbID,
-        })
-      );
-      dispatch(setCollectionData({id: state.collection.id}));
     }
+    // if just adding imdbID
+    // dispatch(
+    //   addToCollectionSuccess({
+    //     imdbID,
+    //   })
+    // );
+    // dispatch(setCollectionData({id: state.collection.id}));
+
     // this does need to run off and fetch the movie info still
     // maybe use Indexed DB
-    // fetch(
-    //   `//omdbapi.com/?apikey=${API_KEY}&i=${encodeURIComponent(
-    //     imdbID
-    //   )}&plot=full`
-    // )
-    //   .then((res) => res.json())
-    //   .then((res) => {
-    //     if (res.Response === 'False') {
-    //       throw new Error(res.Error);
-    //     }
-    //     dispatch(
-    //       addToCollectionSuccess({
-    //         filmResult: res,
-    //       })
-    //     );
-    //   })
-    //   .catch((err) =>
-    //     dispatch(
-    //       addToCollectionFail({
-    //         message: err,
-    //       })
-    //     )
-    //   );
+    fetch(
+      `//omdbapi.com/?apikey=${API_KEY}&i=${encodeURIComponent(
+        imdbID
+      )}&plot=full`
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        if (res.Response === 'False') {
+          throw new Error(res.Error);
+        }
+        dispatch(
+          addToCollectionSuccess({
+            filmData: res,
+          })
+        );
+      })
+      .then(() => {
+        dispatch(setCollectionData({id: state.collection.id}));
+      })
+      .catch((err) =>
+        dispatch(
+          addToCollectionFail({
+            message: err,
+          })
+        )
+      );
   };
 };
 

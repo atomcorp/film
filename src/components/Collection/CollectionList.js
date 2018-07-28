@@ -34,7 +34,7 @@ scss;
  */
 const CollectionList = ({
   collection,
-  filteredimdbIDs,
+  filteredFilms,
   toggleWatchedList,
   removeFilmFromCollection,
   toggleFilmRating,
@@ -54,8 +54,8 @@ const CollectionList = ({
             }}
             {...provided.droppableProps}
           >
-            {filteredimdbIDs &&
-              filteredimdbIDs.map((film, index) => (
+            {filteredFilms &&
+              filteredFilms.map((film, index) => (
                 <Draggable key={index} draggableId={film.imdbID} index={index}>
                   {(provided, snapshot) => (
                     <div
@@ -65,7 +65,6 @@ const CollectionList = ({
                     >
                       <li onClick={() => showHighlight({imdbID: film.imdbID})}>
                         <h4>
-                          Imdb Id = {film}
                           {film.Title} ({film.Year})
                           {collection.watched.includes(film.imdbID) && ' ️👀'}
                           {collection.loved.includes(film.imdbID) && ' 💖'}
@@ -124,7 +123,7 @@ CollectionList.propTypes = {
   toggleWatchedList: PropTypes.func,
   removeFilmFromCollection: PropTypes.func,
   toggleFilmRating: PropTypes.func,
-  filteredimdbIDs: PropTypes.arrayOf(PropTypes.string),
+  filteredFilms: PropTypes.arrayOf(PropTypes.object),
   watched: PropTypes.arrayOf(PropTypes.string),
   loved: PropTypes.arrayOf(PropTypes.string),
   isDownloading: PropTypes.bool,

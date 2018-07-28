@@ -45,7 +45,7 @@ const defaultState = {
   addingFilm: false,
   id: null,
   admin: null,
-  imdbIDs: [],
+  films: [],
 };
 
 // const removeAndReturnState = ({state, itemToRemove}) =>
@@ -69,7 +69,7 @@ const collection = (state = defaultState, action) => {
       return Object.assign({}, state, {visibility: action.visibility});
     case ADD_TO_COLLECTION.SUCCESS:
       return Object.assign({}, state, {
-        imdbIDs: [action.imdbID, ...state.imdbIDs],
+        films: [action.filmData, ...state.films],
         message: [],
         addingFilm: false,
       });
@@ -80,7 +80,7 @@ const collection = (state = defaultState, action) => {
       });
     case REMOVE_FROM_COLLECTION:
       return Object.assign({}, state, {
-        imdbIDs: state.imdbIDs.filter((imdbID) => imdbID !== action.imdbID),
+        films: state.films.filter((imdbID) => imdbID !== action.imdbID),
       });
     case TOGGLE_WATCHED_LIST.ADD:
       return Object.assign({}, state, {
@@ -100,7 +100,7 @@ const collection = (state = defaultState, action) => {
       });
     case REORDER_COLLECTION:
       return Object.assign({}, state, {
-        imdbIDs: reorderArray(state.imdbIDs, action.from, action.to),
+        films: reorderArray(state.films, action.from, action.to),
       });
     case ADD_TO_COLLECTION.ATTEMPT:
       return Object.assign({}, state, {

@@ -12,8 +12,8 @@ import filterCollection from '../helpers/filterCollection';
 const mapStateToProps = (state) => ({
   isDownloading: state.database.isDownloading,
   collection: state.collection,
-  filteredimdbIDs: filterCollection({
-    imdbIDs: state.collection.imdbIDs,
+  filteredFilms: filterCollection({
+    films: state.collection.films,
     visibility: state.collection.visibility,
     watched: state.collection.watched,
   }),
