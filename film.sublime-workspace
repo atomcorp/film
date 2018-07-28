@@ -107,6 +107,15 @@
 			}
 		},
 		{
+			"file": "/C/Users/atom/sites/last/src/data/tms2666/artists.json",
+			"settings":
+			{
+				"buffer_size": 2501914,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"contents": "Package Control Messages\n========================\n\nSublimeLinter-eslint\n--------------------\n\n  SublimeLinter-eslint\n  -------------------------------\n  This linter plugin for SublimeLinter provides an interface to ESLint.\n  \n  Please read the installation instructions at:\n  \n  https://github.com/roadhump/SublimeLinter-eslint\n",
 			"settings":
 			{
@@ -237,6 +246,7 @@
 	],
 	"file_history":
 	[
+		"/C/Users/atom/sites/last/src/data/tms2666/tracks.json",
 		"/C/Users/atom/sites/film/src/redux/actions/collection-actions.js",
 		"/C/Users/atom/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
 		"/C/Users/tom/sites/film/src/redux/reducers/collection-reducers.js",
@@ -363,8 +373,7 @@
 		"/C/Users/tom/Desktop/colors.theme",
 		"/C/xampp/htdocs/constellations/sites/default/settings.php",
 		"/C/Users/tom/AppData/Roaming/Sublime Text 3/Packages/User/node.sublime-build",
-		"/C/Users/tom/Sites/wp_portfolio/wp-content/themes/bones-child/library/sass/style.scss",
-		"/C/xampp/htdocs/pro-drupal/sites/all/modules/custom/annotate/annotate.admin.inc"
+		"/C/Users/tom/Sites/wp_portfolio/wp-content/themes/bones-child/library/sass/style.scss"
 	],
 	"find":
 	{
@@ -410,7 +419,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -432,6 +441,9 @@
 						],
 						"settings":
 						{
+							"SL.13.region_keys":
+							[
+							],
 							"SL.27.region_keys":
 							[
 								"sublime_linter.protected_regions",
@@ -453,7 +465,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -475,17 +487,50 @@
 						],
 						"settings":
 						{
+							"SL.14.region_keys":
+							[
+							],
+							"git_gutter_is_enabled": false,
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
+					"file": "/C/Users/atom/sites/last/src/data/tms2666/artists.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2501914,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1007,
+								1007
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": false,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 870.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"semi_transient": false,
 					"settings":
 					{
@@ -502,6 +547,9 @@
 						],
 						"settings":
 						{
+							"SL.15.region_keys":
+							[
+							],
 							"auto_indent": false,
 							"git_gutter_is_enabled": false,
 							"syntax": "Packages/Text/Plain text.tmLanguage",
@@ -512,7 +560,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
