@@ -1,6 +1,9 @@
 import Collection from '../components/Collection/Collection';
 import {connect} from 'react-redux';
-import {initNewCollection} from '../redux/actions/collection-actions';
+import {
+  initNewCollection,
+  getCollectionData,
+} from '../redux/actions/collection-actions';
 
 export default connect(
   (state) => ({
@@ -15,6 +18,9 @@ export default connect(
           usersName,
         })
       );
+    },
+    getCollectionData: ({id}) => {
+      dispatch(getCollectionData({id}));
     },
   })
 )(Collection);

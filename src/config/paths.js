@@ -1,3 +1,3 @@
 export const usersPath = 'users';
 export const collectionsPath = 'collections';
-export const filmPath = 'film';
+export const filmsPath = 'films';

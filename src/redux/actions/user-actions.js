@@ -7,6 +7,12 @@ export const GET_USER_DATA = {
   FAIL: 'GET_USER_DATA_FAIL',
 };
 
+export const SET_USER_DATA = {
+  ATTEMPT: 'SET_USER_DATA_ATTEMPT',
+  SUCCESS: 'SET_USER_DATA_SUCCESS',
+  FAIL: 'SET_USER_DATA_FAIL',
+};
+
 const getUserDataAttempt = () => ({
   type: GET_USER_DATA.ATTEMPT,
 });
@@ -32,5 +38,33 @@ export const getUserData = ({id}) => {
         dispatch(getUserDataSuccess({userData: snapshot.val()}));
       })
       .catch((err) => dispatch(getUserDataFail({message: err.message})));
+  };
+};
+
+const setUserDataAttempt = () => ({
+  type: SET_USER_DATA.ATTEMPT,
+});
+
+const setUserDataSuccess = () => ({
+  type: SET_USER_DATA.SUCCESS,
+});
+
+const setUserDataFail = ({message}) => ({
+  type: SET_USER_DATA.FAIL,
+  message,
+});
+
+export const setUserData = () => {
+  return (dispatch, getState) => {
+    dispatch(setUserDataAttempt());
+    const lastestUserData = getState().user;
+    database
+      .ref(`${usersPath}/${lastestUserData.id}`)
+      .set(lastestUserData)
+      .then((snapshot) => {
+        /* eslint-disable no-console */
+        dispatch(setUserDataSuccess());
+      })
+      .catch((err) => dispatch(setUserDataFail({message: err.message})));
   };
 };

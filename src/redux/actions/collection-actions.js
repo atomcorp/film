@@ -1,5 +1,6 @@
 // import {API_KEY} from '../../config/api';
 import {collectionsPath} from '../../config/paths';
+import {setUserData} from './user-actions';
 import {database} from '../../firebase/firebase';
 const ADD_TO_COLLECTION = {
   ATTEMPT: 'ADD_TO_COLLECTION_ATTEMPT',
@@ -31,6 +32,11 @@ export const INIT_NEW_COLLECTION = {
   FAIL: 'INIT_NEW_COLLECTION_FAIL',
 };
 
+export const GET_COLLECTION_DATA = {
+  ATTEMPT: 'GET_COLLECTION_DATA_ATTEMPT',
+  SUCCESS: 'GET_COLLECTION_DATA_SUCCESS',
+  FAIL: 'GET_COLLECTION_DATA_FAIL',
+};
 // INIT_NEW_COLLECTION
 const initNewCollectionAttempt = () => ({
   type: INIT_NEW_COLLECTION.ATTEMPT,
@@ -52,7 +58,6 @@ export const initNewCollection = ({usersId, usersName}) => (
   dispatch,
   getState
 ) => {
-  // console.log('Col');
   dispatch(initNewCollectionAttempt());
   const newCollectionRef = database.ref(`${collectionsPath}`).push();
   newCollectionRef
@@ -69,6 +74,9 @@ export const initNewCollection = ({usersId, usersName}) => (
           id: newCollectionRef.key,
         })
       );
+    })
+    .then(() => {
+      dispatch(setUserData());
     })
     .catch((err) =>
       dispatch(
@@ -243,6 +251,34 @@ const toggleFilmRating = ({imdbID}) => {
     } else {
       dispatch(toggleRatingRemove({imdbID}));
     }
+  };
+};
+
+const getCollectionDataAttempt = () => ({
+  type: GET_COLLECTION_DATA.ATTEMPT,
+});
+
+const getCollectionDataSuccess = ({collectionData}) => ({
+  type: GET_COLLECTION_DATA.SUCCESS,
+  collectionData,
+});
+
+const getCollectionDataFail = ({message}) => ({
+  type: GET_COLLECTION_DATA.FAIL,
+  message,
+});
+
+export const getCollectionData = ({id}) => {
+  return (dispatch, getState) => {
+    dispatch(getCollectionDataAttempt());
+    database
+      .ref(`${collectionsPath}/${id}`)
+      .once('value')
+      .then((snapshot) => {
+        /* eslint-disable no-console */
+        dispatch(getCollectionDataSuccess({collectionData: snapshot.val()}));
+      })
+      .catch((err) => dispatch(getCollectionDataFail({message: err.message})));
   };
 };
 

@@ -1,4 +1,4 @@
-import {GET_USER_DATA} from '../actions/user-actions';
+import {GET_USER_DATA, SET_USER_DATA} from '../actions/user-actions';
 import {INIT_NEW_COLLECTION} from '../actions/collection-actions';
 const defaultState = {
   name: '',
@@ -7,27 +7,17 @@ const defaultState = {
   collections: [],
   watched: [],
   loved: [],
-  downloadingData: false,
-  downloadingDataFailed: false,
-  downloadedData: false,
+  // downloadingData: false,
+  // downloadingDataFailed: false,
+  // downloadedData: false,
 };
 
 const user = (state = defaultState, action) => {
   switch (action.type) {
     case GET_USER_DATA.ATTEMPT:
-      return Object.assign({}, defaultState, {
-        downloadingData: true,
-      });
+      return defaultState;
     case GET_USER_DATA.SUCCESS:
-      return Object.assign({}, state, action.userData, {
-        downloadingData: false,
-        downloadedData: true,
-      });
-    case GET_USER_DATA.FAIL:
-      return Object.assign({}, state, {
-        downloadingData: false,
-        downloadingDataFailed: true,
-      });
+      return Object.assign({}, state, action.userData);
     case INIT_NEW_COLLECTION.SUCCESS:
       return Object.assign({}, state, {
         collections:
@@ -35,6 +25,10 @@ const user = (state = defaultState, action) => {
             ? [...state.collections, action.id]
             : state.collection,
       });
+    case SET_USER_DATA.SUCCESS:
+    case SET_USER_DATA.FAIL:
+    case SET_USER_DATA.ATTEMPT:
+    case GET_USER_DATA.FAIL:
     default:
       return state;
   }

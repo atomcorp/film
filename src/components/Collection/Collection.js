@@ -16,11 +16,15 @@ class Collection extends React.Component {
    * componentDidMount
    */
   componentDidMount() {
-    if (this.props.collection.id === null) {
+    // TODO: abstract this check elsewhere
+    if (!this.props.user.collections.length) {
       this.props.initNewCollection({
         usersId: this.props.user.id,
         usersName: this.props.user.name,
       });
+    } else {
+      // download collection
+      this.props.getCollectionData({id: this.props.user.collections[0]});
     }
   }
   /**
@@ -39,6 +43,7 @@ Collection.propTypes = {
   collection: collectionStateType,
   initNewCollection: PropTypes.func,
   user: userStateType,
+  getCollectionData: PropTypes.func,
 };
 
 export default Collection;
