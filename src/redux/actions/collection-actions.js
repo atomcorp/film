@@ -37,6 +37,12 @@ export const GET_COLLECTION_DATA = {
   SUCCESS: 'GET_COLLECTION_DATA_SUCCESS',
   FAIL: 'GET_COLLECTION_DATA_FAIL',
 };
+
+export const SET_COLLECTION_DATA = {
+  ATTEMPT: 'SET_COLLECTION_DATA_ATTEMPT',
+  SUCCESS: 'SET_COLLECTION_DATA_SUCCESS',
+  FAIL: 'SET_COLLECTION_DATA_FAIL',
+};
 // INIT_NEW_COLLECTION
 const initNewCollectionAttempt = () => ({
   type: INIT_NEW_COLLECTION.ATTEMPT,
@@ -135,6 +141,7 @@ const addFilmImdbDataToCollection = ({imdbID}) => {
           imdbID,
         })
       );
+      dispatch(setCollectionData({id: state.collection.id}));
     }
     // this does need to run off and fetch the movie info still
     // maybe use Indexed DB
@@ -279,6 +286,33 @@ export const getCollectionData = ({id}) => {
         dispatch(getCollectionDataSuccess({collectionData: snapshot.val()}));
       })
       .catch((err) => dispatch(getCollectionDataFail({message: err.message})));
+  };
+};
+
+const setCollectionDataAttempt = () => ({
+  type: SET_COLLECTION_DATA.ATTEMPT,
+});
+
+const setCollectionDataSuccess = () => ({
+  type: SET_COLLECTION_DATA.SUCCESS,
+});
+
+const setCollectionDataFail = ({message}) => ({
+  type: SET_COLLECTION_DATA.FAIL,
+  message,
+});
+
+export const setCollectionData = ({id}) => {
+  return (dispatch, getState) => {
+    dispatch(setCollectionDataAttempt());
+    const latestCollectionData = getState().collection;
+    database
+      .ref(`${collectionsPath}/${id}`)
+      .set(latestCollectionData)
+      .then(() => {
+        dispatch(setCollectionDataSuccess());
+      })
+      .catch((err) => dispatch(setCollectionDataFail({message: err.message})));
   };
 };
 
