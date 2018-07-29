@@ -4,6 +4,7 @@ import PrivateRoute from './PrivateRoute';
 import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
 import SignInContainer from '../containers/SignInContainer';
 import SignUpContainer from '../containers/SignUpContainer';
+import CollectionContainer from '../containers/CollectionContainer';
 import {FilmApp} from '../components/';
 
 const Router = (props) => (
@@ -12,6 +13,9 @@ const Router = (props) => (
       <PrivateRoute exact path="/app" component={FilmApp} />
       <Route exact path="/signin" component={SignInContainer} />
       <Route path="/signup" component={SignUpContainer} />
+      <Route path="/c/:id" component={CollectionContainer} />
+      {/* if user logged in show their last collection */}
+      <Route path="/c/" component={CollectionContainer} />
       <Redirect to="/app" />
     </Switch>
   </BrowserRouter>

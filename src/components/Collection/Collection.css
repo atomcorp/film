@@ -1,3 +1,15 @@
 h4 {
   margin: 0;
 }
+
+.content {
+  display: flex;
+}
+
+.collection {
+  flex: 1 0 50%;
+}
+
+.highlights {
+  flex: 0 1 50%;
+}

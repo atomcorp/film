@@ -77,6 +77,8 @@ class SignIn extends React.Component {
           </div>
           {this.props.app.isSigningIn && 'Signing in'}
         </form>
+        <Link to="/c/-LIX6jO8zd0_6EV_ipdq">Collection page</Link>
+        <br />
         {this.props.app.isAuthenticated && <Link to="/app">App</Link>}
       </div>
     );
