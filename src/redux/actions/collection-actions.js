@@ -43,6 +43,8 @@ export const SET_COLLECTION_DATA = {
   SUCCESS: 'SET_COLLECTION_DATA_SUCCESS',
   FAIL: 'SET_COLLECTION_DATA_FAIL',
 };
+
+export const SET_COLLECTION_NAME = 'SET_COLLECTION_NAME';
 // INIT_NEW_COLLECTION
 const initNewCollectionAttempt = () => ({
   type: INIT_NEW_COLLECTION.ATTEMPT,
@@ -317,6 +319,16 @@ export const setCollectionData = ({id}) => {
         dispatch(setCollectionDataSuccess());
       })
       .catch((err) => dispatch(setCollectionDataFail({message: err.message})));
+  };
+};
+
+export const setCollectionName = ({name}) => {
+  return (dispatch, getState) => {
+    dispatch({
+      type: SET_COLLECTION_NAME,
+      name,
+    });
+    dispatch(setCollectionData({id: getState().collection.id}));
   };
 };
 

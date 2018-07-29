@@ -8,6 +8,7 @@ import {
   TOGGLE_RATING,
   INIT_NEW_COLLECTION,
   GET_COLLECTION_DATA,
+  SET_COLLECTION_NAME,
 } from '../actions/collection-actions';
 import {RECEIVED_DATA_FROM_DB} from '../actions/database-actions';
 import reorderArray from '../../helpers/reorder';
@@ -105,6 +106,10 @@ const collection = (state = defaultState, action) => {
     case ADD_TO_COLLECTION.ATTEMPT:
       return Object.assign({}, state, {
         addingFilm: true,
+      });
+    case SET_COLLECTION_NAME:
+      return Object.assign({}, state, {
+        name: action.name,
       });
     case GET_COLLECTION_DATA.ATTEMPT:
       return defaultState;

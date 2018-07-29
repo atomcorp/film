@@ -1,9 +1,11 @@
 Next: 
-  ☐ Add films to a collection
-  ☐ save new collection data 
+  ✔ Add films to a collection @done(18-07-28 19:37)
+  ✔ save new collection data @done(18-07-28 19:37)
   ☐ redo async loading, or research better ways of doing it
   ☐ Use indexedDB to save film information
   ☐ Work out how to use cache or download info if necessary 
+  ☐ give collections  their own pages in the router
+  ☐ hide edit functions behind prive routes
 
 Task:
   ✔ Throttle search within Redux, so we can show loading icon when user is typing or just do it through state maybe @done(18-05-08 23:30)
@@ -33,6 +35,7 @@ Task:
   ☐ Allow non-users to view private pages @future @enhancement
     They're the same pages, but editing features are disabled for logout people
   ☐ You can only have one Collection loaded at a time
+  ☐ 
 
 Later:
   ✔ add login / signup @done(18-07-22 12:44)

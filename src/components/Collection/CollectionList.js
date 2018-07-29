@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import {collectionStateType} from '../../types';
 import {DraggableList} from '../../containers';
 import {Droppable, Draggable} from 'react-beautiful-dnd';
-import scss from './Collection.css';
-scss;
+// // import css from './Collection.css';
 /**
  * @typedef film
  * Full film data from omdbAPI

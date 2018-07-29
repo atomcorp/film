@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {collectionStateType, userStateType} from '../../types';
 import CollectionListContainer from '../../containers/CollectionListContainer';
+import CollectionNameContainer from '../../containers/CollectionNameContainer';
 /**
  * This handles loading a Collection
  */
@@ -32,7 +33,10 @@ class Collection extends React.Component {
    */
   render() {
     return this.props.collection.id ? (
-      <CollectionListContainer />
+      <div>
+        <CollectionNameContainer />
+        <CollectionListContainer />
+      </div>
     ) : (
       <div>Creating you a new collection</div>
     );
