@@ -1,4 +1,5 @@
 import Collection from '../components/Collection/Collection';
+import isCollectionEditable from '../components/Collection/isCollectionEditable';
 import {connect} from 'react-redux';
 import {
   initNewCollection,
@@ -23,4 +24,4 @@ export default connect(
       dispatch(getCollectionData({id}));
     },
   })
-)(Collection);
+)(isCollectionEditable(Collection));
