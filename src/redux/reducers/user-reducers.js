@@ -1,5 +1,6 @@
 import {GET_USER_DATA, SET_USER_DATA} from '../actions/user-actions';
 import {INIT_NEW_COLLECTION} from '../actions/collection-actions';
+import {SIGN_OUT} from '../actions/app-actions';
 const defaultState = {
   name: '',
   id: '',
@@ -25,6 +26,8 @@ const user = (state = defaultState, action) => {
             ? [...state.collections, action.id]
             : state.collection,
       });
+    case SIGN_OUT.SUCCESS:
+      return defaultState;
     case SET_USER_DATA.SUCCESS:
     case SET_USER_DATA.FAIL:
     case SET_USER_DATA.ATTEMPT:

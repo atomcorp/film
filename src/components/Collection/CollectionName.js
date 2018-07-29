@@ -11,7 +11,7 @@ class CollectionName extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      editable: false,
+      editing: false,
       name: this.props.collection.name,
     };
   }
@@ -24,9 +24,9 @@ class CollectionName extends React.Component {
       name: event.target.value,
     });
   };
-  toggleEditable = () => {
+  toggleEditing = () => {
     this.setState((prevState) => ({
-      editable: !prevState.editable,
+      editing: !prevState.editing,
     }));
   };
   /**
@@ -36,17 +36,23 @@ class CollectionName extends React.Component {
   render() {
     return (
       <div>
-        {!this.state.editable ? (
+        {!this.state.editing ? (
           <h2>{this.state.name}</h2>
         ) : (
           <input value={this.state.name} onChange={this.handleChange} />
         )}
-        <button onClick={this.toggleEditable}>Edit name</button>
-        <button
-          onClick={() => this.props.setCollectionName({name: this.state.name})}
-        >
-          Save
-        </button>
+        {this.props.editable && (
+          <div>
+            <button onClick={this.toggleEditing}>Edit name</button>
+            <button
+              onClick={() =>
+                this.props.setCollectionName({name: this.state.name})
+              }
+            >
+              Save
+            </button>
+          </div>
+        )}
       </div>
     );
   }
@@ -55,6 +61,7 @@ class CollectionName extends React.Component {
 CollectionName.propTypes = {
   collection: PropTypes.object,
   setCollectionName: PropTypes.func,
+  editable: PropTypes.bool,
 };
 
 export default CollectionName;

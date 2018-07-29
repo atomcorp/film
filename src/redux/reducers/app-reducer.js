@@ -72,9 +72,10 @@ const app = (state = defaultState, action) => {
         initialisingFailureReason: [...action.message],
       });
 
-    case SIGN_OUT.ATTEMPT:
     case SIGN_OUT.SUCCESS:
       return defaultState;
+
+    case SIGN_OUT.ATTEMPT:
     default:
       return state;
   }
