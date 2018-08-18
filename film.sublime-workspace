@@ -116,15 +116,6 @@
 			}
 		},
 		{
-			"file": "/C/Users/atom/Downloads/film-ac003-export(1).json",
-			"settings":
-			{
-				"buffer_size": 112430,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"contents": "Package Control Messages\n========================\n\nSublimeLinter-eslint\n--------------------\n\n  SublimeLinter-eslint\n  -------------------------------\n  This linter plugin for SublimeLinter provides an interface to ESLint.\n  \n  Please read the installation instructions at:\n  \n  https://github.com/roadhump/SublimeLinter-eslint\n",
 			"settings":
 			{
@@ -254,6 +245,7 @@
 	],
 	"file_history":
 	[
+		"/C/Users/atom/Downloads/film-ac003-export(1).json",
 		"/C/Users/atom/sites/last/src/data/tms2666/tracks.json",
 		"/C/Users/atom/sites/film/src/redux/actions/collection-actions.js",
 		"/C/Users/atom/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
@@ -380,8 +372,7 @@
 		"/C/xampp/htdocs/constellations/sites/all/modules/admin_menu/admin_menu.css",
 		"/C/Users/tom/Desktop/colors.theme",
 		"/C/xampp/htdocs/constellations/sites/default/settings.php",
-		"/C/Users/tom/AppData/Roaming/Sublime Text 3/Packages/User/node.sublime-build",
-		"/C/Users/tom/Sites/wp_portfolio/wp-content/themes/bones-child/library/sass/style.scss"
+		"/C/Users/tom/AppData/Roaming/Sublime Text 3/Packages/User/node.sublime-build"
 	],
 	"find":
 	{
@@ -427,7 +418,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -505,7 +496,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -531,43 +522,14 @@
 							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 870.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/C/Users/atom/Downloads/film-ac003-export(1).json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 112430,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								84187,
-								84187
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": false,
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 68328.0,
+						"translation.y": 406.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"semi_transient": false,
 					"settings":
 					{
