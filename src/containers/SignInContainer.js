@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import SignIn from '../components/User/SignIn';
-import {signIn} from '../redux/actions/app-actions';
+import {signInToFirebase} from '../redux/actions/app-actions';
 
 const mapStateToProps = ({app, user, auth}) => ({
   app,
@@ -9,8 +9,8 @@ const mapStateToProps = ({app, user, auth}) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  signIn: ({email, password}) => {
-    dispatch(signIn({email, password}));
+  signInToFirebase: ({email, password}) => {
+    dispatch(signInToFirebase({email, password}));
   },
 });
 

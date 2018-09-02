@@ -8,7 +8,7 @@ import {
 } from '../../helpers/localstorage';
 import {validateUsername} from '../../helpers/validateUsername';
 
-export const SIGN_IN = tryAction('SIGN_IN');
+export const SIGN_IN_TO_FIREBASE = tryAction('SIGN_IN_TO_FIREBASE');
 export const SIGN_OUT = tryAction('SIGN_OUT');
 export const SIGN_UP = tryAction('SIGN_UP');
 export const INIT_USER = tryAction('INIT_USER');
@@ -41,40 +41,40 @@ export const signUp = ({email, password, name}) => {
           dispatch(signUpSuccess());
           // set up a database entry
           dispatch(initUser({id: user.uid, name, email}));
-          // then signIn?
+          // then signInToFirebase?
         })
         .catch((err) => dispatch(signUpFail({message: err.message})));
     }
   };
 };
 
-const signInAttempt = () => ({
-  type: SIGN_IN.ATTEMPT,
+const signInToFirebaseAttempt = () => ({
+  type: SIGN_IN_TO_FIREBASE.ATTEMPT,
 });
 
-export const signInSuccess = () => ({
-  type: SIGN_IN.SUCCESS,
+export const signInToFirebaseSuccess = () => ({
+  type: SIGN_IN_TO_FIREBASE.SUCCESS,
 });
 
-const signInFail = ({message}) => ({
-  type: SIGN_IN.FAIL,
+const signInToFirebaseFail = ({message}) => ({
+  type: SIGN_IN_TO_FIREBASE.FAIL,
   message,
 });
 
-export const signIn = ({email, password}) => {
+export const signInToFirebase = ({email, password}) => {
   return (dispatch, getState) => {
-    dispatch(signInAttempt());
+    dispatch(signInToFirebaseAttempt());
     auth
-      .signInWithEmailAndPassword(email, password)
+      .signInToFirebaseWithEmailAndPassword(email, password)
       .then(({user}) => {
-        dispatch(signInSuccess());
+        dispatch(signInToFirebaseSuccess());
         addToLocalStorage('id', user.uid);
         return user;
       })
       .then((user) => {
         dispatch(getUserData({id: user.uid}));
       })
-      .catch((err) => dispatch(signInFail({message: err.message})));
+      .catch((err) => dispatch(signInToFirebaseFail({message: err.message})));
   };
 };
 

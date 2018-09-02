@@ -1,5 +1,10 @@
 import {COLLECTION_VISIBILITY} from '../actions/collection-actions';
-import {SIGN_IN, SIGN_OUT, SIGN_UP, INIT_USER} from '../actions/app-actions';
+import {
+  SIGN_IN_TO_FIREBASE,
+  SIGN_OUT,
+  SIGN_UP,
+  INIT_USER,
+} from '../actions/app-actions';
 
 const defaultState = {
   isAuthenticated: false,
@@ -37,16 +42,16 @@ const app = (state = defaultState, action) => {
         signUpFail: true,
         signUpMessage: [...action.message],
       });
-    case SIGN_IN.ATTEMPT:
+    case SIGN_IN_TO_FIREBASE.ATTEMPT:
       return Object.assign({}, defaultState, {
         isSigningIn: true,
       });
-    case SIGN_IN.SUCCESS:
+    case SIGN_IN_TO_FIREBASE.SUCCESS:
       return Object.assign({}, state, {
         isSigningIn: false,
         isAuthenticated: true,
       });
-    case SIGN_IN.FAIL:
+    case SIGN_IN_TO_FIREBASE.FAIL:
       return Object.assign({}, state, {
         isSigningIn: false,
         isAuthenticated: false,

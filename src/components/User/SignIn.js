@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link, Redirect} from 'react-router-dom';
 import {appStateType, authType} from '../../types';
+import PropTypes from 'prop-types';
 
 /**
  * SignIn
@@ -32,7 +33,7 @@ class SignIn extends React.Component {
    */
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.signIn({
+    this.props.signInToFirebase({
       email: this.state.email,
       password: this.state.password,
     });
@@ -86,7 +87,7 @@ class SignIn extends React.Component {
 
 SignIn.propTypes = {
   app: appStateType,
-  // user: userStateType,
+  signInToFirebase: PropTypes.func,
   auth: authType,
 };
 

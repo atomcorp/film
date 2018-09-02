@@ -14,7 +14,7 @@ import {default as authReducer} from '../reducers/auth-reducer';
 // } from '../actions/database-actions';
 import {auth} from '../../firebase/firebase';
 import {getUserData} from '../actions/user-actions';
-import {signOut, signInSuccess} from '../actions/app-actions';
+import {signOut, signInToFirebaseSuccess} from '../actions/app-actions';
 
 // import {initNewCollection} from '../actions/collection-actions';
 
@@ -41,7 +41,7 @@ const store = createStore(rootReducer, applyMiddleware(thunk, logger));
 // about Firebase.Auth changes
 auth.onAuthStateChanged((user) => {
   if (user) {
-    store.dispatch(signInSuccess());
+    store.dispatch(signInToFirebaseSuccess());
     store.dispatch(getUserData({id: user.uid}));
   } else {
     store.dispatch(signOut());
