@@ -12,6 +12,7 @@ export const SIGN_IN_TO_FIREBASE = tryAction('SIGN_IN_TO_FIREBASE');
 export const SIGN_OUT = tryAction('SIGN_OUT');
 export const SIGN_UP = tryAction('SIGN_UP');
 export const INIT_USER = tryAction('INIT_USER');
+export const INIT_APP_DONE = 'INIT_APP_DONE';
 
 const signUpAttempt = () => ({
   type: SIGN_UP.ATTEMPT,
@@ -48,7 +49,7 @@ export const signUp = ({email, password, name}) => {
   };
 };
 
-const signInToFirebaseAttempt = () => ({
+export const signInToFirebaseAttempt = () => ({
   type: SIGN_IN_TO_FIREBASE.ATTEMPT,
 });
 
@@ -74,7 +75,9 @@ export const signInToFirebase = ({email, password}) => {
       .then((user) => {
         dispatch(getUserData({id: user.uid}));
       })
-      .catch((err) => dispatch(signInToFirebaseFail({message: err.message})));
+      .catch((err) => {
+        dispatch(signInToFirebaseFail({message: err.message}));
+      });
   };
 };
 
@@ -130,3 +133,7 @@ export const initUser = ({id, name, email}) => {
       });
   };
 };
+
+export const initAppDone = () => ({
+  type: INIT_APP_DONE,
+});

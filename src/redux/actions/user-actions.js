@@ -2,6 +2,7 @@ import {database} from '../../firebase/firebase';
 import {usersPath} from '../../config/paths';
 import tryAction from '../../helpers/tryAction';
 import {setAuth} from './auth-actions';
+import {initAppDone} from './app-actions';
 export const GET_USER_DATA = tryAction('GET_USER_DATA');
 export const SET_USER_DATA = tryAction('SET_USER_DATA');
 
@@ -31,6 +32,7 @@ export const getUserData = ({id}) => {
       })
       .then(() => {
         dispatch(setAuth({isAuth: true}));
+        dispatch(initAppDone());
       })
       .catch((err) => dispatch(getUserDataFail({message: err.message})));
   };

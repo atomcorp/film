@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 export const appStateType = PropTypes.shape({
-  isAuthenticated: PropTypes.bool,
+  isSignedIntoFirebase: PropTypes.bool,
   addingFilm: PropTypes.bool,
   visibility: PropTypes.string,
   isSigningIn: PropTypes.bool,

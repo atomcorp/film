@@ -79,7 +79,7 @@ class SignIn extends React.Component {
         </form>
         <Link to="/c/-LIX6jO8zd0_6EV_ipdq">Collection page</Link>
         <br />
-        {this.props.app.isAuthenticated && <Link to="/app">App</Link>}
+        {this.props.auth.isAuth && <Link to="/app">App</Link>}
       </div>
     );
   }

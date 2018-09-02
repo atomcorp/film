@@ -1,20 +1,29 @@
-import {combineReducers, createStore, applyMiddleware} from 'redux';
-import thunk from 'redux-thunk';
+import {applyMiddleware, combineReducers, createStore} from 'redux';
 import logger from 'redux-logger';
-import search from '../reducers/search-reducers';
-import collection from '../reducers/collection-reducers';
-import database from '../reducers/database-reducers';
-import highlight from '../reducers/highlight-reducer';
-import app from '../reducers/app-reducer';
-import user from '../reducers/user-reducers';
-import {default as authReducer} from '../reducers/auth-reducer';
+import thunk from 'redux-thunk';
 // import {
 //   postUsersDataToDatabase,
 //   getUsersDataAndUpdateSite,
 // } from '../actions/database-actions';
 import {auth} from '../../firebase/firebase';
+import {
+  addToLocalStorage,
+  getFromLocalStorage,
+} from '../../helpers/localstorage';
+import {
+  signInToFirebaseSuccess,
+  signOut,
+  signInToFirebaseAttempt,
+  initAppDone,
+} from '../actions/app-actions';
 import {getUserData} from '../actions/user-actions';
-import {signOut, signInToFirebaseSuccess} from '../actions/app-actions';
+import app from '../reducers/app-reducer';
+import {default as authReducer} from '../reducers/auth-reducer';
+import collection from '../reducers/collection-reducers';
+import database from '../reducers/database-reducers';
+import highlight from '../reducers/highlight-reducer';
+import search from '../reducers/search-reducers';
+import user from '../reducers/user-reducers';
 
 // import {initNewCollection} from '../actions/collection-actions';
 
@@ -29,13 +38,14 @@ const rootReducer = combineReducers({
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk, logger));
-// store.dispatch(
-//   initNewCollection({
-//     usersId: 'DQptYcFM5uhhVxLmmEctUqnjf0f2',
-//     usersName: 'Thomas',
-//   })
-// );
-// store.dispatch(getUsersDataAndUpdateSite());
+
+// if user id is in localStorage try and download it
+// otherwise just show app
+if (getFromLocalStorage('id')) {
+  store.dispatch(signInToFirebaseAttempt());
+} else {
+  store.dispatch(initAppDone());
+}
 
 // This is for updating our state
 // about Firebase.Auth changes
@@ -43,6 +53,7 @@ auth.onAuthStateChanged((user) => {
   if (user) {
     store.dispatch(signInToFirebaseSuccess());
     store.dispatch(getUserData({id: user.uid}));
+    addToLocalStorage('id', user.uid);
   } else {
     store.dispatch(signOut());
   }

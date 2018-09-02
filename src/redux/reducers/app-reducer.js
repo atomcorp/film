@@ -4,10 +4,11 @@ import {
   SIGN_OUT,
   SIGN_UP,
   INIT_USER,
+  INIT_APP_DONE,
 } from '../actions/app-actions';
 
 const defaultState = {
-  isAuthenticated: false,
+  isSignedIntoFirebase: false,
   addingFilm: false,
   visibility: COLLECTION_VISIBILITY.SHOW_ALL,
   isSigningIn: false,
@@ -23,6 +24,7 @@ const defaultState = {
   name: '',
   email: '',
   id: '',
+  isInitilisingApp: true,
 };
 
 const app = (state = defaultState, action) => {
@@ -34,7 +36,7 @@ const app = (state = defaultState, action) => {
     case SIGN_UP.SUCCESS:
       return Object.assign({}, state, {
         isSigningUp: false,
-        isAuthenticated: false,
+        isSignedIntoFirebase: false,
       });
     case SIGN_UP.FAIL:
       return Object.assign({}, state, {
@@ -49,12 +51,12 @@ const app = (state = defaultState, action) => {
     case SIGN_IN_TO_FIREBASE.SUCCESS:
       return Object.assign({}, state, {
         isSigningIn: false,
-        isAuthenticated: true,
+        isSignedIntoFirebase: true,
       });
     case SIGN_IN_TO_FIREBASE.FAIL:
       return Object.assign({}, state, {
         isSigningIn: false,
-        isAuthenticated: false,
+        isSignedIntoFirebase: false,
         signInFail: true,
         signInMessage: [...action.message],
       });
@@ -76,7 +78,10 @@ const app = (state = defaultState, action) => {
         hasInitialisingFailed: true,
         initialisingFailureReason: [...action.message],
       });
-
+    case INIT_APP_DONE:
+      return Object.assign({}, state, {
+        isInitilisingApp: false,
+      });
     case SIGN_OUT.SUCCESS:
       return defaultState;
 
