@@ -7,7 +7,7 @@ import css from './FilmApp.css';
 
 const FilmApp = () => (
   <div className="film-app">
-    {<h1 className={css.title}>Your Next</h1>}
+    <h1 className={css.title}>Your Next</h1>
     <Welcome />
     <SearchInput />
     <SearchResults />

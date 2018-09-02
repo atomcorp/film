@@ -2,47 +2,30 @@ import {API_KEY} from '../../config/api';
 import {collectionsPath} from '../../config/paths';
 import {setUserData} from './user-actions';
 import {database} from '../../firebase/firebase';
-const ADD_TO_COLLECTION = {
-  ATTEMPT: 'ADD_TO_COLLECTION_ATTEMPT',
-  SUCCESS: 'ADD_TO_COLLECTION_SUCCESS',
-  FAIL: 'ADD_TO_COLLECTION_FAIL',
-};
-const REMOVE_FROM_COLLECTION = 'REMOVE_FROM_COLLECTION';
-const TOGGLE_WATCHED_LIST = {
+import tryAction from '../../helpers/tryAction';
+export const ADD_TO_COLLECTION = tryAction('ADD_TO_COLLECTION');
+export const REMOVE_FROM_COLLECTION = 'REMOVE_FROM_COLLECTION';
+export const TOGGLE_WATCHED_LIST = {
   ATTEMPT: 'TOGGLE_WATCHED_LIST_ATTEMPT',
   ADD: 'TOGGLE_WATCHED_LIST_ADD',
   REMOVE: 'TOGGLE_WATCHED_LIST_REMOVE',
 };
-const SET_COLLECTION_VISIBILITY = 'SET_COLLECTION_VISIBILITY';
-const COLLECTION_VISIBILITY = {
+export const SET_COLLECTION_VISIBILITY = 'SET_COLLECTION_VISIBILITY';
+export const COLLECTION_VISIBILITY = {
   SHOW_ALL: 'SHOW_ALL',
   UNWATCHED: 'SHOW_UNWATCHED',
   WATCHED: 'SHOW_WATCHED',
 };
-const REORDER_COLLECTION = 'REORDER_COLLECTION';
-const TOGGLE_RATING = {
+export const REORDER_COLLECTION = 'REORDER_COLLECTION';
+export const TOGGLE_RATING = {
   ATTEMPT: 'TOGGLE_RATING_ATTEMPT',
   ADD: 'TOGGLE_RATING_ADD',
   REMOVE: 'TOGGLE_RATING_REMOVE',
 };
 
-export const INIT_NEW_COLLECTION = {
-  ATTEMPT: 'INIT_NEW_COLLECTION_ATTEMPT',
-  SUCCESS: 'INIT_NEW_COLLECTION_SUCCESS',
-  FAIL: 'INIT_NEW_COLLECTION_FAIL',
-};
-
-export const GET_COLLECTION_DATA = {
-  ATTEMPT: 'GET_COLLECTION_DATA_ATTEMPT',
-  SUCCESS: 'GET_COLLECTION_DATA_SUCCESS',
-  FAIL: 'GET_COLLECTION_DATA_FAIL',
-};
-
-export const SET_COLLECTION_DATA = {
-  ATTEMPT: 'SET_COLLECTION_DATA_ATTEMPT',
-  SUCCESS: 'SET_COLLECTION_DATA_SUCCESS',
-  FAIL: 'SET_COLLECTION_DATA_FAIL',
-};
+export const INIT_NEW_COLLECTION = tryAction('INIT_NEW_COLLECTION');
+export const GET_COLLECTION_DATA = tryAction('GET_COLLECTION_DATA');
+export const SET_COLLECTION_DATA = tryAction('SET_COLLECTION_DATA');
 
 export const SET_COLLECTION_NAME = 'SET_COLLECTION_NAME';
 // INIT_NEW_COLLECTION
@@ -118,7 +101,7 @@ const addToCollectionFail = ({message}) => ({
   message,
 });
 
-const addFilmImdbDataToCollection = ({imdbID}) => {
+export const addFilmImdbDataToCollection = ({imdbID}) => {
   return (dispatch, getState) => {
     const state = getState();
     if (state.collection.addingFilm) {
@@ -177,7 +160,7 @@ const addFilmImdbDataToCollection = ({imdbID}) => {
   };
 };
 
-const removeFilmFromCollection = ({imdbID}) => ({
+export const removeFilmFromCollection = ({imdbID}) => ({
   type: REMOVE_FROM_COLLECTION,
   imdbID,
 });
@@ -208,7 +191,7 @@ const toggleWatchedListRemove = ({imdbID}) => ({
  * @param {string} watchlistParams.imdbID
  * @return {void} void
  */
-const toggleWatchedList = ({imdbID}) => {
+export const toggleWatchedList = ({imdbID}) => {
   return (dispatch, getState) => {
     const state = getState();
     dispatch(toggleWatchedListAttempt());
@@ -228,14 +211,14 @@ const toggleWatchedList = ({imdbID}) => {
 };
 
 // CHANGE FILTER
-const setCollectionVisibility = ({visibility}) => ({
+export const setCollectionVisibility = ({visibility}) => ({
   type: SET_COLLECTION_VISIBILITY,
   visibility,
 });
 
 // REORDER COLLECTION
 
-const reorderCollection = ({from, to}) => ({
+export const reorderCollection = ({from, to}) => ({
   type: REORDER_COLLECTION,
   from,
   to,
@@ -255,7 +238,7 @@ const toggleRatingRemove = ({imdbID}) => ({
   imdbID,
 });
 
-const toggleFilmRating = ({imdbID}) => {
+export const toggleFilmRating = ({imdbID}) => {
   return (dispatch, getState) => {
     dispatch(toggleRatingAttempt());
     const state = getState();
@@ -332,18 +315,18 @@ export const setCollectionName = ({name}) => {
   };
 };
 
-export {
-  ADD_TO_COLLECTION,
-  addFilmImdbDataToCollection,
-  TOGGLE_WATCHED_LIST,
-  toggleWatchedList,
-  setCollectionVisibility,
-  COLLECTION_VISIBILITY,
-  SET_COLLECTION_VISIBILITY,
-  reorderCollection,
-  REORDER_COLLECTION,
-  removeFilmFromCollection,
-  REMOVE_FROM_COLLECTION,
-  toggleFilmRating,
-  TOGGLE_RATING,
-};
+// export {
+//   ADD_TO_COLLECTION,
+//   addFilmImdbDataToCollection,
+//   TOGGLE_WATCHED_LIST,
+//   toggleWatchedList,
+//   setCollectionVisibility,
+//   COLLECTION_VISIBILITY,
+//   SET_COLLECTION_VISIBILITY,
+//   reorderCollection,
+//   REORDER_COLLECTION,
+//   removeFilmFromCollection,
+//   REMOVE_FROM_COLLECTION,
+//   toggleFilmRating,
+//   TOGGLE_RATING,
+// };

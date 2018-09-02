@@ -1,17 +1,9 @@
 import {database} from '../../firebase/firebase';
 import {usersPath} from '../../config/paths';
+import tryAction from '../../helpers/tryAction';
 
-export const GET_USER_DATA = {
-  ATTEMPT: 'GET_USER_DATA_ATTEMPT',
-  SUCCESS: 'GET_USER_DATA_SUCCESS',
-  FAIL: 'GET_USER_DATA_FAIL',
-};
-
-export const SET_USER_DATA = {
-  ATTEMPT: 'SET_USER_DATA_ATTEMPT',
-  SUCCESS: 'SET_USER_DATA_SUCCESS',
-  FAIL: 'SET_USER_DATA_FAIL',
-};
+export const GET_USER_DATA = tryAction('GET_USER_DATA');
+export const SET_USER_DATA = tryAction('SET_USER_DATA');
 
 const getUserDataAttempt = () => ({
   type: GET_USER_DATA.ATTEMPT,

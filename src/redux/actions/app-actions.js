@@ -1,34 +1,17 @@
 import {auth, database} from '../../firebase/firebase';
 import {usersPath} from '../../config/paths';
 import {getUserData} from './user-actions';
-// import {initNewCollection} from './collection-actions';
+import tryAction from '../../helpers/tryAction';
 import {
   addToLocalStorage,
   clearFromLocalStorage,
 } from '../../helpers/localstorage';
 import {validateUsername} from '../../helpers/validateUsername';
 
-export const SIGN_IN = {
-  ATTEMPT: 'SIGN_IN_ATTEMPT',
-  SUCCESS: 'SIGN_IN_SUCCESS',
-  FAIL: 'SIGN_IN_FAIL',
-};
-export const SIGN_OUT = {
-  ATTEMPT: 'SIGN_OUT_ATTEMPT',
-  SUCCESS: 'SIGN_OUT_SUCCESS',
-  FAIL: 'SIGN_OUT_FAIL',
-};
-export const SIGN_UP = {
-  ATTEMPT: 'SIGN_UP_ATTEMPT',
-  SUCCESS: 'SIGN_UP_SUCCESS',
-  FAIL: 'SIGN_UP_FAIL',
-};
-
-export const INIT_USER = {
-  ATTEMPT: 'INIT_USER_ATTEMPT',
-  SUCCESS: 'INIT_USER_SUCCESS',
-  FAIL: 'INIT_USER_FAIL',
-};
+export const SIGN_IN = tryAction('SIGN_IN');
+export const SIGN_OUT = tryAction('SIGN_OUT');
+export const SIGN_UP = tryAction('SIGN_UP');
+export const INIT_USER = tryAction('INIT_USER');
 
 const signUpAttempt = () => ({
   type: SIGN_UP.ATTEMPT,
