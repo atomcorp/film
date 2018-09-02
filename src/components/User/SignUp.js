@@ -40,7 +40,7 @@ class SignUp extends React.Component {
    */
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.signUp({
+    this.props.signUpWithFirebaseAuth({
       name: this.state.name,
       email: this.state.email,
       password: this.state.password,
@@ -102,7 +102,7 @@ class SignUp extends React.Component {
 
 SignUp.propTypes = {
   app: appStateType,
-  signUp: PropTypes.func,
+  signUpWithFirebaseAuth: PropTypes.func,
 };
 
 export default SignUp;

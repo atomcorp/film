@@ -6,44 +6,48 @@ import {validateUsername} from '../../helpers/validateUsername';
 
 export const SIGN_IN_TO_FIREBASE = tryAction('SIGN_IN_TO_FIREBASE');
 export const SIGN_OUT = tryAction('SIGN_OUT');
-export const SIGN_UP = tryAction('SIGN_UP');
+export const SIGN_UP_WITH_FIREBASE_AUTH = tryAction(
+  'SIGN_UP_WITH_FIREBASE_AUTH'
+);
 export const INIT_USER = tryAction('INIT_USER');
 export const INIT_APP = {
   START: 'INIT_APP_START',
   FINISH: 'INIT_APP_FINISH',
 };
 
-const signUpAttempt = () => ({
-  type: SIGN_UP.ATTEMPT,
+const signUpWithFirebaseAuthAttempt = () => ({
+  type: SIGN_UP_WITH_FIREBASE_AUTH.ATTEMPT,
 });
 
-const signUpSuccess = () => ({
-  type: SIGN_UP.SUCCESS,
+const signUpWithFirebaseAuthSuccess = () => ({
+  type: SIGN_UP_WITH_FIREBASE_AUTH.SUCCESS,
 });
 
-const signUpFail = ({message}) => ({
-  type: SIGN_UP.FAIL,
+const signUpWithFirebaseAuthFail = ({message}) => ({
+  type: SIGN_UP_WITH_FIREBASE_AUTH.FAIL,
   message,
 });
 
-export const signUp = ({email, password, name}) => {
+export const signUpWithFirebaseAuth = ({email, password, name}) => {
   return (dispatch, getState) => {
-    dispatch(signUpAttempt());
+    dispatch(signUpWithFirebaseAuthAttempt());
     // First we validate the username
     const username = validateUsername(name);
     if (!username.isValid) {
-      dispatch(signUpFail({message: username.error}));
+      dispatch(signUpWithFirebaseAuthFail({message: username.error}));
     } else {
       auth
         .createUserWithEmailAndPassword(email, password)
         .then(({user}) => {
           // console.log(user);
-          dispatch(signUpSuccess());
+          dispatch(signUpWithFirebaseAuthSuccess());
           // set up a database entry
           dispatch(initUser({id: user.uid, name, email}));
           // then signInToFirebase?
         })
-        .catch((err) => dispatch(signUpFail({message: err.message})));
+        .catch((err) =>
+          dispatch(signUpWithFirebaseAuthFail({message: err.message}))
+        );
     }
   };
 };

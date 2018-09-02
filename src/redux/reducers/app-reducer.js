@@ -2,10 +2,13 @@ import {COLLECTION_VISIBILITY} from '../actions/collection-actions';
 import {
   SIGN_IN_TO_FIREBASE,
   SIGN_OUT,
-  SIGN_UP,
+  SIGN_UP_WITH_FIREBASE_AUTH,
   INIT_USER,
   INIT_APP,
 } from '../actions/app-actions';
+
+// TODO: This state needs to be broken up
+// some of it does nothing
 
 const defaultState = {
   isSignedIntoFirebase: false,
@@ -29,16 +32,16 @@ const defaultState = {
 
 const app = (state = defaultState, action) => {
   switch (action.type) {
-    case SIGN_UP.ATTEMPT:
+    case SIGN_UP_WITH_FIREBASE_AUTH.ATTEMPT:
       return Object.assign({}, state, {
         isSigningUp: true,
       });
-    case SIGN_UP.SUCCESS:
+    case SIGN_UP_WITH_FIREBASE_AUTH.SUCCESS:
       return Object.assign({}, state, {
         isSigningUp: false,
         isSignedIntoFirebase: false,
       });
-    case SIGN_UP.FAIL:
+    case SIGN_UP_WITH_FIREBASE_AUTH.FAIL:
       return Object.assign({}, state, {
         isSigningUp: false,
         signUpFail: true,

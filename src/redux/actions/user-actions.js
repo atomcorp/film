@@ -32,7 +32,9 @@ export const getUserData = ({id}) => {
       })
       .then(() => {
         dispatch(setAuth({isAuth: true}));
-        dispatch(initAppFinish());
+        if (getState().app.isInitilisingApp) {
+          dispatch(initAppFinish());
+        }
       })
       .catch((err) => dispatch(getUserDataFail({message: err.message})));
   };
