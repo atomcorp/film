@@ -21,18 +21,21 @@ class Collection extends React.Component {
    * componentDidMount
    */
   componentDidMount() {
-    // TODO: abstract this check elsewhere
-    // if (!this.props.user.collections.length) {
-    //   this.props.initNewCollection({
-    //     usersId: this.props.user.id,
-    //     usersName: this.props.user.name,
-    //   });
-    // } else {
-    //   // download collection
-    //   this.props.getCollectionData({id: this.props.user.collections[0]});
-    // }
+    // TODO: improve this
     if (this.props.match) {
+      // eg. /c/:collectionId
       this.props.getCollectionData({id: this.props.match.params.id});
+    } else {
+      // eg. /app and user has no collection
+      if (!this.props.user.collections.length) {
+        this.props.initNewCollection({
+          usersId: this.props.user.id,
+          usersName: this.props.user.name,
+        });
+      } else {
+        // /app and user has collection
+        this.props.getCollectionData({id: this.props.user.collections[0]});
+      }
     }
   }
   /**

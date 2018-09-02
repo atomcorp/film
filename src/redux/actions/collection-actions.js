@@ -314,19 +314,3 @@ export const setCollectionName = ({name}) => {
     dispatch(setCollectionData({id: getState().collection.id}));
   };
 };
-
-// export {
-//   ADD_TO_COLLECTION,
-//   addFilmImdbDataToCollection,
-//   TOGGLE_WATCHED_LIST,
-//   toggleWatchedList,
-//   setCollectionVisibility,
-//   COLLECTION_VISIBILITY,
-//   SET_COLLECTION_VISIBILITY,
-//   reorderCollection,
-//   REORDER_COLLECTION,
-//   removeFilmFromCollection,
-//   REMOVE_FROM_COLLECTION,
-//   toggleFilmRating,
-//   TOGGLE_RATING,
-// };

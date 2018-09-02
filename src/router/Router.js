@@ -1,11 +1,11 @@
 import React from 'react';
 import PropsType from 'prop-types';
 import PrivateRoute from './PrivateRoute';
-import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import SignInContainer from '../containers/SignInContainer';
 import SignUpContainer from '../containers/SignUpContainer';
 import CollectionContainer from '../containers/CollectionContainer';
-import {FilmApp} from '../components/';
+import {FilmApp, Home} from '../components/';
 
 const Router = (props) => (
   <BrowserRouter>
@@ -16,7 +16,7 @@ const Router = (props) => (
       <Route path="/c/:id" component={CollectionContainer} />
       {/* if user logged in show their last collection */}
       <Route path="/c/" component={CollectionContainer} />
-      <Redirect to="/app" />
+      <Route component={Home} />
     </Switch>
   </BrowserRouter>
 );
