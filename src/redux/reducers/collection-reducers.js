@@ -81,7 +81,7 @@ const collection = (state = defaultState, action) => {
       });
     case REMOVE_FROM_COLLECTION:
       return Object.assign({}, state, {
-        films: state.films.filter((imdbID) => imdbID !== action.imdbID),
+        films: state.films.filter((film) => film.imdbID !== action.imdbID),
       });
     case TOGGLE_WATCHED_LIST.ADD:
       return Object.assign({}, state, {
