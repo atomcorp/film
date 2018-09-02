@@ -122,14 +122,6 @@ export const initUser = ({id, name, email}) => {
         name,
         email,
       })
-      // .then(() => {
-      //   dispatch(
-      //     initNewCollection({
-      //       usersId: id,
-      //       usersName: name,
-      //     })
-      //   );
-      // })
       .then(() => {
         dispatch(initUserSuccess({id, name, email}));
       })

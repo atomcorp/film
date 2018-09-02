@@ -52,7 +52,7 @@ class SignUp extends React.Component {
    */
   render() {
     if (this.props.app.hasInitialised) {
-      return <Redirect to="/signin" />;
+      return <Redirect to="/app" />;
     }
     return (
       <div>

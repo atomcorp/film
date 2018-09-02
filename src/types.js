@@ -62,3 +62,7 @@ export const omdbFilmType = PropTypes.shape({
   Production: PropTypes.string,
   Website: PropTypes.string,
 });
+
+export const authType = PropTypes.shape({
+  isAuth: PropTypes.bool,
+});

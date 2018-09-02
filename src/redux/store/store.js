@@ -7,6 +7,7 @@ import database from '../reducers/database-reducers';
 import highlight from '../reducers/highlight-reducer';
 import app from '../reducers/app-reducer';
 import user from '../reducers/user-reducers';
+import {default as authReducer} from '../reducers/auth-reducer';
 // import {
 //   postUsersDataToDatabase,
 //   getUsersDataAndUpdateSite,
@@ -24,6 +25,7 @@ const rootReducer = combineReducers({
   highlight,
   app,
   user,
+  auth: authReducer,
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk, logger));
@@ -39,8 +41,8 @@ const store = createStore(rootReducer, applyMiddleware(thunk, logger));
 // about Firebase.Auth changes
 auth.onAuthStateChanged((user) => {
   if (user) {
-    store.dispatch(getUserData({id: user.uid}));
     store.dispatch(signInSuccess());
+    store.dispatch(getUserData({id: user.uid}));
   } else {
     store.dispatch(signOut());
   }

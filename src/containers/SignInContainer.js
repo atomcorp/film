@@ -2,9 +2,10 @@ import {connect} from 'react-redux';
 import SignIn from '../components/User/SignIn';
 import {signIn} from '../redux/actions/app-actions';
 
-const mapStateToProps = ({app, user}) => ({
+const mapStateToProps = ({app, user, auth}) => ({
   app,
   user,
+  auth,
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import {appStateType, userStateType} from '../../types';
 import {Link, Redirect} from 'react-router-dom';
+import {appStateType, authType} from '../../types';
 
 /**
  * SignIn
@@ -43,7 +42,7 @@ class SignIn extends React.Component {
    * @return {HTML} Link
    */
   render() {
-    if (this.props.app.isAuthenticated && this.props.user.downloadedData) {
+    if (this.props.auth.isAuth) {
       return <Redirect to="/app" />;
     }
 
@@ -87,8 +86,8 @@ class SignIn extends React.Component {
 
 SignIn.propTypes = {
   app: appStateType,
-  user: userStateType,
-  signIn: PropTypes.func,
+  // user: userStateType,
+  auth: authType,
 };
 
 export default SignIn;
