@@ -20,7 +20,7 @@ const Initialize = ({app, children}) => (
 Initialize.propTypes = {
   app: appStateType,
   auth: authType,
-  initAppDone: PropTypes.func,
+  initAppFinish: PropTypes.func,
   children: PropTypes.element,
 };
 

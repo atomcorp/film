@@ -8,7 +8,10 @@ export const SIGN_IN_TO_FIREBASE = tryAction('SIGN_IN_TO_FIREBASE');
 export const SIGN_OUT = tryAction('SIGN_OUT');
 export const SIGN_UP = tryAction('SIGN_UP');
 export const INIT_USER = tryAction('INIT_USER');
-export const INIT_APP_DONE = 'INIT_APP_DONE';
+export const INIT_APP = {
+  START: 'INIT_APP_START',
+  FINISH: 'INIT_APP_FINISH',
+};
 
 const signUpAttempt = () => ({
   type: SIGN_UP.ATTEMPT,
@@ -123,6 +126,10 @@ export const initUser = ({id, name, email}) => {
   };
 };
 
-export const initAppDone = () => ({
-  type: INIT_APP_DONE,
+export const initAppStart = () => ({
+  type: INIT_APP.START,
+});
+
+export const initAppFinish = () => ({
+  type: INIT_APP.FINISH,
 });

@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import Initialize from '../components/Initialize/Initialize';
-import {initAppDone} from '../redux/actions/app-actions';
+import {initAppFinish} from '../redux/actions/app-actions';
 
 export default connect(
   ({app, user, auth}) => ({
@@ -9,6 +9,6 @@ export default connect(
     auth,
   }),
   (dispatch) => ({
-    initAppDone: () => dispatch(initAppDone()),
+    initAppFinish: () => dispatch(initAppFinish()),
   })
 )(Initialize);

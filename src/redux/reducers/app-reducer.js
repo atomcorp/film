@@ -4,7 +4,7 @@ import {
   SIGN_OUT,
   SIGN_UP,
   INIT_USER,
-  INIT_APP_DONE,
+  INIT_APP,
 } from '../actions/app-actions';
 
 const defaultState = {
@@ -24,13 +24,13 @@ const defaultState = {
   name: '',
   email: '',
   id: '',
-  isInitilisingApp: true,
+  isInitilisingApp: false,
 };
 
 const app = (state = defaultState, action) => {
   switch (action.type) {
     case SIGN_UP.ATTEMPT:
-      return Object.assign({}, defaultState, {
+      return Object.assign({}, state, {
         isSigningUp: true,
       });
     case SIGN_UP.SUCCESS:
@@ -45,7 +45,7 @@ const app = (state = defaultState, action) => {
         signUpMessage: [...action.message],
       });
     case SIGN_IN_TO_FIREBASE.ATTEMPT:
-      return Object.assign({}, defaultState, {
+      return Object.assign({}, state, {
         isSigningIn: true,
       });
     case SIGN_IN_TO_FIREBASE.SUCCESS:
@@ -61,7 +61,7 @@ const app = (state = defaultState, action) => {
         signInMessage: [...action.message],
       });
     case INIT_USER.ATTEMPT:
-      return Object.assign({}, defaultState, {
+      return Object.assign({}, state, {
         isInitilising: true,
       });
     case INIT_USER.SUCCESS:
@@ -78,14 +78,16 @@ const app = (state = defaultState, action) => {
         hasInitialisingFailed: true,
         initialisingFailureReason: [...action.message],
       });
-    case INIT_APP_DONE:
+    case INIT_APP.START:
+      return Object.assign({}, state, {
+        isInitilisingApp: true,
+      });
+    case INIT_APP.FINISH:
       return Object.assign({}, state, {
         isInitilisingApp: false,
       });
     case SIGN_OUT.SUCCESS:
-      return Object.assign({}, defaultState, {
-        isInitilisingApp: false,
-      });
+      return defaultState;
     case SIGN_OUT.ATTEMPT:
     default:
       return state;

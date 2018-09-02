@@ -14,7 +14,8 @@ import {
   signInToFirebaseSuccess,
   signOut,
   signInToFirebaseAttempt,
-  initAppDone,
+  initAppFinish,
+  initAppStart,
 } from '../actions/app-actions';
 import {getUserData} from '../actions/user-actions';
 import app from '../reducers/app-reducer';
@@ -38,13 +39,13 @@ const rootReducer = combineReducers({
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk, logger));
-
+store.dispatch(initAppStart());
 // if user id is in localStorage try and download it
 // otherwise just show app
 if (getFromLocalStorage('id')) {
   store.dispatch(signInToFirebaseAttempt());
 } else {
-  store.dispatch(initAppDone());
+  store.dispatch(initAppFinish());
 }
 
 // This is for updating our state
