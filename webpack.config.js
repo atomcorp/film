@@ -1,6 +1,7 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const WebpackMessages = require('webpack-messages');
+const path = require('path');
 
 module.exports = {
   devtool: 'source-map',
@@ -90,6 +91,15 @@ module.exports = {
         ],
       },
     ],
+  },
+  resolve: {
+    alias: {
+      '@containers': path.resolve(__dirname, 'src/containers'),
+      '@src': path.resolve(__dirname, 'src'),
+      '@components': path.resolve(__dirname, 'src/components'),
+      '@helpers': path.resolve(__dirname, 'src/helpers'),
+      '@router': path.resolve(__dirname, 'src/router'),
+    },
   },
   plugins: [
     new HtmlWebPackPlugin({
