@@ -31,7 +31,7 @@ import {Droppable, Draggable} from 'react-beautiful-dnd';
  * @param {Array<film>} collection.film
  * @return {HTML}
  */
-const CollectionList = ({
+const CollectionEditableList = ({
   collection,
   filteredFilms,
   toggleWatchedList,
@@ -39,7 +39,6 @@ const CollectionList = ({
   toggleFilmRating,
   isDownloading,
   showHighlight,
-  initNewCollection,
 }) => (
   <DraggableList>
     <ol>
@@ -117,7 +116,7 @@ const CollectionList = ({
   </DraggableList>
 );
 
-CollectionList.propTypes = {
+CollectionEditableList.propTypes = {
   toggleWatchedList: PropTypes.func,
   removeFilmFromCollection: PropTypes.func,
   toggleFilmRating: PropTypes.func,
@@ -127,7 +126,6 @@ CollectionList.propTypes = {
   isDownloading: PropTypes.bool,
   showHighlight: PropTypes.func,
   collection: collectionStateType,
-  initNewCollection: PropTypes.func,
 };
 
-export default CollectionList;
+export default CollectionEditableList;

@@ -1,17 +1,21 @@
 import React from 'react';
-import css from './Collection.css';
+import PropTypes from 'prop-types';
+import css from './CollectionLayout.css';
 // this can be used by editable and no-editable things
-const CollectionLayout = () => (
+const CollectionLayout = ({films, highlight}) => (
   <div className={css.container}>
     <div className={css.header}>This has logo</div>
-    <div className={css.container}>
-      <div>
-        Scrollable List of movie name and maybe and <br />{' '}
-        <button>Add more movies button</button>{' '}
-      </div>
-      <div>A highlighted movie with poster etc if clicked on list item</div>
+    <div className={css.films}>
+      <button>Add more movies button</button>
+      {films}
     </div>
+    <div className={css.highlight}>{highlight}</div>
   </div>
 );
+
+CollectionLayout.propTypes = {
+  films: PropTypes.element,
+  highlight: PropTypes.element,
+};
 
 export default CollectionLayout;

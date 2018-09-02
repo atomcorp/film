@@ -1,4 +1,4 @@
-import CollectionList from '../components/Collection/CollectionList';
+import CollectionEditableList from '../components/Collection/CollectionEditableList';
 import {connect} from 'react-redux';
 import {
   toggleWatchedList,
@@ -40,4 +40,6 @@ const mapDispatchToProps = (dispatch) => ({
   },
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(CollectionList);
+export default connect(mapStateToProps, mapDispatchToProps)(
+  CollectionEditableList
+);

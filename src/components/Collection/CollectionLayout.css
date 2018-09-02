@@ -1,0 +1,20 @@
+.container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'header header'
+    'films selected';
+}
+
+.header {
+  grid-area: header;
+}
+
+.films {
+  grid-area: films;
+}
+
+.selected {
+  grid-area: selected;
+}

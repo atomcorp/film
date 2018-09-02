@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {collectionStateType, userStateType} from '../../types';
-import CollectionListContainer from '../../containers/CollectionListContainer';
+import CollectionLayout from './CollectionLayout';
+import CollectionEditableListContainer from '../../containers/CollectionEditableListContainer';
+import CollectionStaticListContainer from '@containers/CollectionStaticListContainer';
 import CollectionNameContainer from '../../containers/CollectionNameContainer';
 import {Highlight} from '../../containers';
 import css from './Collection.css';
@@ -43,20 +45,20 @@ class Collection extends React.Component {
    */
   render() {
     return this.props.collection.id ? (
-      <div>
-        <h2>Collection:</h2>
-        <VisibilityContainer />
-        <div className={css.content}>
-          <div className={css.collection}>
-            <div>
-              <CollectionNameContainer />
-              <CollectionListContainer />
-            </div>
-          </div>
-          <div className={css.highlights}>
-            <Highlight />
-          </div>
-        </div>
+      <div className={css.container}>
+        {this.props.editable ? '(You can edit)' : '(You can not edit)'}
+        {<CollectionNameContainer />}
+        {this.props.editable && <VisibilityContainer />}
+        <CollectionLayout
+          films={
+            this.props.editable ? (
+              <CollectionEditableListContainer />
+            ) : (
+              <CollectionStaticListContainer />
+            )
+          }
+          highlight={<Highlight />}
+        />
       </div>
     ) : (
       <div>Loading you collection</div>
@@ -70,6 +72,7 @@ Collection.propTypes = {
   user: userStateType,
   getCollectionData: PropTypes.func,
   match: PropTypes.object,
+  editable: PropTypes.bool,
 };
 
 export default Collection;
