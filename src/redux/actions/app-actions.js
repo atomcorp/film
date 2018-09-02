@@ -1,11 +1,7 @@
-import {auth, database} from '../../firebase/firebase';
 import {usersPath} from '../../config/paths';
-import {getUserData} from './user-actions';
+import {auth, database} from '../../firebase/firebase';
+import {clearFromLocalStorage} from '../../helpers/localstorage';
 import tryAction from '../../helpers/tryAction';
-import {
-  addToLocalStorage,
-  clearFromLocalStorage,
-} from '../../helpers/localstorage';
 import {validateUsername} from '../../helpers/validateUsername';
 
 export const SIGN_IN_TO_FIREBASE = tryAction('SIGN_IN_TO_FIREBASE');
@@ -65,19 +61,12 @@ const signInToFirebaseFail = ({message}) => ({
 export const signInToFirebase = ({email, password}) => {
   return (dispatch, getState) => {
     dispatch(signInToFirebaseAttempt());
-    auth
-      .signInToFirebaseWithEmailAndPassword(email, password)
-      .then(({user}) => {
-        dispatch(signInToFirebaseSuccess());
-        addToLocalStorage('id', user.uid);
-        return user;
-      })
-      .then((user) => {
-        dispatch(getUserData({id: user.uid}));
-      })
-      .catch((err) => {
-        dispatch(signInToFirebaseFail({message: err.message}));
-      });
+    // this logs into Firebase
+    // if successful it triggers auth.onAuthStateChanged
+    // in the store.js
+    auth.signInWithEmailAndPassword(email, password).catch((err) => {
+      dispatch(signInToFirebaseFail({message: err.message}));
+    });
   };
 };
 

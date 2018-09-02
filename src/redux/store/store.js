@@ -55,7 +55,9 @@ auth.onAuthStateChanged((user) => {
     store.dispatch(getUserData({id: user.uid}));
     addToLocalStorage('id', user.uid);
   } else {
-    store.dispatch(signOut());
+    if (store.getState().user.id) {
+      store.dispatch(signOut());
+    }
   }
 });
 

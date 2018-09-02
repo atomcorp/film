@@ -83,8 +83,9 @@ const app = (state = defaultState, action) => {
         isInitilisingApp: false,
       });
     case SIGN_OUT.SUCCESS:
-      return defaultState;
-
+      return Object.assign({}, defaultState, {
+        isInitilisingApp: false,
+      });
     case SIGN_OUT.ATTEMPT:
     default:
       return state;

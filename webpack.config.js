@@ -99,6 +99,7 @@ module.exports = {
       '@components': path.resolve(__dirname, 'src/components'),
       '@helpers': path.resolve(__dirname, 'src/helpers'),
       '@router': path.resolve(__dirname, 'src/router'),
+      '@redux': path.resolve(__dirname, 'src/redux'),
     },
   },
   plugins: [
