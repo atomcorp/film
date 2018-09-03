@@ -10,7 +10,7 @@ import {FilmApp, Home} from '../components/';
 const Router = (props) => (
   <BrowserRouter>
     <Switch>
-      <PrivateRoute exact path="/app" component={FilmApp} />
+      <PrivateRoute exact path="/app" component={CollectionContainer} />
       <Route exact path="/signin" component={SignInContainer} />
       <Route path="/signup" component={SignUpContainer} />
       <Route path="/c/:id" component={CollectionContainer} />

@@ -7,11 +7,9 @@ import InitializeContainer from './containers/InitializeContainer';
 
 const App = () => (
   <Provider store={store}>
-    <div>
-      <InitializeContainer>
-        <Router />
-      </InitializeContainer>
-    </div>
+    <InitializeContainer>
+      <Router />
+    </InitializeContainer>
   </Provider>
 );
 

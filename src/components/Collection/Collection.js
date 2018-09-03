@@ -4,7 +4,6 @@ import {collectionStateType, userStateType} from '../../types';
 import CollectionLayout from './CollectionLayout';
 import CollectionEditableListContainer from '../../containers/CollectionEditableListContainer';
 import CollectionStaticListContainer from '@containers/CollectionStaticListContainer';
-import CollectionNameContainer from '../../containers/CollectionNameContainer';
 import {Highlight} from '../../containers';
 import css from './Collection.css';
 import VisibilityContainer from '../../containers/VisibilityContainer';
@@ -24,7 +23,7 @@ class Collection extends React.Component {
    */
   componentDidMount() {
     // TODO: improve this
-    if (this.props.match) {
+    if (this.props.match.path.match('/c/:id')) {
       // eg. /c/:collectionId
       this.props.getCollectionData({id: this.props.match.params.id});
     } else {
@@ -45,21 +44,17 @@ class Collection extends React.Component {
    */
   render() {
     return this.props.collection.id ? (
-      <div className={css.container}>
-        {this.props.editable ? '(You can edit)' : '(You can not edit)'}
-        {<CollectionNameContainer />}
-        {this.props.editable && <VisibilityContainer />}
-        <CollectionLayout
-          films={
-            this.props.editable ? (
-              <CollectionEditableListContainer />
-            ) : (
-              <CollectionStaticListContainer />
-            )
-          }
-          highlight={<Highlight />}
-        />
-      </div>
+      <CollectionLayout
+        films={
+          this.props.editable ? (
+            <CollectionEditableListContainer />
+          ) : (
+            <CollectionStaticListContainer />
+          )
+        }
+        highlight={<Highlight />}
+        toggleWatched={this.props.editable && <VisibilityContainer />}
+      />
     ) : (
       <div>Loading you collection</div>
     );
