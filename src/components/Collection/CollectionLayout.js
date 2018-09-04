@@ -30,7 +30,7 @@ CollectionLayout.propTypes = {
   films: PropTypes.element,
   highlight: PropTypes.element,
   toggleWatched: PropTypes.element,
-  sideBarWidth: PropTypes.string,
+  sideBarWidth: PropTypes.number,
 };
 
 export default CollectionLayout;

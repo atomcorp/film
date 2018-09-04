@@ -16,7 +16,7 @@ class Collection extends React.Component {
    */
   constructor(props) {
     super(props);
-    this.state = {sidebarWidth: '300'};
+    this.state = {sidebarWidth: 300};
   }
   /**
    * componentDidMount
