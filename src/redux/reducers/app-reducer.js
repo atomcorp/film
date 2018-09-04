@@ -5,6 +5,7 @@ import {
   SIGN_UP_WITH_FIREBASE_AUTH,
   INIT_USER,
   INIT_APP,
+  UPDATE_COLLECTION_SIDEBAR_WIDTH,
 } from '../actions/app-actions';
 
 // TODO: This state needs to be broken up
@@ -28,6 +29,7 @@ const defaultState = {
   email: '',
   id: '',
   isInitilisingApp: false,
+  collectionSidebarWidth: 300,
 };
 
 const app = (state = defaultState, action) => {
@@ -91,6 +93,10 @@ const app = (state = defaultState, action) => {
       });
     case SIGN_OUT.SUCCESS:
       return defaultState;
+    case UPDATE_COLLECTION_SIDEBAR_WIDTH:
+      return Object.assign({}, state, {
+        collectionSidebarWidth: false,
+      });
     case SIGN_OUT.ATTEMPT:
     default:
       return state;

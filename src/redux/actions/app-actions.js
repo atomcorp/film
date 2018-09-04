@@ -14,7 +14,8 @@ export const INIT_APP = {
   START: 'INIT_APP_START',
   FINISH: 'INIT_APP_FINISH',
 };
-
+export const UPDATE_COLLECTION_SIDEBAR_WIDTH =
+  'UPDATE_COLLECTION_SIDEBAR_WIDTH';
 const signUpWithFirebaseAuthAttempt = () => ({
   type: SIGN_UP_WITH_FIREBASE_AUTH.ATTEMPT,
 });
@@ -136,4 +137,9 @@ export const initAppStart = () => ({
 
 export const initAppFinish = () => ({
   type: INIT_APP.FINISH,
+});
+
+export const updateCollectionSidebarWidth = ({width}) => ({
+  type: UPDATE_COLLECTION_SIDEBAR_WIDTH,
+  width,
 });

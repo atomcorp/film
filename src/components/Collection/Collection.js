@@ -5,9 +5,8 @@ import CollectionLayout from './CollectionLayout';
 import CollectionEditableListContainer from '../../containers/CollectionEditableListContainer';
 import CollectionStaticListContainer from '@containers/CollectionStaticListContainer';
 import {Highlight} from '../../containers';
-import css from './Collection.css';
 import VisibilityContainer from '../../containers/VisibilityContainer';
-
+import localForage from 'localforage';
 /**
  * This handles loading a Collection
  */
@@ -17,6 +16,7 @@ class Collection extends React.Component {
    */
   constructor(props) {
     super(props);
+    this.state = {sidebarWidth: '300'};
   }
   /**
    * componentDidMount
@@ -38,6 +38,11 @@ class Collection extends React.Component {
         this.props.getCollectionData({id: this.props.user.collections[0]});
       }
     }
+    localForage.getItem('sidebarWidth', (err, value) => {
+      this.setState({
+        sidebarWidth: value,
+      });
+    });
   }
   /**
    * @return {HTML}
@@ -54,6 +59,7 @@ class Collection extends React.Component {
         }
         highlight={<Highlight />}
         toggleWatched={this.props.editable && <VisibilityContainer />}
+        sideBarWidth={this.state.sidebarWidth}
       />
     ) : (
       <div>Loading you collection</div>

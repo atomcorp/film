@@ -61,6 +61,7 @@
     "webpack-messages": "^2.0.0"
   },
   "dependencies": {
+    "localforage": "^1.7.2",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
     "react-split-pane": "^0.1.82"
