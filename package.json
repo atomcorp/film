@@ -62,7 +62,8 @@
   },
   "dependencies": {
     "react": "^16.3.0",
-    "react-dom": "^16.3.0"
+    "react-dom": "^16.3.0",
+    "react-split-pane": "^0.1.82"
   },
   "jest": {
     "moduleNameMapper": {

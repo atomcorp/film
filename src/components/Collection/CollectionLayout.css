@@ -14,13 +14,9 @@
 }
 
 .films {
-  /* grid-area: films; */
-  flex: 1 0 35%;
   overflow: auto;
-  position: relative;
+  height: 100%;
 }
 
 .highlight {
-  grid-area: selected;
-  flex: 1 0 65%;
 }
