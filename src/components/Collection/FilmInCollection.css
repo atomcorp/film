@@ -1,0 +1,19 @@
+.container {
+  padding: 20px;
+  border-bottom: 1px solid gainsboro;
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 10px 0 0;
+}
+
+.year {
+  font-size: 16px;
+}

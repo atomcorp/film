@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import FilmInCollection from '@components/Collection/FilmInCollection';
 import {collectionStateType} from '../../types';
 // // import css from './Collection.css';
 /**
@@ -35,19 +36,17 @@ const CollectionEditableList = ({
   isDownloading,
   showHighlight,
 }) => (
-  <ol>
+  <div>
     {isDownloading && 'Downloading...'}
     {filteredFilms.map((film, index) => (
-      <li key={index} onClick={() => showHighlight({imdbID: film.imdbID})}>
-        <h4>
-          {film.Title} ({film.Year})
-          {collection.watched.includes(film.imdbID) && ' ️👀'}
-          {collection.loved.includes(film.imdbID) && ' 💖'}
-        </h4>
-        {film.Director}
-      </li>
+      <FilmInCollection
+        key={index}
+        showHighlight={showHighlight}
+        film={film}
+        collection={collection}
+      />
     ))}
-  </ol>
+  </div>
 );
 
 CollectionEditableList.propTypes = {

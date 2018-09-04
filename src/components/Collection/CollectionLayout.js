@@ -18,7 +18,7 @@ const CollectionLayout = ({films, highlight, toggleWatched, sideBarWidth}) => (
       <div className={css.films}>
         {toggleWatched}
         <CollectionNameContainer />
-        <button>Add more movies button</button>
+        {/* <button>Add more movies button</button> */}
         {films}
       </div>
       <div className={css.highlight}>{highlight}</div>
