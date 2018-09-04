@@ -5,6 +5,7 @@ Next:
   ✔ hide edit functions behind private routes @done(18-07-29 18:49)
   ☐ Make the CollectionLayout
     should work for both editable and non-editable pages
+  ☐ Make collection sidebar draggable
 
 Task:
   ✔ Throttle search within Redux, so we can show loading icon when user is typing or just do it through state maybe @done(18-05-08 23:30)

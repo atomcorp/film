@@ -15,7 +15,7 @@ const Router = (props) => (
       <Route path="/signup" component={SignUpContainer} />
       <Route path="/c/:id" component={CollectionContainer} />
       {/* if user logged in show their last collection */}
-      <Route path="/c/" component={CollectionContainer} />
+      {/* <Route path="/c/" component={CollectionContainer} /> */}
       <Route component={Home} />
     </Switch>
   </BrowserRouter>

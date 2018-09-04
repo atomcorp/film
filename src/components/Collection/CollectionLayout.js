@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import css from './CollectionLayout.css';
 import CollectionNameContainer from '../../containers/CollectionNameContainer';
+// import DraggableHandle from '@components/DraggableHandle/DraggableHandle';
 
 // this can be used by editable and no-editable things
 const CollectionLayout = ({films, highlight, toggleWatched}) => (
