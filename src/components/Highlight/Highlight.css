@@ -12,7 +12,7 @@
 .poster {
   max-width: 600px;
   /* max-height: 800px; */
-  max-height: 100%;
+  max-height: calc(100vh - 40px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,7 +38,7 @@
 }
 
 .year {
-  font-size: 16px;
+  font-size: 24px;
 }
 
 .director {

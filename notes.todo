@@ -38,6 +38,7 @@ Task:
   ☐ One button for watched and loved
     click -> watched, click -> loved, click -> watched, click -> unwatch
   ☐ add film from someone elses list to your list
+  ☐ only load highlight when image has fully loaded
 
 Later:
   ✔ add login / signup @done(18-07-22 12:44)
