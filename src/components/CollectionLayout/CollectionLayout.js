@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import css from './CollectionLayout.css';
-import CollectionNameContainer from '../../containers/CollectionNameContainer';
+import CollectionNameContainer from '@containers/CollectionNameContainer';
 // import DraggableHandle from '@components/DraggableHandle/DraggableHandle';
 import SplitPane from 'react-split-pane';
 import './react-split-pane.css';

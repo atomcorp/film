@@ -1,4 +1,4 @@
-import CollectionName from '../components/Collection/CollectionName';
+import CollectionName from '@components/CollectionName/CollectionName';
 import {connect} from 'react-redux';
 import {setCollectionName} from '../redux/actions/collection-actions';
 

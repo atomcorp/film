@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {collectionStateType, userStateType} from '../../types';
-import CollectionLayout from './CollectionLayout';
-import CollectionEditableListContainer from '../../containers/CollectionEditableListContainer';
+import CollectionLayout from '@components/CollectionLayout/CollectionLayout';
+import CollectionEditableListContainer from '@containers/CollectionEditableListContainer';
 import CollectionStaticListContainer from '@containers/CollectionStaticListContainer';
 import {Highlight} from '../../containers';
 import VisibilityContainer from '../../containers/VisibilityContainer';

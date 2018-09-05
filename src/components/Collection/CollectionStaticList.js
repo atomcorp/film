@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import FilmInCollection from '@components/Collection/FilmInCollection';
-import {collectionStateType} from '../../types';
+import FilmInCollection from '@components/FilmInCollection/FilmInCollection';
+import {collectionStateType} from '@src/types';
 // // import css from './Collection.css';
 /**
  * @typedef film
