@@ -27,7 +27,7 @@ class Search extends Component {
     super(props);
     /** @type {SearchState} */
     this.state = {
-      filmName: 'Burning',
+      filmName: 'Star Wars',
       year: '',
       advanced: false,
       page: 1,

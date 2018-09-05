@@ -7,7 +7,13 @@ import SplitPane from 'react-split-pane';
 import './react-split-pane.css';
 import localForage from 'localforage';
 // this can be used by editable and no-editable things
-const CollectionLayout = ({films, highlight, toggleWatched, sideBarWidth}) => (
+const CollectionLayout = ({
+  films,
+  highlight,
+  toggleWatched,
+  sideBarWidth,
+  search,
+}) => (
   <div className={css.container}>
     <SplitPane
       split="vertical"
@@ -17,6 +23,7 @@ const CollectionLayout = ({films, highlight, toggleWatched, sideBarWidth}) => (
     >
       <div className={css.films}>
         {toggleWatched}
+        {search}
         <CollectionNameContainer />
         {/* <button>Add more movies button</button> */}
         {films}
@@ -30,6 +37,7 @@ CollectionLayout.propTypes = {
   films: PropTypes.element,
   highlight: PropTypes.element,
   toggleWatched: PropTypes.element,
+  search: PropTypes.element,
   sideBarWidth: PropTypes.number,
 };
 

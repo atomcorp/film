@@ -4,9 +4,10 @@ import {collectionStateType, userStateType} from '../../types';
 import CollectionLayout from '@components/CollectionLayout/CollectionLayout';
 import CollectionEditableListContainer from '@containers/CollectionEditableListContainer';
 import CollectionStaticListContainer from '@containers/CollectionStaticListContainer';
-import {Highlight} from '../../containers';
-import VisibilityContainer from '../../containers/VisibilityContainer';
+import {Highlight, SearchInput, SearchResults} from '@containers';
+import VisibilityContainer from '@containers/VisibilityContainer';
 import localForage from 'localforage';
+
 /**
  * This handles loading a Collection
  */
@@ -55,6 +56,14 @@ class Collection extends React.Component {
             <CollectionEditableListContainer />
           ) : (
             <CollectionStaticListContainer />
+          )
+        }
+        search={
+          this.props.editable && (
+            <div>
+              <SearchInput />
+              <SearchResults />{' '}
+            </div>
           )
         }
         highlight={<Highlight />}
