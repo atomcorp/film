@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import css from './CollectionName.css';
 /**
  * Collection name, dispay and edit
  */
@@ -37,7 +37,7 @@ class CollectionName extends React.Component {
     return (
       <div>
         {!this.state.editing ? (
-          <h2>{this.state.name}</h2>
+          <h2 className={css.name}>{this.state.name}</h2>
         ) : (
           <input value={this.state.name} onChange={this.handleChange} />
         )}
