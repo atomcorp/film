@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import FilmInCollection from '@components/FilmInCollection/FilmInCollection';
 import {collectionStateType} from '@src/types';
+import css from './Collection.css';
 // // import css from './Collection.css';
 /**
  * @typedef film
@@ -36,7 +37,7 @@ const CollectionEditableList = ({
   isDownloading,
   showHighlight,
 }) => (
-  <div>
+  <div className={css.container}>
     {isDownloading && 'Downloading...'}
     {filteredFilms.map((film, index) => (
       <FilmInCollection
