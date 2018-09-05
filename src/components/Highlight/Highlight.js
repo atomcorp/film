@@ -5,7 +5,10 @@ import css from './Highlight.css';
 const Film = ({film}) => (
   <div className={css.film}>
     <div className={css.poster}>
-      <img src={film.Poster} />
+      <img
+        className={css.img}
+        src={film.Poster.replace('SX300.jpg', 'SX800.jpg')}
+      />
     </div>
     <div className={css.details}>
       <h2>
