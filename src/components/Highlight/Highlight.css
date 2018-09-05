@@ -1,17 +1,18 @@
 .container {
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   overflow: auto;
 }
 
-.film {
+.highlight {
   padding: 20px;
 }
 
 .poster {
   max-width: 600px;
-  max-height: 800px;
+  /* max-height: 800px; */
+  max-height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,8 +31,24 @@
   min-width: 400px;
 }
 
+.title {
+  font-size: 48px;
+  margin: 0;
+  line-height: 40px;
+}
+
+.year {
+  font-size: 16px;
+}
+
+.director {
+  font-weight: 400;
+  font-size: 24px;
+  margin: 0 0 20px;
+}
+
 @media (min-width: 1024px) {
-  .film {
+  .highlight {
     display: flex;
   }
 }

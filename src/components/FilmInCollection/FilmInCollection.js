@@ -11,8 +11,10 @@ const FilmInCollection = ({showHighlight, film, collection}) => (
       {film.Title} <span className={css.year}>({film.Year})</span>
     </div>
     <div className={css.director}>{film.Director}</div>
-    {/* collection.watched.includes(film.imdbID) && ' ️👀' */}
-    {/* collection.loved.includes(film.imdbID) && ' 💖' */}
+    <div className={css.status}>
+      {(collection.loved.includes(film.imdbID) && '💖') ||
+        (collection.watched.includes(film.imdbID) && '👀')}
+    </div>
   </div>
 );
 

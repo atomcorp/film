@@ -64,6 +64,7 @@
     "localforage": "^1.7.2",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
+    "react-progressive-image": "^0.3.0",
     "react-split-pane": "^0.1.82"
   },
   "jest": {
