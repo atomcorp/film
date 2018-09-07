@@ -27,6 +27,9 @@ export const getUserData = ({id}) => {
       .ref(`${usersPath}/${id}`)
       .once('value')
       .then((snapshot) => {
+        if (!snapshot.val()) {
+          throw new Error('No user');
+        }
         /* eslint-disable no-console */
         dispatch(getUserDataSuccess({userData: snapshot.val()}));
       })
@@ -57,6 +60,9 @@ export const setUserData = () => {
   return (dispatch, getState) => {
     dispatch(setUserDataAttempt());
     const lastestUserData = getState().user;
+    if (!lastestUserData.id) {
+      dispatch(setUserDataFail({message: 'No lastestUserData id'}));
+    }
     database
       .ref(`${usersPath}/${lastestUserData.id}`)
       .set(lastestUserData)

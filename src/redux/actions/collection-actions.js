@@ -250,6 +250,25 @@ export const toggleFilmRating = ({imdbID}) => {
   };
 };
 
+export const toggleWatchedState = ({imdbID}) => {
+  return (dispatch, getState) => {
+    const state = getState();
+    if (
+      !isFilmInWatchList({
+        watched: state.collection.watched,
+        imdbID,
+      })
+    ) {
+      dispatch(toggleWatchedListAdd({imdbID}));
+    } else if (!state.collection.loved.includes(imdbID)) {
+      dispatch(toggleRatingAdd({imdbID}));
+    } else {
+      dispatch(toggleWatchedListRemove({imdbID}));
+      dispatch(toggleRatingRemove({imdbID}));
+    }
+  };
+};
+
 const getCollectionDataAttempt = () => ({
   type: GET_COLLECTION_DATA.ATTEMPT,
 });

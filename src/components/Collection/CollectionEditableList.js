@@ -40,6 +40,7 @@ const CollectionEditableList = ({
   toggleFilmRating,
   isDownloading,
   showHighlight,
+  toggleWatchedState,
 }) => (
   <DraggableList>
     {isDownloading && 'Downloading...'}
@@ -65,44 +66,17 @@ const CollectionEditableList = ({
                     showHighlight={showHighlight}
                     film={film}
                     collection={collection}
-                    toggleWatched={
-                      <div>
-                        <button
-                          onClick={() => {
-                            toggleWatchedList({
-                              imdbID: film.imdbID,
-                            });
-                          }}
-                        >
-                          {collection.watched.includes(film.imdbID)
-                            ? 'Remove from watched list'
-                            : 'Add to watched list'}
-                        </button>
-                        {collection.watched.includes(film.imdbID) && (
-                          <React.Fragment>
-                            <button
-                              onClick={() =>
-                                toggleFilmRating({
-                                  imdbID: film.imdbID,
-                                })
-                              }
-                            >
-                              {collection.loved.includes(film.imdbID)
-                                ? 'Unlove'
-                                : 'Love'}
-                            </button>
-                          </React.Fragment>
-                        )}
-                        <br />
-                        <button
-                          onClick={() =>
-                            removeFilmFromCollection({
-                              imdbID: film.imdbID,
-                            })
-                          }
-                        >
-                          Delete
-                        </button>
+                    editable
+                    toggleWatchedState={toggleWatchedState}
+                    remove={
+                      <div
+                        onClick={() =>
+                          removeFilmFromCollection({
+                            imdbID: film.imdbID,
+                          })
+                        }
+                      >
+                        🗑️
                       </div>
                     }
                   />
@@ -126,6 +100,7 @@ CollectionEditableList.propTypes = {
   isDownloading: PropTypes.bool,
   showHighlight: PropTypes.func,
   collection: collectionStateType,
+  toggleWatchedState: PropTypes.func,
 };
 
 export default CollectionEditableList;

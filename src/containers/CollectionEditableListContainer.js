@@ -5,6 +5,7 @@ import {
   removeFilmFromCollection,
   toggleFilmRating,
   initNewCollection,
+  toggleWatchedState,
 } from '../redux/actions/collection-actions';
 import {showHighlight} from '../redux/actions/highlight-actions';
 import filterCollection from '../helpers/filterCollection';
@@ -37,6 +38,9 @@ const mapDispatchToProps = (dispatch) => ({
   // },
   initNewCollection: ({usersId, usersName}) => {
     dispatch(initNewCollection({usersId, usersName}));
+  },
+  toggleWatchedState: ({imdbID}) => {
+    dispatch(toggleWatchedState({imdbID}));
   },
 });
 

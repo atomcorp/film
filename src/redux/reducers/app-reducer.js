@@ -7,6 +7,7 @@ import {
   INIT_APP,
   UPDATE_COLLECTION_SIDEBAR_WIDTH,
 } from '../actions/app-actions';
+import {GET_USER_DATA} from '../actions/user-actions';
 
 // TODO: This state needs to be broken up
 // some of it does nothing
@@ -97,6 +98,8 @@ const app = (state = defaultState, action) => {
       return Object.assign({}, state, {
         collectionSidebarWidth: false,
       });
+    case GET_USER_DATA.FAIL:
+      return defaultState;
     case SIGN_OUT.ATTEMPT:
     default:
       return state;
