@@ -160,10 +160,16 @@ export const addFilmImdbDataToCollection = ({imdbID}) => {
   };
 };
 
-export const removeFilmFromCollection = ({imdbID}) => ({
-  type: REMOVE_FROM_COLLECTION,
-  imdbID,
-});
+export const removeFilmFromCollection = ({imdbID}) => {
+  return (dispatch, getState) => {
+    dispatch({
+      type: REMOVE_FROM_COLLECTION,
+      imdbID,
+    });
+    const id = getState().collection.id;
+    dispatch(setCollectionData({id}));
+  };
+};
 
 // WATCHLIST
 
