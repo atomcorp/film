@@ -6,6 +6,7 @@ body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
   margin: 0;
   height: 100%;
+  color: #000100;
 }
 
 :global(#root) {

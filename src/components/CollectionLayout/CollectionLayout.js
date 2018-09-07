@@ -15,21 +15,26 @@ const CollectionLayout = ({
   search,
 }) => (
   <div className={css.container}>
-    <SplitPane
-      split="vertical"
-      minSize="300"
-      defaultSize={sideBarWidth}
-      onDragFinished={(size) => localForage.setItem('sidebarWidth', size)}
-    >
-      <div className={css.films}>
-        {toggleWatched}
-        {search}
-        <CollectionNameContainer />
-        {/* <button>Add more movies button</button> */}
-        {films}
-      </div>
-      <div className={css.highlight}>{highlight}</div>
-    </SplitPane>
+    <div className={css.header}>
+      <h1 className={css.logo}>Your next</h1>
+    </div>
+    <div className={css.body}>
+      <SplitPane
+        split="vertical"
+        minSize="300"
+        defaultSize={sideBarWidth}
+        onDragFinished={(size) => localForage.setItem('sidebarWidth', size)}
+      >
+        <div className={css.films}>
+          {toggleWatched}
+          {search}
+          <CollectionNameContainer />
+          {/* <button>Add more movies button</button> */}
+          {films}
+        </div>
+        <div className={css.highlight}>{highlight}</div>
+      </SplitPane>
+    </div>
   </div>
 );
 
