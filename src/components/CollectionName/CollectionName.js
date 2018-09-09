@@ -13,7 +13,18 @@ class CollectionName extends React.Component {
     this.state = {
       editing: false,
       name: this.props.collection.name,
+      originalName: this.props.collection.name,
     };
+    this.inputRef = React.createRef();
+  }
+  /**
+   * componentDidUpdate
+   * @param {object} prevProps
+   */
+  componentDidUpdate(prevProps) {
+    if (!prevProps.editing && this.state.editing) {
+      this.inputRef.current.focus();
+    }
   }
   /**
    * handleChange
@@ -27,6 +38,17 @@ class CollectionName extends React.Component {
   toggleEditing = () => {
     this.setState((prevState) => ({
       editing: !prevState.editing,
+      originalName: prevState.name,
+    }));
+  };
+  saveName = () => {
+    this.toggleEditing();
+    this.props.setCollectionName({name: this.state.name});
+  };
+  reset = () => {
+    this.setState((prevState) => ({
+      editing: false,
+      name: prevState.originalName,
     }));
   };
   /**
@@ -37,20 +59,27 @@ class CollectionName extends React.Component {
     return (
       <div>
         {!this.state.editing ? (
-          <h2 className={css.name}>{this.state.name}</h2>
+          <h2 className={css.name}>
+            {this.state.name}
+            {this.props.editable && (
+              <button onClick={this.toggleEditing}>✏️</button>
+            )}
+          </h2>
         ) : (
-          <input value={this.state.name} onChange={this.handleChange} />
-        )}
-        {this.props.editable && (
-          <div>
-            <button onClick={this.toggleEditing}>Edit name</button>
-            <button
-              onClick={() =>
-                this.props.setCollectionName({name: this.state.name})
-              }
-            >
-              Save
-            </button>
+          <div className={css.editing}>
+            <input
+              ref={this.inputRef}
+              className={css.input}
+              value={this.state.name}
+              onChange={this.handleChange}
+            />
+            {this.props.editable &&
+              this.state.editing && (
+                <span>
+                  <button onClick={this.saveName}>💾</button>
+                  <button onClick={this.reset}>🙅</button>
+                </span>
+              )}
           </div>
         )}
       </div>

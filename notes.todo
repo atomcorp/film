@@ -38,10 +38,10 @@ Task:
   ✔ One button for watched and loved @done(18-09-09 15:10)
     click -> watched, click -> loved, click -> watched, click -> unwatch
   ☐ add film from someone elses list to your list
-  ☐ only load highlight when image has fully loaded
+  ✘ only load highlight when image has fully loaded @cancelled(18-09-09 15:51)
   ✔ reset highlight when leaving/changing collection @done(18-09-09 15:50)
   ☐ "add film" section in modal, put in highlight window
-  ☐ make edit collection name nicer
+  ✔ make edit collection name nicer @done(18-09-09 16:18)
   ☐ make nicer toggle for 
 
 Later:

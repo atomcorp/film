@@ -9,6 +9,10 @@ body {
   color: #000100;
 }
 
+input {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
+}
+
 :global(#root) {
   height: 100%;
 }
