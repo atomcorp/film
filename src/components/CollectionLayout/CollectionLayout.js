@@ -26,9 +26,9 @@ const CollectionLayout = ({
         onDragFinished={(size) => localForage.setItem('sidebarWidth', size)}
       >
         <div className={css.films}>
-          {toggleWatched}
           {search}
           <CollectionNameContainer />
+          {toggleWatched}
           {/* <button>Add more movies button</button> */}
           {films}
         </div>

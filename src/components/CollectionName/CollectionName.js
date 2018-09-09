@@ -57,7 +57,7 @@ class CollectionName extends React.Component {
    */
   render() {
     return (
-      <div>
+      <div className={css.container}>
         {!this.state.editing ? (
           <h2 className={css.name}>
             {this.state.name}

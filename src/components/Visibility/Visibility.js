@@ -15,7 +15,7 @@ const Visibility = ({setCollectionVisibility, visibility}) => (
         })
       }
     >
-      Show all
+      All
     </li>
     <li
       className={
@@ -27,7 +27,7 @@ const Visibility = ({setCollectionVisibility, visibility}) => (
         })
       }
     >
-      Only show watched
+      Watched
     </li>
     <li
       className={
@@ -39,7 +39,7 @@ const Visibility = ({setCollectionVisibility, visibility}) => (
         })
       }
     >
-      Only show unwatched
+      Unwatched
     </li>
   </ul>
 );

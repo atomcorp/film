@@ -1,7 +1,10 @@
+.container {
+  border-bottom: 1px solid #dcdcdc;
+}
+
 .name {
   padding: 20px;
   margin: 0;
-  border-bottom: 1px solid #dcdcdc;
   text-transform: uppercase;
   font-size: 24px;
   border: 1px solid transparent;
