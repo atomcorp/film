@@ -400,7 +400,7 @@
 	],
 	"find":
 	{
-		"height": 75.0
+		"height": 37.0
 	},
 	"find_in_files":
 	{
@@ -642,6 +642,9 @@
 						],
 						"settings":
 						{
+							"SL.18.region_keys":
+							[
+							],
 							"SL.22.region_keys":
 							[
 							],

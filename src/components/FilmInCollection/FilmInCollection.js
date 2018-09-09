@@ -20,20 +20,22 @@ const FilmInCollection = ({
       </div>
       <div className={css.director}>{film.Director}</div>
     </div>
-    <div className={css.events}>
-      <div
-        className={css.status}
-        onClick={(e) => {
-          e.stopPropagation();
-          toggleWatchedState({imdbID: film.imdbID});
-        }}
-      >
-        {(collection.loved.includes(film.imdbID) && '💖') ||
-          (collection.watched.includes(film.imdbID) && '✔️') ||
-          '❌'}
+    {editable && (
+      <div className={css.events}>
+        <div
+          className={css.status}
+          onClick={(e) => {
+            e.stopPropagation();
+            toggleWatchedState({imdbID: film.imdbID});
+          }}
+        >
+          {(collection.loved.includes(film.imdbID) && '💖') ||
+            (collection.watched.includes(film.imdbID) && '✔️') ||
+            '❌'}
+        </div>
+        {remove && <div className={css.buttons}>{remove}</div>}
       </div>
-      {remove && <div className={css.buttons}>{remove}</div>}
-    </div>
+    )}
   </div>
 );
 

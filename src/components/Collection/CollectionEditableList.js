@@ -68,17 +68,6 @@ const CollectionEditableList = ({
                     collection={collection}
                     editable
                     toggleWatchedState={toggleWatchedState}
-                    remove={
-                      <div
-                        onClick={() =>
-                          removeFilmFromCollection({
-                            imdbID: film.imdbID,
-                          })
-                        }
-                      >
-                        🗑️
-                      </div>
-                    }
                   />
                 </div>
               )}

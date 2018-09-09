@@ -3,7 +3,7 @@ Next:
   ✔ save new collection data @done(18-07-28 19:37)
   ✔ give collections their own pages in the router @done(18-07-29 18:49)
   ✔ hide edit functions behind private routes @done(18-07-29 18:49)
-  ☐ Make the CollectionLayout
+  ✔ Make the CollectionLayout @done(18-09-09 15:10)
     should work for both editable and non-editable pages
   ✔ Make collection sidebar draggable (Split.js, is good) @done(18-09-04 22:06)
 
@@ -35,10 +35,12 @@ Task:
   ☐ Allow non-users to view private pages @future @enhancement
     They're the same pages, but editing features are disabled for logout people
   ☐ You can only have one Collection loaded at a time
-  ☐ One button for watched and loved
+  ✔ One button for watched and loved @done(18-09-09 15:10)
     click -> watched, click -> loved, click -> watched, click -> unwatch
   ☐ add film from someone elses list to your list
   ☐ only load highlight when image has fully loaded
+  ☐ reset highlight when leaving/changing collection
+  ☐ 
 
 Later:
   ✔ add login / signup @done(18-07-22 12:44)

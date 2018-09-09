@@ -166,8 +166,7 @@ export const removeFilmFromCollection = ({imdbID}) => {
       type: REMOVE_FROM_COLLECTION,
       imdbID,
     });
-    const id = getState().collection.id;
-    dispatch(setCollectionData({id}));
+    dispatch(setCollectionData({id: getState().collection.id}));
   };
 };
 
