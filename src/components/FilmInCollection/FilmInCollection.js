@@ -7,7 +7,7 @@ const FilmInCollection = ({
   film,
   collection,
   toggleWatchedState,
-  remove,
+  removeFilmFromCollection,
   editable,
 }) => (
   <div
@@ -21,7 +21,7 @@ const FilmInCollection = ({
       <div className={css.director}>{film.Director}</div>
     </div>
     {editable && (
-      <div className={css.events}>
+      <div className={css.actions}>
         <div
           className={css.status}
           onClick={(e) => {
@@ -33,7 +33,15 @@ const FilmInCollection = ({
             (collection.watched.includes(film.imdbID) && '✔️') ||
             '❌'}
         </div>
-        {remove && <div className={css.buttons}>{remove}</div>}
+        <div
+          onClick={() =>
+            removeFilmFromCollection({
+              imdbID: film.imdbID,
+            })
+          }
+        >
+          🗑️
+        </div>
       </div>
     )}
   </div>
@@ -47,7 +55,7 @@ FilmInCollection.propTypes = {
     loved: PropTypes.arrayOf(PropTypes.string),
   }),
   toggleWatchedState: PropTypes.func,
-  remove: PropTypes.element,
+  removeFilmFromCollection: PropTypes.func,
   editable: PropTypes.bool,
 };
 

@@ -68,6 +68,7 @@ const CollectionEditableList = ({
                     collection={collection}
                     editable
                     toggleWatchedState={toggleWatchedState}
+                    removeFilmFromCollection={removeFilmFromCollection}
                   />
                 </div>
               )}
