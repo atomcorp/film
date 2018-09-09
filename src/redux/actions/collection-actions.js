@@ -228,11 +228,16 @@ export const setCollectionVisibility = ({visibility}) => ({
 
 // REORDER COLLECTION
 
-export const reorderCollection = ({from, to}) => ({
-  type: REORDER_COLLECTION,
-  from,
-  to,
-});
+export const reorderCollection = ({from, to}) => {
+  return (dispatch, getState) => {
+    dispatch({
+      type: REORDER_COLLECTION,
+      from,
+      to,
+    });
+    dispatch(setCollectionData({id: getState().collection.id}));
+  };
+};
 
 const toggleRatingAttempt = () => ({
   type: TOGGLE_RATING.ATTEMPT,
@@ -276,6 +281,7 @@ export const toggleWatchedState = ({imdbID}) => {
       dispatch(toggleWatchedListRemove({imdbID}));
       dispatch(toggleRatingRemove({imdbID}));
     }
+    dispatch(setCollectionData({id: getState().collection.id}));
   };
 };
 
