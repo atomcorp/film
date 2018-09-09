@@ -42,7 +42,7 @@ Task:
   ✔ reset highlight when leaving/changing collection @done(18-09-09 15:50)
   ☐ "add film" section in modal, put in highlight window
   ✔ make edit collection name nicer @done(18-09-09 16:18)
-  ☐ make nicer toggle for watched/unwatched/loved
+  ✔ make nicer toggle for watched/unwatched/loved @done(18-09-09 17:05)
 
 Later:
   ✔ add login / signup @done(18-07-22 12:44)

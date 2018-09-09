@@ -62,6 +62,7 @@ export const initNewCollection = ({usersId, usersName}) => (
       dispatch(
         initNewCollectionSuccess({
           admin: usersId,
+          adminName: usersName,
           name: `${usersName}'s Collection`,
           id: newCollectionRef.key,
         })

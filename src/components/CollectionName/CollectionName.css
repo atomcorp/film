@@ -1,17 +1,16 @@
 .container {
   border-bottom: 1px solid #dcdcdc;
+  padding: 20px;
 }
 
 .name {
-  padding: 20px;
-  margin: 0;
+  margin: 0 0 10px;
   text-transform: uppercase;
   font-size: 24px;
   border: 1px solid transparent;
 }
 
 .editing {
-  padding: 20px;
 }
 
 .input {
@@ -20,4 +19,9 @@
   text-transform: uppercase;
   padding: 2px;
   border: 1px solid;
+  width: 100%;
+  max-width: 360px;
+}
+
+.admin {
 }

@@ -46,6 +46,7 @@ const defaultState = {
   addingFilm: false,
   id: null,
   admin: null,
+  adminName: '',
   films: [],
 };
 
@@ -59,6 +60,7 @@ const collection = (state = defaultState, action) => {
     case INIT_NEW_COLLECTION.SUCCESS:
       return Object.assign({}, state, {
         admin: action.admin,
+        adminName: action.adminName,
         name: action.name,
         id: action.id,
       });

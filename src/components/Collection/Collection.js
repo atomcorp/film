@@ -4,7 +4,7 @@ import {collectionStateType, userStateType} from '../../types';
 import CollectionLayout from '@components/CollectionLayout/CollectionLayout';
 import CollectionEditableListContainer from '@containers/CollectionEditableListContainer';
 import CollectionStaticListContainer from '@containers/CollectionStaticListContainer';
-import {Highlight, SearchInput, SearchResults} from '@containers';
+import {Highlight} from '@containers';
 import VisibilityContainer from '@containers/VisibilityContainer';
 import localForage from 'localforage';
 
@@ -17,7 +17,10 @@ class Collection extends React.Component {
    */
   constructor(props) {
     super(props);
-    this.state = {sidebarWidth: 300};
+    this.state = {
+      sidebarWidth: 300,
+      searchModalOpen: false,
+    };
   }
   /**
    * componentDidMount
@@ -45,6 +48,11 @@ class Collection extends React.Component {
       });
     });
   }
+  handleSearchModal = (searchModalOpen) => {
+    this.setState({
+      searchModalOpen,
+    });
+  };
   /**
    * @return {HTML}
    */
@@ -60,10 +68,7 @@ class Collection extends React.Component {
         }
         search={
           this.props.editable && (
-            <div>
-              <SearchInput />
-              <SearchResults />{' '}
-            </div>
+            <button onClick={this.handleSearchModal}>Add film</button>
           )
         }
         highlight={<Highlight />}

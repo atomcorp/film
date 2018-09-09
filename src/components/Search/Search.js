@@ -1,6 +1,7 @@
 /** @module containers/Search */
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import css from './Search.css';
 import {staggerRequests as _staggerRequests} from '../../helpers';
 
 /**
@@ -73,7 +74,7 @@ class Search extends Component {
   /** @return {HTML} Search */
   render() {
     return (
-      <div className="search">
+      <div className={css.container}>
         <form onSubmit={this.handleSubmit}>
           <div>
             <input

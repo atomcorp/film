@@ -1,0 +1,15 @@
+.container {
+  /* position: fixed;
+  width: 400px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: #fff;
+  border-left: 1px solid #000100;
+  padding: 20px; */
+}
+
+.title {
+  font-size: 20px;
+  margin: 0;
+}

@@ -6,6 +6,7 @@ import CollectionNameContainer from '@containers/CollectionNameContainer';
 import SplitPane from 'react-split-pane';
 import './react-split-pane.css';
 import localForage from 'localforage';
+import SearchModal from '@components/SearchModal/SearchModal';
 // this can be used by editable and no-editable things
 const CollectionLayout = ({
   films,
@@ -15,6 +16,7 @@ const CollectionLayout = ({
   search,
 }) => (
   <div className={css.container}>
+    {/* <SearchModal /> */}
     <div className={css.header}>
       <h1 className={css.logo}>Your next</h1>
     </div>
@@ -26,10 +28,9 @@ const CollectionLayout = ({
         onDragFinished={(size) => localForage.setItem('sidebarWidth', size)}
       >
         <div className={css.films}>
-          {search}
+          {/* search */}
           <CollectionNameContainer />
-          {toggleWatched}
-          {/* <button>Add more movies button</button> */}
+          {/* toggleWatched */}
           {films}
         </div>
         <div className={css.highlight}>{highlight}</div>

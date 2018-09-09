@@ -82,6 +82,9 @@ class CollectionName extends React.Component {
               )}
           </div>
         )}
+        <div className={css.admin}>
+          by {this.props.collection.adminName || 'Defualt name'}
+        </div>
       </div>
     );
   }
