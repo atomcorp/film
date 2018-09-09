@@ -3,6 +3,7 @@ import {collectionsPath} from '../../config/paths';
 import {setUserData} from './user-actions';
 import {database} from '../../firebase/firebase';
 import tryAction from '../../helpers/tryAction';
+import {HIGHLIGHT_REMOVE} from './highlight-actions';
 export const ADD_TO_COLLECTION = tryAction('ADD_TO_COLLECTION');
 export const REMOVE_FROM_COLLECTION = 'REMOVE_FROM_COLLECTION';
 export const TOGGLE_WATCHED_LIST = {
@@ -162,6 +163,9 @@ export const addFilmImdbDataToCollection = ({imdbID}) => {
 
 export const removeFilmFromCollection = ({imdbID}) => {
   return (dispatch, getState) => {
+    if (getState().highlight.imdbID === imdbID) {
+      dispatch({type: HIGHLIGHT_REMOVE});
+    }
     dispatch({
       type: REMOVE_FROM_COLLECTION,
       imdbID,

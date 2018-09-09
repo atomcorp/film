@@ -34,11 +34,12 @@ const FilmInCollection = ({
             '❌'}
         </div>
         <div
-          onClick={() =>
+          onClick={(e) => {
+            e.stopPropagation();
             removeFilmFromCollection({
               imdbID: film.imdbID,
-            })
-          }
+            });
+          }}
         >
           🗑️
         </div>
