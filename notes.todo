@@ -31,7 +31,7 @@ Task:
   ✘ link users together @cancelled(18-05-12 17:30)
   ✔ if you're downloading the collection, you should not be able to  send an update to the collection (otherwise might delete everything) @critical @bug @done(18-05-15 22:02)
   ✔ add year, and other possible search filters @done(18-06-27 00:05)
-  ☐ add loading screen when user has ID in localStorage
+  ✔ add loading screen when user has ID in localStorage @done(18-09-09 15:27)
   ☐ Allow non-users to view private pages @future @enhancement
     They're the same pages, but editing features are disabled for logout people
   ☐ You can only have one Collection loaded at a time
@@ -39,7 +39,7 @@ Task:
     click -> watched, click -> loved, click -> watched, click -> unwatch
   ☐ add film from someone elses list to your list
   ☐ only load highlight when image has fully loaded
-  ☐ reset highlight when leaving/changing collection
+  ✔ reset highlight when leaving/changing collection @done(18-09-09 15:50)
   ☐ "add film" section in modal, put in highlight window
   ☐ make edit collection name nicer
   ☐ make nicer toggle for 

@@ -1,6 +1,7 @@
 const HIGHLIGHT_REQUEST = 'HIGHLIGHT_REQUEST';
 const HIGHLIGHT_SUCCESS = 'HIGHLIGHT_SUCCESS';
 const TOGGLE_HIGHLIGHT = 'TOGGLE_HIGHLIGHT';
+const HIGHLIGHT_REMOVE = 'HIGHLIGHT_REMOVE';
 
 const highlightRequest = ({imdbID}) => ({
   type: HIGHLIGHT_REQUEST,
@@ -28,4 +29,10 @@ const showHighlight = ({imdbID}) => {
   };
 };
 
-export {HIGHLIGHT_REQUEST, HIGHLIGHT_SUCCESS, showHighlight, TOGGLE_HIGHLIGHT};
+export {
+  HIGHLIGHT_REQUEST,
+  HIGHLIGHT_SUCCESS,
+  showHighlight,
+  TOGGLE_HIGHLIGHT,
+  HIGHLIGHT_REMOVE,
+};

@@ -2,15 +2,22 @@ import {
   HIGHLIGHT_REQUEST,
   HIGHLIGHT_SUCCESS,
   TOGGLE_HIGHLIGHT,
+  HIGHLIGHT_REMOVE,
 } from '../actions/highlight-actions';
+import {GET_COLLECTION_DATA} from '../actions/collection-actions';
 
-const highlight = (state = {
+const defaultState = {
   imdbID: '',
   film: {},
   isFetching: false,
   visible: false,
-}, action) => {
+};
+
+const highlight = (state = defaultState, action) => {
   switch (action.type) {
+    case HIGHLIGHT_REMOVE:
+    case GET_COLLECTION_DATA.ATTEMPT:
+      return defaultState;
     case HIGHLIGHT_REQUEST:
       return Object.assign({}, state, {
         isFetching: true,

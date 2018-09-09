@@ -43,15 +43,14 @@ Film.propTypes = {
   film: PropTypes.object,
 };
 
-const Highlight = ({visible, film}) => (
+const Highlight = ({highlight}) => (
   <div className={css.container}>
-    {film && film.Response ? <Film film={film} /> : <div />}
+    {highlight.visible ? <Film film={highlight.film} /> : <div />}
   </div>
 );
 
 Highlight.propTypes = {
-  film: PropTypes.object,
-  visible: PropTypes.bool,
+  highlight: PropTypes.object,
 };
 
 export default Highlight;
