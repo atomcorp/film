@@ -6,7 +6,7 @@ import CollectionNameContainer from '@containers/CollectionNameContainer';
 import SplitPane from 'react-split-pane';
 import './react-split-pane.css';
 import localForage from 'localforage';
-import SearchModal from '@components/SearchModal/SearchModal';
+// import SearchModal from '@components/SearchModal/SearchModal';
 // this can be used by editable and no-editable things
 const CollectionLayout = ({
   films,
